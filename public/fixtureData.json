@@ -1,0 +1,47 @@
+{
+  "dataName" : "Fixtures",
+
+  "fixtures": [
+    {
+      "manufacturer": "Robe",
+      "fixture": "Pointe",
+      "type": "Discharge",
+      "power": 470,
+      "blackoutPower": 470,
+      "weight": 15,
+      "citation": "https://cdn.robe.cz/fileadmin/user_upload/product_pdf/en_pointe.pdf",
+      "productionCos": ["default","cse","siyan"]
+    },
+    {
+      "manufacturer": "Robe",
+      "fixture": "Spiider",
+      "type": "LED",
+      "power": 600,
+      "blackoutPower": 600,
+      "weight": 13.3,
+      "citation": "https://cdn.robe.cz/fileadmin/user_upload/product_pdf/en_spiider.pdf",
+      "productionCos": ["default", "cse"]
+
+    },
+    {
+      "manufacturer": "Showtec",
+      "fixture": "Stage Blinder 2",
+      "type": "Generic",
+      "power": 1300,
+      "blackoutPower": 1300,
+      "weight": 2.96,
+      "citation": "https://www.thomann.de/gb/showtec_stage_blinder_2_dmx.htm",
+      "productionCos": ["default", "cse", "siyan"]
+    },
+    {
+      "manufacturer": "Clay Paky",
+      "fixture": "Scenius Unico",
+      "type": "Discharge",
+      "power": 1400,
+      "blackoutPower": 1400,
+      "weight": 45.6,
+      "citation": "https://8c693ab5-259b-48c5-9145-47e096473bba.filesusr.com/ugd/cf9a35_76c5494da4ee4c5ebf49c758280efb7e.pdf",
+      "productionCos": ["default", "cse"]
+    }
+  ]
+}
