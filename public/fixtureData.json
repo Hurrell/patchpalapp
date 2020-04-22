@@ -3,6 +3,7 @@
 
   "fixtures": [
     {
+      "id": 1001,
       "manufacturer": "Robe",
       "fixture": "Pointe",
       "type": "Discharge",
@@ -13,6 +14,7 @@
       "productionCos": ["default","cse","siyan"]
     },
     {
+      "id": 1002,
       "manufacturer": "Robe",
       "fixture": "Spiider",
       "type": "LED",
@@ -21,9 +23,9 @@
       "weight": 13.3,
       "citation": "https://cdn.robe.cz/fileadmin/user_upload/product_pdf/en_spiider.pdf",
       "productionCos": ["default", "cse"]
-
     },
     {
+      "id": 1003,
       "manufacturer": "Showtec",
       "fixture": "Stage Blinder 2",
       "type": "Generic",
@@ -34,6 +36,7 @@
       "productionCos": ["default", "cse", "siyan"]
     },
     {
+      "id": 1004,
       "manufacturer": "Clay Paky",
       "fixture": "Scenius Unico",
       "type": "Discharge",
@@ -41,7 +44,7 @@
       "blackoutPower": 1400,
       "weight": 45.6,
       "citation": "https://8c693ab5-259b-48c5-9145-47e096473bba.filesusr.com/ugd/cf9a35_76c5494da4ee4c5ebf49c758280efb7e.pdf",
-      "productionCos": ["default", "cse"]
+      "productionCos": ["cse"]
     }
   ]
 }
