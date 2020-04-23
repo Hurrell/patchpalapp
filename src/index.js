@@ -19,9 +19,15 @@ var FIXTURES;
 class FixtureRow extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+            fixtureDetails: (<div></div>),
+            fixtureDetailToggle: false
+        };
         this.handleFixtureChange = this.handleFixtureChange.bind(this);
         this.handleRemoveButtonClick = this.handleRemoveButtonClick.bind(this);
+        this.handleFixtureClick = this.handleFixtureClick.bind(this);
     }
+    
 
     handleFixtureChange(e) {
         this.props.onFixtureChange(this.props.fixture.id, e.target.value);
@@ -30,6 +36,22 @@ class FixtureRow extends React.Component {
     handleRemoveButtonClick() {
         this.props.onRemoveButtonClick(this.props.fixture.id);
     }
+
+    handleFixtureClick(e) {
+        if (this.state.fixtureDetailToggle) {
+            this.setState({fixtureDetails: (<div></div>)})
+            this.setState({fixtureDetailToggle: false});
+        } else {
+            
+            let details = "" + 
+                this.props.fixture.weight +"kg, " +
+                this.props.fixture.power + "W, " +
+                this.props.fixture.type;
+            this.setState({fixtureDetails: (<div>{details}</div>)});
+            this.setState({fixtureDetailToggle: true});
+        }
+    }
+
     render() {
         const fixture = this.props.fixture;
 
@@ -49,10 +71,22 @@ class FixtureRow extends React.Component {
 
         return (
             <tr>
-                <td>{fixture.manufacturer}</td>
-                <td>{fixture.fixture}</td>
+                <td 
+                    onClick={this.handleFixtureClick}
+                >
+                    <tr>
+                        {fixture.manufacturer} 
+                        {" "}
+                        {fixture.fixture}
+                    </tr>
+                    <tr>
+                        {this.state.fixtureDetails}
+                    </tr>
+                </td>
                 <td>
-                    <form>
+                    <form 
+                        onKeyPress={(e) => { e.key === 'Enter' && e.preventDefault(); }}
+                    >
                         <input 
                         type="number"
                         value={quantityShown}
@@ -61,7 +95,9 @@ class FixtureRow extends React.Component {
                         {removeButton}
                     </form>
                 </td>
+                <td></td>
             </tr>
+
         )
     };
 }
@@ -84,28 +120,43 @@ class FixtureTable extends React.Component {
     render() {
         const filterText = this.props.filterText;
         const productionCo = this.props.productionCo;
+        const currentTruss = this.props.currentTruss;
 
         const rows = [];
         
         this.props.fixtures.forEach((fixture) => {
+
             //filter by search
             if (!fixture.manufacturer.toLowerCase().includes(filterText.toLowerCase()) &&
             !fixture.fixture.toLowerCase().includes(filterText.toLowerCase())) {
                 return;
             }
-            //ignore default filter if search has value
 
-            //filter by production Company
-            if(productionCo !== "") {
-                if (!fixture.productionCos.includes(productionCo.toLowerCase())) {
+            //filter by truss
+            if (fixture.truss) {
+                console.log(currentTruss);
+                console.log(fixture.truss)
+                if (fixture.truss !== currentTruss) {
                     return;
                 }
             }
+
+            //ignore default filter if search has value
+            if (!(filterText && productionCo === "default")) {
+            //filter by production Company (or default)
+                if(productionCo !== "") {
+                    if (!fixture.productionCos.includes(productionCo.toLowerCase())) {
+                        return;
+                    }
+                }
+            }
+
             //replace with selected fixture if necessary
+
             let fixtureSelectedOrNot = fixture;
             if (this.props.selectedFixtures) {
                 this.props.selectedFixtures.forEach((selectFixture) => {
-                    if (selectFixture.id === fixture.id) {
+                    if (selectFixture.id === fixture.id && selectFixture.truss===currentTruss) {
                         fixtureSelectedOrNot = selectFixture;
                         return;
                     }
@@ -126,7 +177,7 @@ class FixtureTable extends React.Component {
             <table>
                 <thead>
                     <tr>
-                        <th>Manufacturer</th>
+                        {/* <th>Manufacturer</th> */}
                         <th>Fixture</th>
                         <th>Quantity</th>
                     </tr>
@@ -156,7 +207,9 @@ class SearchBar extends React.Component {
         const filterText = this.props.filterText;
 
         return (
-            <form>
+            <form
+                onKeyPress={(e) => { e.key === 'Enter' && e.preventDefault(); }}
+            >
                 <input 
                     type="text" 
                     placeholder="Search..." 
@@ -225,6 +278,7 @@ class FilterableFixtureTable extends React.Component {
                     productionCo={this.state.productionCo}
                     onFixtureChange={this.handleFixtureChange}
                     onRemoveButtonClick={this.handleRemoveButtonClick}
+                    currentTruss={this.props.currentTruss}
                  />
             </div>
         )
@@ -258,6 +312,7 @@ class SelectedFixturesTable extends React.Component {
                 productionCo={""}
                 onFixtureChange={this.handleFixtureChange}
                 onRemoveButtonClick={this.handleRemoveButtonClick}
+                currentTruss={this.props.currentTruss}
                  />
             </div>
         )
@@ -270,7 +325,9 @@ class TotalPower extends React.Component {
         let power = 0;
         if (this.props.selectedFixtures) {
             this.props.selectedFixtures.forEach((fixture) => {
-                power += fixture.power*fixture.quantity;
+                if (fixture.quantity >= 1) {
+                    power += Number(fixture.power)*Number(fixture.quantity);
+                }
             });
         }
 
@@ -301,7 +358,9 @@ class TotalWeight extends React.Component {
         let weight = 0;
         if (this.props.selectedFixtures) {
             this.props.selectedFixtures.forEach((fixture) => {
-                weight += fixture.weight*fixture.quantity;
+                if (fixture.quantity >=1) {
+                    weight += Number(fixture.weight)*Number(fixture.quantity);
+                }
             });
         }
 
@@ -327,15 +386,93 @@ class Overview extends React.Component {
     }
 }
 
-class App extends React.Component {
-    constructor (props) {
+class FixtureSelector extends React.Component {
+    constructor(props) {
+        super(props);
+        this.handleFixtureChange = this.handleFixtureChange.bind(this);
+        //this.handleSelectedFixtureChange = this.handleSelectedFixtureChange.bind(this);
+        this.handleRemoveButtonClick = this.handleRemoveButtonClick.bind(this);
+        }
+
+    handleFixtureChange (fixtureId,quantity) {
+        this.props.onFixtureChange(fixtureId,quantity);
+    }
+
+    handleRemoveButtonClick(fixtureId) {
+        this.props.onRemoveButtonClick(fixtureId);
+    }
+
+    render() {
+        return (
+            <div>
+                <FilterableFixtureTable 
+                fixtures = {FIXTURES.fixtures}
+                selectedFixtures={this.props.selectedFixtures}
+                onFixtureChange = {this.handleFixtureChange}
+                onRemoveButtonClick={this.handleRemoveButtonClick}
+                currentTruss={this.props.currentTruss}
+                />
+                <Overview selectedFixtures={this.props.selectedFixtures}/>
+                <SelectedFixturesTable 
+                    selectedFixtures={this.props.selectedFixtures} 
+                    onFixtureChange={this.handleFixtureChange}
+                    onRemoveButtonClick={this.handleRemoveButtonClick}
+                    currentTruss={this.props.currentTruss}
+                />
+            </div>
+        )
+    }
+}
+
+class TrussSelector extends React.Component {
+    constructor(props) {
+        super(props);
+    this.handleTrussSelect = this.handleTrussSelect.bind(this);
+    }
+
+    handleTrussSelect (e) {
+        this.props.onTrussSelect(e.target.dataset.truss)
+    }
+
+    render () {
+        return (
+            <div id="truss-selector">
+                <div 
+                    data-truss="Truss 1"
+                    onClick={this.handleTrussSelect}
+                >
+                    Truss 1
+                </div>
+                <div 
+                    data-truss="Truss 2"
+                    onClick={this.handleTrussSelect}
+                >
+                    Truss 2
+                </div>
+                <div 
+                    data-truss="Truss 3"
+                    onClick={this.handleTrussSelect}
+                >
+                    Truss 3
+                </div>
+            </div>
+        )
+    }
+}
+
+class Build extends React.Component {
+    constructor(props) {
         super(props);
         this.state = {
             selectedFixtures: [],
-        }
+        };
         this.handleFixtureChange = this.handleFixtureChange.bind(this);
-        this.handleSelectedFixtureChange = this.handleSelectedFixtureChange.bind(this);
         this.handleRemoveButtonClick = this.handleRemoveButtonClick.bind(this);
+        this.handleTrussSelect = this.handleTrussSelect.bind(this);
+    }
+
+    handleTrussSelect (trussName) {
+        this.props.onTrussSelect(trussName);
     }
 
     handleFixtureChange (fixtureId, quantity) {
@@ -348,7 +485,7 @@ class App extends React.Component {
         if (newFixture) {
             let fixtureAlreadySelected = false;
             updatedSelectedFixtures.forEach((fixture) => {
-                if (fixture.id === fixtureId) {
+                if (fixture.id === fixtureId && fixture.truss === this.props.currentTruss) {
                     fixture.quantity = quantity;
                     fixtureAlreadySelected = true;
                     return;
@@ -358,18 +495,13 @@ class App extends React.Component {
             if(!fixtureAlreadySelected) {
                 newFixture.quantity = quantity;
                 newFixture.selected = true;
+                newFixture.truss = this.props.currentTruss;
                 updatedSelectedFixtures.push(newFixture);
             }
         }
 
         this.setState({
             selectedFixtures: updatedSelectedFixtures,
-        });
-    }
-
-    handleSelectedFixtureChange (selectedFixtures) {
-        this.setState({
-            selectedFixtures: selectedFixtures,
         });
     }
 
@@ -386,24 +518,47 @@ class App extends React.Component {
         });
     }
 
-
     render() {
         return (
             <div>
-            <h1>PatchPal</h1>
-                <FilterableFixtureTable 
-                fixtures = {FIXTURES.fixtures}
-                selectedFixtures={this.state.selectedFixtures}
-                onFixtureChange = {this.handleFixtureChange}
-                onRemoveButtonClick={this.handleRemoveButtonClick}
+                <TrussSelector
+                    onTrussSelect={this.handleTrussSelect}
                 />
-                <Overview selectedFixtures={this.state.selectedFixtures}/>
-                <SelectedFixturesTable 
-                    selectedFixtures={this.state.selectedFixtures} 
+                <FixtureSelector 
+                    selectedFixtures={this.state.selectedFixtures}
                     onFixtureChange={this.handleFixtureChange}
                     onRemoveButtonClick={this.handleRemoveButtonClick}
+                    currentTruss={this.props.currentTruss}
                 />
             </div>
+        )
+    }
+}
+
+class App extends React.Component {
+    constructor (props) {
+        super(props);
+        this.state={
+            currentTruss: "Truss 1"
+        }
+        this.handleTrussSelect = this.handleTrussSelect.bind(this);
+    }
+
+    handleTrussSelect (trussName) {
+        this.setState({
+            currentTruss: trussName,
+        });
+    }
+    render() {
+        return (
+            <div>
+                <h1>PatchPal</h1>
+                <Build
+                    onTrussSelect={this.handleTrussSelect}
+                    currentTruss={this.state.currentTruss}
+                />
+            </div>
+
         )
     }
 }

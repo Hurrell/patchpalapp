@@ -1,0 +1,9 @@
+#truss-selector {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+#truss-selector div {
+    border: 1px solid black;
+    text-align: center;
+}
