@@ -1,0 +1,106 @@
+{
+  "dataName" : "Fixtures",
+
+  "fixtures": [
+    {
+      "id": 1001,
+      "manufacturer": "Robe",
+      "fixture": "Pointe",
+      "type": "Discharge",
+      "power": 470,
+      "blackoutPower": 470,
+      "weight": 15,
+      "citation": "https://cdn.robe.cz/fileadmin/user_upload/product_pdf/en_pointe.pdf",
+      "productionCos": ["default","cse","siyan"]
+    },
+    {
+      "id": 1002,
+      "manufacturer": "Robe",
+      "fixture": "Spiider",
+      "type": "LED",
+      "power": 600,
+      "blackoutPower": 600,
+      "weight": 13.3,
+      "citation": "https://cdn.robe.cz/fileadmin/user_upload/product_pdf/en_spiider.pdf",
+      "productionCos": ["default", "cse"]
+    },
+    {
+      "id": 1003,
+      "manufacturer": "Generic",
+      "fixture": "2 Lite Blinder",
+      "type": "Generic",
+      "power": 1300,
+      "blackoutPower": 1300,
+      "weight": 2.96,
+      "citation": "https://www.thomann.de/gb/showtec_stage_blinder_2_dmx.htm",
+      "productionCos": ["default", "cse", "siyan"]
+    },
+    {
+      "id": 1004,
+      "manufacturer": "Clay Paky",
+      "fixture": "Scenius Unico",
+      "type": "Discharge",
+      "power": 1400,
+      "blackoutPower": 1400,
+      "weight": 45.6,
+      "citation": "https://8c693ab5-259b-48c5-9145-47e096473bba.filesusr.com/ugd/cf9a35_76c5494da4ee4c5ebf49c758280efb7e.pdf",
+      "productionCos": ["cse"]
+    },
+    {
+      "id": 1005,
+      "manufacturer": "Generic",
+      "fixture": "4 Lite Blinder",
+      "type": "Generic",
+      "power": 2600,
+      "blackoutPower": 1300,
+      "weight": 6,
+      "citation": "https://www.thomann.de/gb/showtec_stage_blinder_2_dmx.htm",
+      "productionCos": ["cse", "siyan"]
+    },
+    {
+      "id": 1006,
+      "manufacturer": "GLP German Light Products",
+      "fixture": "JDC-1",
+      "type": "LED-Strobe",
+      "power": 1200,
+      "blackoutPower": 50,
+      "weight": 12,
+      "citation": "https://www.glp.de/en/products?format=raw&task=download&fid=571",
+      "productionCos": ["cse"]
+    },
+    {
+      "id": 1007,
+      "manufacturer": "Coloursound",
+      "fixture": "Aquabeam",
+      "type": "Discharge",
+      "power": 628,
+      "blackoutPower": 628,
+      "weight": 23,
+      "citation": "https://www.coloursound.com/aquabeam",
+      "productionCos": ["cse"]
+    },
+    {
+      "id": 1008,
+      "manufacturer": "Prolights",
+      "fixture": "Diamond 7",
+      "type": "LED",
+      "power": 125,
+      "blackoutPower": 50,
+      "weight": 6.4,
+      "citation": "https://www.prolights.it/en/product/DIAMOND7#tech-sheet",
+      "productionCos": ["cse"]
+    },
+    {
+      "id": 1009,
+      "manufacturer": "Robe",
+      "fixture": "MegaPointe",
+      "type": "Discharge",
+      "power": 670,
+      "powerFactor": 0.97,
+      "blackoutPower": 50,
+      "weight": 22,
+      "citation": "https://www.prolights.it/en/product/DIAMOND7#tech-sheet",
+      "productionCos": ["cse"]
+    }
+  ]
+}
