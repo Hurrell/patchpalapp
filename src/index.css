@@ -1,3 +1,9 @@
+#header {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+}
+
+
 #truss-selector {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -6,4 +12,55 @@
 #truss-selector div {
     border: 1px solid black;
     text-align: center;
+}
+
+.total-footer h2 {
+    margin-block-start: 5px;
+    margin-block-end: 5px;
+}
+.totals {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.totals p {
+    margin-block-start: 0;
+    margin-block-end: 0.5em;
+}
+.total-footer {
+    background-color: gray;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.fixture-selector {
+    height: 60vh;
+    overflow: scroll;
+}
+
+.review-details {
+    height: 75vh;
+    overflow: scroll;
+}
+
+.review-details h2 {
+    margin-block-start: 10px;
+    margin-block-end: 5px;
+}
+
+.fixture-table, .fixture-row {
+    display: grid;
+    grid-template-columns: 2fr 0.5fr 1fr;
+}
+
+.quantity-input {
+    width: 50px;
+}
+
+.phase-table {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    /* text-align: center; */
 }
