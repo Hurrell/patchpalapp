@@ -1,36 +1,34 @@
 {
-  "dataName" : "Fixtures",
-
   "fixtures": [
     {
       "id": 1001,
       "manufacturer": "Robe",
-      "fixture": "Pointe",
+      "name": "Pointe",
       "type": "Discharge",
       "power": 470,
       "blackoutPower": 470,
       "weight": 15,
-      "citation": "https://cdn.robe.cz/fileadmin/user_upload/product_pdf/en_pointe.pdf",
+      "specSheet": "https://cdn.robe.cz/fileadmin/user_upload/product_pdf/en_pointe.pdf",
       "productionCos": ["default","cse","siyan"]
     },
     {
       "id": 1002,
       "manufacturer": "Robe",
-      "fixture": "Spiider",
+      "name": "Spiider",
       "type": "LED",
       "power": 600,
       "blackoutPower": 600,
       "weight": 13.3,
-      "citation": "https://cdn.robe.cz/fileadmin/user_upload/product_pdf/en_spiider.pdf",
+      "specSheet": "https://cdn.robe.cz/fileadmin/user_upload/product_pdf/en_spiider.pdf",
       "productionCos": ["default", "cse"]
     },
     {
       "id": 1003,
       "manufacturer": "Generic",
-      "fixture": "2 Lite Blinder",
+      "name": "2 Lite Blinder",
       "type": "Generic",
       "power": 1300,
-      "blackoutPower": 1300,
+      "blackoutPower": 0,
       "weight": 2.96,
       "citation": "https://www.thomann.de/gb/showtec_stage_blinder_2_dmx.htm",
       "productionCos": ["default", "cse", "siyan"]
@@ -38,7 +36,7 @@
     {
       "id": 1004,
       "manufacturer": "Clay Paky",
-      "fixture": "Scenius Unico",
+      "name": "Scenius Unico",
       "type": "Discharge",
       "power": 1400,
       "blackoutPower": 1400,
@@ -49,29 +47,29 @@
     {
       "id": 1005,
       "manufacturer": "Generic",
-      "fixture": "4 Lite Blinder",
+      "name": "4 Lite Blinder",
       "type": "Generic",
       "power": 2600,
-      "blackoutPower": 1300,
+      "blackoutPower": 0,
       "weight": 6,
       "citation": "https://www.thomann.de/gb/showtec_stage_blinder_2_dmx.htm",
       "productionCos": ["cse", "siyan"]
     },
     {
       "id": 1006,
-      "manufacturer": "GLP German Light Products",
-      "fixture": "JDC-1",
+      "manufacturer": "GLP",
+      "name": "JDC-1",
       "type": "LED-Strobe",
       "power": 1200,
       "blackoutPower": 50,
       "weight": 12,
-      "citation": "https://www.glp.de/en/products?format=raw&task=download&fid=571",
+      "manual": "https://www.glp.de/en/products?format=raw&task=download&fid=571",
       "productionCos": ["cse"]
     },
     {
       "id": 1007,
       "manufacturer": "Coloursound",
-      "fixture": "Aquabeam",
+      "name": "Aquabeam",
       "type": "Discharge",
       "power": 628,
       "blackoutPower": 628,
@@ -82,7 +80,7 @@
     {
       "id": 1008,
       "manufacturer": "Prolights",
-      "fixture": "Diamond 7",
+      "name": "Diamond 7",
       "type": "LED",
       "power": 125,
       "blackoutPower": 50,
@@ -93,7 +91,7 @@
     {
       "id": 1009,
       "manufacturer": "Robe",
-      "fixture": "MegaPointe",
+      "name": "MegaPointe",
       "type": "Discharge",
       "power": 670,
       "powerFactor": 0.97,
