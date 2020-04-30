@@ -43,7 +43,7 @@ a:active {
 }
 
 .page {
-  margin: 15px;
+  margin: 15px 15px 10px 10px;
   overflow-y: auto;
   -ms-overflow-style: none;
 }
@@ -133,9 +133,9 @@ a:active {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   align-self: center;
-  font-size: 1.3em;
+  font-size: 1em;
   display: grid;
-  grid-template-columns: 0.15fr 1fr 0.4fr;
+  grid-template-columns: 28px 1fr 0.4fr;
   /* grid-template-rows: 1fr 1fr; */
   margin-bottom: 20px;
   /* grid-template-areas:
@@ -144,7 +144,7 @@ a:active {
 }
 
 .fixture-in-row-details {
-  font-size: 14px;
+  font-size: 0.8em;
   font-family: "Open Sans", sans-serif;
 }
 .fixture-change {
@@ -163,7 +163,7 @@ a:active {
 .plus-minus-icon {
   display: inline-block;
   vertical-align: middle;
-  font-size: 1.2em;
+  font-size: 1.8em;
 }
 
 .remove-button-container {
@@ -203,7 +203,7 @@ a:active {
   outline-style: none;
   text-align: center;
   vertical-align: middle;
-  font-size: 1.1em;
+  font-size: 1.5em;
 }
 .quantity-input input::placeholder {
   color: var(--main-bg-color);
@@ -286,59 +286,3 @@ a:active {
 .review-amps {
   grid-area: amps;
 }
-/* #truss-selector {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-}
-
-#truss-selector div {
-    border: 1px solid black;
-    text-align: center;
-}
-
-.total-footer h2 {
-    margin-block-start: 5px;
-    margin-block-end: 5px;
-}
-.totals {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
-.totals p {
-    margin-block-start: 0;
-    margin-block-end: 0.5em;
-}
-.total-footer {
-    background-color: gray;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-}
-
-.fixture-selector {
-    height: 60vh;
-    overflow: scroll;
-}
-
-/* .review-details {
-    height: 75vh;
-    overflow: scroll;
-} */
-
-/* .review-details h2 {
-    margin-block-start: 10px;
-    margin-block-end: 5px;
-}
-
-/* .fixture-table, .fixture-row {
-    display: grid;
-    grid-template-columns: 2fr 0.5fr 1fr;
-} */
-
-/* 
-.phase-table {
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    /* text-align: center; */
