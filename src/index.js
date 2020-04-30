@@ -75,6 +75,7 @@ class FixtureAdd extends React.Component {
     const fixture = this.props.fixture;
     let quantityShown = "";
     let minusSymbol = <div></div>;
+    let numberInput = <div></div>;
     if (fixture.quantity || fixture.quantity === 0) {
       quantityShown = fixture.quantity;
       minusSymbol = (
@@ -82,10 +83,7 @@ class FixtureAdd extends React.Component {
           <IoIosRemove class="plus-minus-icon" />
         </div>
       );
-    }
-    return (
-      <div class="fixture-change">
-        {minusSymbol}
+      numberInput = (
         <form
           class="quantity-input"
           onKeyPress={(e) => {
@@ -94,9 +92,9 @@ class FixtureAdd extends React.Component {
         >
           <input
             //background-image={plusSign}
-            //max="99"
-            placeholder="+"
-            type="number"
+            type="text"
+            pattern="\d*"
+            maxlength="2"
             value={quantityShown}
             onChange={this.handleFixtureChange}
             onKeyDown={(evt) =>
@@ -104,6 +102,12 @@ class FixtureAdd extends React.Component {
             }
           />
         </form>
+      );
+    }
+    return (
+      <div class="fixture-change">
+        {minusSymbol}
+        {numberInput}
         <div onClick={this.handlePlus}>
           <IoIosAdd class="plus-minus-icon" />
         </div>
@@ -871,7 +875,13 @@ class Header extends React.Component {
         title = <h1 class="title">Summary</h1>;
         leftIcon = <div></div>;
         headerClass = "header-review";
-        rightIcon = <div></div>;
+        // rightIcon = (
+        //   <select id="voltage">
+        //     <option value="230">230V</option>
+        //     <option value="220">220V</option>
+        //     <option value="120">120V</option>
+        //   </select>
+        // );
         break;
       default:
         leftIcon = <div></div>;
