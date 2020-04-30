@@ -215,9 +215,11 @@ class SearchBar extends React.Component {
 
         return (
             <form
-                //onKeyPress={(e) => { e.key === 'Enter' && e.preventDefault(); }}
+                onKeyPress={(e) => { e.key === 'Enter' && e.preventDefault(); }}
             >
                 <input 
+
+                    autoFocus
                     class = "search"
                     type="text" 
                     placeholder="Search" 
@@ -800,7 +802,8 @@ class Header extends React.Component {
                         rightIcon = (<div></div>);
                         break;
                     default:
-                        title = (<h1>PatchPal</h1>);
+                        title = (<h1 onClick={this.handleSearchClick}>
+                            PatchPal</h1>);
                         leftIcon =  (
                             <div 
                                 class="left-icon-div"
