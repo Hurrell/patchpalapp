@@ -76,14 +76,12 @@ class FixtureRow extends React.Component {
         //let plusSign = (<IoIosAdd/>);
         return (
             <div class="fixture-row">
-                <div 
-                    onClick={this.handleFixtureClick}
-                >
-                    <div>
+                <div>
+                    <span onClick={this.handleFixtureClick}>
                         {fixture.manufacturer} 
                         {" "}
                         {fixture.name}
-                    </div>
+                    </span>
                 </div>
                 <div>
                     <form 
@@ -101,7 +99,7 @@ class FixtureRow extends React.Component {
                     </form>
                 </div>
                 <div>{removeButton}</div>
-                <div class="fixture-in-row-details">Weight: {fixture.weight}kg Power: {fixture.power}w</div>
+                <div class="fixture-in-row-details">{fixture.weight}kg · {fixture.power}W</div>
                 <div></div>
                 <div></div>
             </div>
@@ -916,10 +914,11 @@ class App extends React.Component {
         this.handleBackClick=this.handleBackClick.bind(this);
     }
     handleBuildMode(e) {
-        console.log("Build or review clicked")
-        console.log(e.target);
-        console.log(e.target.dataset.mode);
+
         let newMode= e.target.dataset.mode;
+        this.setState({
+            fixtureView: false,
+        })
         if (this.state.mode !== newMode) {
             this.setState({
                 mode: e.target.dataset.mode,
