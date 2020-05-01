@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/patchpalapp/static/css/main.f8279e91.chunk.css",
-    "main.js": "/patchpalapp/static/js/main.3ab10d78.chunk.js",
-    "main.js.map": "/patchpalapp/static/js/main.3ab10d78.chunk.js.map",
+    "main.css": "/patchpalapp/static/css/main.824b9751.chunk.css",
+    "main.js": "/patchpalapp/static/js/main.4b9bdcfe.chunk.js",
+    "main.js.map": "/patchpalapp/static/js/main.4b9bdcfe.chunk.js.map",
     "runtime-main.js": "/patchpalapp/static/js/runtime-main.ba88b367.js",
     "runtime-main.js.map": "/patchpalapp/static/js/runtime-main.ba88b367.js.map",
     "static/js/2.91eeb43d.chunk.js": "/patchpalapp/static/js/2.91eeb43d.chunk.js",
     "static/js/2.91eeb43d.chunk.js.map": "/patchpalapp/static/js/2.91eeb43d.chunk.js.map",
     "index.html": "/patchpalapp/index.html",
-    "precache-manifest.d8c007597c17b7e9bcea0e8a424f494c.js": "/patchpalapp/precache-manifest.d8c007597c17b7e9bcea0e8a424f494c.js",
+    "precache-manifest.413b9fc321b43f4fad0cec09a972fde5.js": "/patchpalapp/precache-manifest.413b9fc321b43f4fad0cec09a972fde5.js",
     "service-worker.js": "/patchpalapp/service-worker.js",
-    "static/css/main.f8279e91.chunk.css.map": "/patchpalapp/static/css/main.f8279e91.chunk.css.map",
+    "static/css/main.824b9751.chunk.css.map": "/patchpalapp/static/css/main.824b9751.chunk.css.map",
     "static/js/2.91eeb43d.chunk.js.LICENSE.txt": "/patchpalapp/static/js/2.91eeb43d.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.ba88b367.js",
     "static/js/2.91eeb43d.chunk.js",
-    "static/css/main.f8279e91.chunk.css",
-    "static/js/main.3ab10d78.chunk.js"
+    "static/css/main.824b9751.chunk.css",
+    "static/js/main.4b9bdcfe.chunk.js"
   ]
 }
