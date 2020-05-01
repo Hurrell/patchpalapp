@@ -3,6 +3,7 @@
   --main-bg-color: #000000;
   --main-fg-color: rgb(255, 255, 255);
   --accent-color: #292929;
+  --dark-text-color: #cfcfcf;
 }
 
 #root,
@@ -43,9 +44,13 @@ a:active {
 }
 
 .page {
-  margin: 15px 15px 10px 10px;
+  width: 100%;
+  margin: 6px 15px 0 10px;
   overflow-y: auto;
   -ms-overflow-style: none;
+
+  max-width: 500px;
+  justify-self: center;
 }
 .page::-webkit-scrollbar {
   display: none;
@@ -116,9 +121,9 @@ a:active {
 
 /* Fixture Table */
 .fixture-table {
-  margin-top: 15px;
-  margin-left: 0;
-  margin-right: 0;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 15px;
 }
 
 .fixture-row,
@@ -135,17 +140,36 @@ a:active {
   align-self: center;
   font-size: 1em;
   display: grid;
-  grid-template-columns: 28px 1fr 0.4fr;
+  grid-template-columns: 28px 1fr 88px;
   /* grid-template-rows: 1fr 1fr; */
-  margin-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   /* grid-template-areas:
     "x name changer"
     "x details changer"; */
+  border-style: solid;
+  border-color: var(--accent-color);
+  border-width: 1px 0;
+}
+
+.fixture-row:hover {
+  background-color: var(--accent-color);
+}
+
+.fixture-row-title:hover {
+  text-decoration: underline;
+}
+
+.fixture-row-title,
+.plus-minus-icon,
+.remove-button-x {
+  cursor: pointer;
 }
 
 .fixture-in-row-details {
   font-size: 0.8em;
   font-family: "Open Sans", sans-serif;
+  color: var(--dark-text-color);
 }
 .fixture-change {
   /* height: 100%; */
@@ -164,6 +188,7 @@ a:active {
   display: inline-block;
   vertical-align: middle;
   font-size: 1.8em;
+  color: var(--dark-text-color);
 }
 
 .remove-button-container {
