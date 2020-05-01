@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "24a0a234a7e60d8313d2c6cfe045be5c",
+    "revision": "046f514bdf62415be28c9344cf34157e",
     "url": "/patchpalapp/index.html"
   },
   {
-    "revision": "9acdb7e68db9db446289",
-    "url": "/patchpalapp/static/css/main.69ba2917.chunk.css"
+    "revision": "f0526147e115a7025c0a",
+    "url": "/patchpalapp/static/css/main.f8279e91.chunk.css"
   },
   {
     "revision": "4042c54ce127392d2613",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/patchpalapp/static/js/2.91eeb43d.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "9acdb7e68db9db446289",
-    "url": "/patchpalapp/static/js/main.339568fd.chunk.js"
+    "revision": "f0526147e115a7025c0a",
+    "url": "/patchpalapp/static/js/main.3ab10d78.chunk.js"
   },
   {
     "revision": "0be4d093d326b0343fc4",
