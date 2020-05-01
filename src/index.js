@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import { printPower, powerDraw, getObj } from "./tools.js";
+import { printPower, powerDraw, getObj, matchAgainst } from "./tools.js";
 import {
   IoIosSearch,
   IoIosList,
@@ -201,34 +201,11 @@ class FixtureTable extends React.Component {
 
     this.props.fixtures.forEach((fixture) => {
       //filter by search
-      if (
-        !fixture.manufacturer
-          .toLowerCase()
-          .includes(filterText.toLowerCase()) &&
-        !fixture.name.toLowerCase().includes(filterText.toLowerCase())
-      ) {
+      if (!matchAgainst(filterText, fixture)) {
         return;
       }
 
-      // //filter by truss
-      // if (fixture.truss) {
-      //     if (fixture.truss !== currentTruss) {
-      //         return;
-      //     }
-      // }
-
-      // //ignore default filter if search has value
-      // if (!(filterText && productionCo === "default")) {
-      // //filter by production Company (or default)
-      //     if(productionCo !== "") {
-      //         if (!fixture.productionCos.includes(productionCo.toLowerCase())) {
-      //             return;
-      //         }
-      //     }
-      // }
-
       //replace with selected fixture if necessary
-
       let fixtureSelectedOrNot = fixture;
       if (this.props.selectedFixtures) {
         this.props.selectedFixtures.forEach((selectFixture) => {
@@ -253,7 +230,17 @@ class FixtureTable extends React.Component {
       );
     });
 
-    return <div class="fixture-table">{rows}</div>;
+    if (rows.length === 0) {
+      if (this.props.mode === "build") {
+        return <div class="search-fail-text">No matches :(</div>;
+      } else if (this.props.mode === "review") {
+        return <div class="search-fail-text">No fixtures selected!</div>;
+      } else {
+        return <div></div>;
+      }
+    } else {
+      return <div class="fixture-table">{rows}</div>;
+    }
   }
 }
 
@@ -344,6 +331,7 @@ class FilterableFixtureTable extends React.Component {
     return (
       <div>
         <FixtureTable
+          mode={this.props.mode}
           fixtures={this.props.fixtures}
           selectedFixtures={this.props.selectedFixtures}
           filterText={this.props.filterText}
@@ -385,8 +373,12 @@ class SelectedFixturesTable extends React.Component {
     });
     return (
       <div>
-        <h2>Selected Fixtures ({fixtureCount})</h2>
+        <div class="selected-heading">
+          <h2>Selected Fixtures ({fixtureCount})</h2>
+        </div>
+
         <FixtureTable
+          mode={this.props.mode}
           fixtures={this.props.selectedFixtures}
           filterText={""}
           productionCo={""}
@@ -595,6 +587,7 @@ class FixtureSelector extends React.Component {
     return (
       <div class="fixture-selector">
         <FilterableFixtureTable
+          mode={this.props.mode}
           fixtures={APPDATA.fixtures}
           selectedFixtures={this.props.selectedFixtures}
           onFixtureChange={this.handleFixtureChange}
@@ -713,15 +706,22 @@ class FixtureDetails extends React.Component {
     ) : (
       ""
     );
+
+    let docs =
+      manual || specSheet ? (
+        <div>
+          Documents: {manual} {specSheet}
+        </div>
+      ) : (
+        <div></div>
+      );
     return (
       <div class="fixture-details">
         <div>Manufacturer: {this.props.fixture.manufacturer}</div>
         <div>Weight: {this.props.fixture.weight}kg</div>
         <div>Power: {this.props.fixture.power}W</div>
         <div>Type: {this.props.fixture.type}</div>
-        <div>
-          Docs: {manual} {specSheet}
-        </div>
+        {docs}
         {/* <div>Rented by: {this.props.fixture.productionCos}</div> */}
       </div>
     );
@@ -752,15 +752,6 @@ class Review extends React.Component {
   render() {
     return (
       <div>
-        {/* <div class="review-details">
-                    <TrussBreakdown 
-                        selectedFixtures={this.props.selectedFixtures}
-                        trussList = {this.props.trussList}
-                    />   
-                    <BalancePhases
-                        selectedFixtures={this.props.selectedFixtures}
-                    />
-                </div> */}
         <div>
           <Totals
             selectedFixtures={this.props.selectedFixtures}
@@ -769,6 +760,7 @@ class Review extends React.Component {
         </div>
         <div>
           <SelectedFixturesTable
+            mode={this.props.mode}
             selectedFixtures={this.props.selectedFixtures}
             onFixtureChange={this.handleFixtureChange}
             onRemoveButtonClick={this.handleRemoveButtonClick}
@@ -1077,6 +1069,7 @@ class App extends React.Component {
       if (this.state.mode === "build") {
         page = (
           <FilterableFixtureTable
+            mode={this.state.mode}
             fixtures={APPDATA.fixtures}
             selectedFixtures={this.state.projectFixtures}
             onFixtureChange={this.handleFixtureChange}
@@ -1089,6 +1082,7 @@ class App extends React.Component {
       } else {
         page = (
           <Review
+            mode={this.state.mode}
             trussList={this.state.trussList}
             selectedFixtures={this.state.projectFixtures}
             onFixtureChange={this.handleFixtureChange}
@@ -1104,13 +1098,18 @@ class App extends React.Component {
 
     return (
       <div class="app">
-        <Header
-          fixtureView={this.state.fixtureView}
-          mode={this.state.mode}
-          selectedFixture={this.state.selectedFixture}
-          onFilterTextChange={this.handleFilterTextChange}
-          onBackClick={this.handleBackClick}
-        />
+        <div class="header-container">
+          <div class="header-container-container">
+            <Header
+              fixtureView={this.state.fixtureView}
+              mode={this.state.mode}
+              selectedFixture={this.state.selectedFixture}
+              onFilterTextChange={this.handleFilterTextChange}
+              onBackClick={this.handleBackClick}
+            />
+          </div>
+        </div>
+
         <div class="page">{page}</div>
 
         <Footer mode={this.state.mode} onModeChange={this.handleBuildMode} />
