@@ -171,12 +171,14 @@ a:active {
   border-width: 1px 0;
 }
 
-.fixture-row:hover {
-  background-color: var(--accent-color);
-}
+@media (hover: hover) and (pointer: fine) {
+  .fixture-row:hover {
+    background-color: var(--accent-color);
+  }
 
-.fixture-row-title:hover {
-  text-decoration: underline;
+  .fixture-row-title:hover {
+    text-decoration: underline;
+  }
 }
 
 .fixture-row-title,
@@ -215,7 +217,7 @@ a:active {
 }
 .remove-button,
 .quantity-input input {
-  background-color: var(--main-bg-color);
+  background-color: transparent;
   color: var(--main-fg-color);
 }
 
