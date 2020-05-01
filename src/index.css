@@ -51,6 +51,7 @@ a:active {
 
   max-width: 500px;
   justify-self: center;
+  /* text-align: center; */
 }
 .page::-webkit-scrollbar {
   display: none;
@@ -294,7 +295,10 @@ a:active {
 
 /* Review/Summary page */
 .page h2 {
+  font-size: 1.2em;
   font-weight: 400;
+  margin-top: 20px;
+  margin-bottom: 0;
 }
 .totals {
   text-align: center;
@@ -307,6 +311,9 @@ a:active {
     "amps amps";
 }
 
+.selected-heading {
+  text-align: center;
+}
 .review-total {
   font-size: 3.5em;
 }
