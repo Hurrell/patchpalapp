@@ -1104,13 +1104,18 @@ class App extends React.Component {
 
     return (
       <div class="app">
-        <Header
-          fixtureView={this.state.fixtureView}
-          mode={this.state.mode}
-          selectedFixture={this.state.selectedFixture}
-          onFilterTextChange={this.handleFilterTextChange}
-          onBackClick={this.handleBackClick}
-        />
+        <div class="header-container">
+          <div class="header-container-container">
+            <Header
+              fixtureView={this.state.fixtureView}
+              mode={this.state.mode}
+              selectedFixture={this.state.selectedFixture}
+              onFilterTextChange={this.handleFilterTextChange}
+              onBackClick={this.handleBackClick}
+            />
+          </div>
+        </div>
+
         <div class="page">{page}</div>
 
         <Footer mode={this.state.mode} onModeChange={this.handleBuildMode} />
