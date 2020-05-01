@@ -253,7 +253,11 @@ class FixtureTable extends React.Component {
       );
     });
 
-    return <div class="fixture-table">{rows}</div>;
+    if (rows.length === 0) {
+      return <div class="search-fail-text">No matches :(</div>;
+    } else {
+      return <div class="fixture-table">{rows}</div>;
+    }
   }
 }
 

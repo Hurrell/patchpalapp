@@ -139,7 +139,11 @@ a:active {
   margin-left: 10px;
   margin-right: 10px;
 }
-
+.search-fail-text {
+  text-align: center;
+  margin-top: 30px;
+  color: var(--dark-text-color);
+}
 .fixture-row,
 .remove-button,
 .remove-button-x,
