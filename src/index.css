@@ -58,7 +58,7 @@ a:active {
 }
 
 /* Header ----------*/
-.header-container {
+.header-container-container {
   background-color: var(--accent-color);
   height: 40px;
   width: 100%;
@@ -66,7 +66,7 @@ a:active {
   text-align: center;
 }
 
-.header-container-container {
+.header-container {
   display: inline-block;
   width: 100%;
   max-width: 560px;
@@ -171,12 +171,14 @@ a:active {
   border-width: 1px 0;
 }
 
-.fixture-row:hover {
-  background-color: var(--accent-color);
-}
+@media (hover: hover) and (pointer: fine) {
+  .fixture-row:hover {
+    background-color: var(--accent-color);
+  }
 
-.fixture-row-title:hover {
-  text-decoration: underline;
+  .fixture-row-title:hover {
+    text-decoration: underline;
+  }
 }
 
 .fixture-row-title,
@@ -215,7 +217,7 @@ a:active {
 }
 .remove-button,
 .quantity-input input {
-  background-color: var(--main-bg-color);
+  background-color: transparent;
   color: var(--main-fg-color);
 }
 
@@ -260,6 +262,20 @@ a:active {
 }
 
 /* Footer ----------*/
+.footer-container-container {
+  background-color: var(--accent-color);
+  height: 40px;
+  width: 100%;
+  justify-self: center;
+  text-align: center;
+}
+
+.footer-container {
+  display: inline-block;
+  width: 100%;
+  max-width: 560px;
+}
+
 #footer {
   padding-top: 5px;
   display: grid;
