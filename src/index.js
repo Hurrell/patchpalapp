@@ -718,27 +718,31 @@ class Footer extends React.Component {
       );
 
     return (
-      <div id="footer">
-        <div></div>
-        <div
-          class="child-clicks-this"
-          style={buildStyle}
-          onClick={this.handleBuildMode}
-          data-mode="build"
-        >
-          {searchIcon}
+      <div class="footer-container-container">
+        <div class="footer-container">
+          <div id="footer">
+            <div></div>
+            <div
+              class="child-clicks-this"
+              style={buildStyle}
+              onClick={this.handleBuildMode}
+              data-mode="build"
+            >
+              {searchIcon}
+            </div>
+            <div></div>
+            <div
+              class="child-clicks-this"
+              pointer-events="none"
+              style={reviewStyle}
+              onClick={this.handleBuildMode}
+              data-mode="review"
+            >
+              {listIcon}
+            </div>
+            <div></div>
+          </div>
         </div>
-        <div></div>
-        <div
-          class="child-clicks-this"
-          pointer-events="none"
-          style={reviewStyle}
-          onClick={this.handleBuildMode}
-          data-mode="review"
-        >
-          {listIcon}
-        </div>
-        <div></div>
       </div>
     );
   }
@@ -883,8 +887,8 @@ class App extends React.Component {
 
     return (
       <div class="app">
-        <div class="header-container">
-          <div class="header-container-container">
+        <div class="header-container-container">
+          <div class="header-container">
             <Header
               fixtureView={this.state.fixtureView}
               mode={this.state.mode}

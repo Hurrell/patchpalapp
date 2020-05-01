@@ -58,7 +58,7 @@ a:active {
 }
 
 /* Header ----------*/
-.header-container {
+.header-container-container {
   background-color: var(--accent-color);
   height: 40px;
   width: 100%;
@@ -66,7 +66,7 @@ a:active {
   text-align: center;
 }
 
-.header-container-container {
+.header-container {
   display: inline-block;
   width: 100%;
   max-width: 560px;
@@ -262,6 +262,20 @@ a:active {
 }
 
 /* Footer ----------*/
+.footer-container-container {
+  background-color: var(--accent-color);
+  height: 40px;
+  width: 100%;
+  justify-self: center;
+  text-align: center;
+}
+
+.footer-container {
+  display: inline-block;
+  width: 100%;
+  max-width: 560px;
+}
+
 #footer {
   padding-top: 5px;
   display: grid;
