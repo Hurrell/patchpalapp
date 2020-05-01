@@ -713,15 +713,22 @@ class FixtureDetails extends React.Component {
     ) : (
       ""
     );
+
+    let docs =
+      manual || specSheet ? (
+        <div>
+          Documents: {manual} {specSheet}
+        </div>
+      ) : (
+        <div></div>
+      );
     return (
       <div class="fixture-details">
         <div>Manufacturer: {this.props.fixture.manufacturer}</div>
         <div>Weight: {this.props.fixture.weight}kg</div>
         <div>Power: {this.props.fixture.power}W</div>
         <div>Type: {this.props.fixture.type}</div>
-        <div>
-          Docs: {manual} {specSheet}
-        </div>
+        {docs}
         {/* <div>Rented by: {this.props.fixture.productionCos}</div> */}
       </div>
     );
