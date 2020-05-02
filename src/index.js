@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import { printPower, powerDraw, getObj, matchAgainst } from "./tools.js";
+import { printPower, getObj, matchAgainst, totalsFrom } from "./tools.js";
 import {
   IoIosSearch,
   IoIosList,
@@ -45,18 +45,17 @@ A) App
 
 */
 
-class FixtureAdd extends React.Component {
+class FixtureChanger extends React.Component {
+  //Component of FixtureRow - user inputs fixture quantities here
   constructor(props) {
     super(props);
     this.handleFixtureChange = this.handleFixtureChange.bind(this);
     this.handleMinus = this.handleMinus.bind(this);
     this.handlePlus = this.handlePlus.bind(this);
   }
-
   handleFixtureChange(e) {
     this.props.onFixtureChange(this.props.fixture.id, e.target.value);
   }
-
   handleMinus() {
     let quantity =
       this.props.fixture.quantity > 0 ? (this.props.fixture.quantity -= 1) : 0;
@@ -71,6 +70,7 @@ class FixtureAdd extends React.Component {
     }
     this.props.onFixtureChange(this.props.fixture.id, quantity);
   }
+
   render() {
     const fixture = this.props.fixture;
     let quantityShown = "";
@@ -80,21 +80,20 @@ class FixtureAdd extends React.Component {
       quantityShown = fixture.quantity;
       minusSymbol = (
         <div onClick={this.handleMinus}>
-          <IoIosRemove class="plus-minus-icon" />
+          <IoIosRemove className="plus-minus-icon" />
         </div>
       );
       numberInput = (
         <form
-          class="quantity-input"
+          className="quantity-input"
           onKeyPress={(e) => {
             e.key === "Enter" && e.preventDefault();
           }}
         >
           <input
-            //background-image={plusSign}
             type="text"
             pattern="\d*"
-            maxlength="2"
+            maxLength="2"
             value={quantityShown}
             onChange={this.handleFixtureChange}
             onKeyDown={(evt) =>
@@ -105,17 +104,19 @@ class FixtureAdd extends React.Component {
       );
     }
     return (
-      <div class="fixture-change">
+      <div className="fixture-change">
         {minusSymbol}
         {numberInput}
         <div onClick={this.handlePlus}>
-          <IoIosAdd class="plus-minus-icon" />
+          <IoIosAdd className="plus-minus-icon" />
         </div>
       </div>
     );
   }
 }
+
 class FixtureRow extends React.Component {
+  //Component of FixtureTable - contains fixture title and action buttons
   constructor(props) {
     super(props);
     this.handleFixtureChange = this.handleFixtureChange.bind(this);
@@ -140,30 +141,32 @@ class FixtureRow extends React.Component {
     if (fixture.selected) {
       removeButton = (
         <button
-          class="remove-button"
+          className="remove-button"
           type="button"
           onClick={this.handleRemoveButtonClick}
         >
-          <IoMdClose class="remove-button-x" />
+          <IoMdClose className="remove-button-x" />
         </button>
       );
     }
 
-    //let plusSign = (<IoIosAdd/>);
     return (
-      <div class="fixture-row">
-        <div class="remove-button-container">{removeButton}</div>
+      <div className="fixture-row">
+        <div className="remove-button-container">{removeButton}</div>
         <div>
           <div>
-            <span class="fixture-row-title" onClick={this.handleFixtureClick}>
+            <span
+              className="fixture-row-title"
+              onClick={this.handleFixtureClick}
+            >
               {fixture.manufacturer} {fixture.name}
             </span>
           </div>
-          <div class="fixture-in-row-details">
+          <div className="fixture-in-row-details">
             {fixture.power}W · {fixture.weight}kg
           </div>
         </div>
-        <FixtureAdd
+        <FixtureChanger
           onFixtureChange={this.handleFixtureChange}
           fixture={this.props.fixture}
         />
@@ -194,9 +197,6 @@ class FixtureTable extends React.Component {
 
   render() {
     const filterText = this.props.filterText;
-    //const productionCo = this.props.productionCo;
-    const currentTruss = this.props.currentTruss;
-
     const rows = [];
 
     this.props.fixtures.forEach((fixture) => {
@@ -209,10 +209,7 @@ class FixtureTable extends React.Component {
       let fixtureSelectedOrNot = fixture;
       if (this.props.selectedFixtures) {
         this.props.selectedFixtures.forEach((selectFixture) => {
-          if (
-            selectFixture.id === fixture.id &&
-            selectFixture.truss === currentTruss
-          ) {
+          if (selectFixture.id === fixture.id) {
             fixtureSelectedOrNot = selectFixture;
             return;
           }
@@ -232,15 +229,42 @@ class FixtureTable extends React.Component {
 
     if (rows.length === 0) {
       if (this.props.mode === "build") {
-        return <div class="search-fail-text">No matches :(</div>;
+        return <div className="search-fail-text">No matches :(</div>;
       } else if (this.props.mode === "review") {
-        return <div class="search-fail-text">No fixtures selected!</div>;
+        return <div className="search-fail-text">No fixtures selected!</div>;
       } else {
         return <div></div>;
       }
     } else {
-      return <div class="fixture-table">{rows}</div>;
+      return <div className="fixture-table">{rows}</div>;
     }
+  }
+}
+
+class Totals extends React.Component {
+  //container within Review, shows totals
+  render() {
+    let totalObj = totalsFrom(this.props.selectedFixtures, VOLTAGE);
+    return (
+      <div className="totals">
+        <div className="review-power">
+          <span className="review-total">
+            {printPower(totalObj.power).number}
+          </span>
+          <span className="review-unit">{printPower(totalObj.power).unit}</span>
+        </div>
+        <div className="review-weight">
+          <span className="review-total">{Math.ceil(totalObj.weight)}</span>
+          <span className="review-unit">kg</span>
+        </div>
+        <div className="review-amps">
+          <span className="review-total ">{Math.ceil(totalObj.current)}</span>
+          <span className="review-unit">
+            A<sup>({VOLTAGE}v)</sup>
+          </span>
+        </div>
+      </div>
+    );
   }
 }
 
@@ -270,7 +294,7 @@ class SearchBar extends React.Component {
       >
         <input
           autoFocus
-          class="search"
+          className="search"
           type="text"
           placeholder="Search"
           value={filterText}
@@ -288,186 +312,8 @@ class SearchBar extends React.Component {
   }
 }
 
-class FilterableFixtureTable extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      filterText: "",
-      productionCo: "default",
-    };
-
-    this.handleFilterTextChange = this.handleFilterTextChange.bind(this);
-    this.handleProdCoChange = this.handleProdCoChange.bind(this);
-    this.handleFixtureChange = this.handleFixtureChange.bind(this);
-    this.handleRemoveButtonClick = this.handleRemoveButtonClick.bind(this);
-    this.handleFixtureClick = this.handleFixtureClick.bind(this);
-  }
-
-  handleFilterTextChange(filterText) {
-    this.setState({
-      filterText: filterText,
-    });
-  }
-
-  handleProdCoChange(productionCo) {
-    this.setState({
-      productionCo: productionCo,
-    });
-  }
-
-  handleFixtureChange(fixtureId, quantity) {
-    this.props.onFixtureChange(fixtureId, quantity);
-  }
-
-  handleRemoveButtonClick(fixtureId) {
-    this.props.onRemoveButtonClick(fixtureId);
-  }
-
-  handleFixtureClick(fixture) {
-    this.props.onFixtureClick(fixture);
-  }
-
-  render() {
-    return (
-      <div>
-        <FixtureTable
-          mode={this.props.mode}
-          fixtures={this.props.fixtures}
-          selectedFixtures={this.props.selectedFixtures}
-          filterText={this.props.filterText}
-          productionCo={this.state.productionCo}
-          onFixtureChange={this.handleFixtureChange}
-          onRemoveButtonClick={this.handleRemoveButtonClick}
-          currentTruss={this.props.currentTruss}
-          onFixtureClick={this.handleFixtureClick}
-        />
-      </div>
-    );
-  }
-}
-
-class SelectedFixturesTable extends React.Component {
-  constructor(props) {
-    super(props);
-    this.handleFixtureChange = this.handleFixtureChange.bind(this);
-    this.handleRemoveButtonClick = this.handleRemoveButtonClick.bind(this);
-    this.handleFixtureClick = this.handleFixtureClick.bind(this);
-  }
-
-  handleFixtureChange(fixtureId, quantity) {
-    this.props.onFixtureChange(fixtureId, quantity);
-  }
-
-  handleRemoveButtonClick(fixtureId) {
-    this.props.onRemoveButtonClick(fixtureId);
-  }
-
-  handleFixtureClick(fixture) {
-    this.props.onFixtureClick(fixture);
-  }
-
-  render() {
-    let fixtureCount = 0;
-    this.props.selectedFixtures.forEach((fixture) => {
-      fixtureCount += Number(fixture.quantity);
-    });
-    return (
-      <div>
-        <div class="selected-heading">
-          <h2>Selected Fixtures ({fixtureCount})</h2>
-        </div>
-
-        <FixtureTable
-          mode={this.props.mode}
-          fixtures={this.props.selectedFixtures}
-          filterText={""}
-          productionCo={""}
-          onFixtureChange={this.handleFixtureChange}
-          onRemoveButtonClick={this.handleRemoveButtonClick}
-          currentTruss={this.props.currentTruss}
-          onFixtureClick={this.handleFixtureClick}
-        />
-      </div>
-    );
-  }
-}
-
-class TotalPower extends React.Component {
-  render() {
-    let power = powerDraw(this.props.selectedFixtures);
-
-    let amps = power / VOLTAGE;
-
-    return (
-      <div class="review-power">
-        <span class="review-total">{printPower(power).number}</span>
-        <span class="review-unit">{printPower(power).unit}</span>
-        {/* <p>
-                    {Math.ceil(amps)}A
-                </p> */}
-      </div>
-    );
-  }
-}
-
-class TotalAmps extends React.Component {
-  render() {
-    let power = powerDraw(this.props.selectedFixtures);
-
-    let amps = power / VOLTAGE;
-
-    return (
-      <div class="review-amps">
-        <span class="review-total ">{Math.ceil(amps)}</span>
-        <span class="review-unit">
-          A<sup>({VOLTAGE}v)</sup>
-        </span>
-      </div>
-    );
-  }
-}
-
-class TotalWeight extends React.Component {
-  render() {
-    let weight = 0;
-    if (this.props.selectedFixtures) {
-      this.props.selectedFixtures.forEach((fixture) => {
-        if (fixture.quantity >= 1) {
-          weight += Number(fixture.weight) * Number(fixture.quantity);
-        }
-      });
-    }
-
-    return (
-      <div class="review-weight">
-        <span class="review-total">{weight.toFixed(0)}</span>
-        <span class="review-unit">kg</span>
-      </div>
-    );
-  }
-}
-
-class Totals extends React.Component {
-  render() {
-    let fixtureCount = 0;
-    this.props.selectedFixtures.forEach((fixture) => {
-      fixtureCount += Number(fixture.quantity);
-    });
-    return (
-      <div>
-        <div class="totals">
-          <TotalPower selectedFixtures={this.props.selectedFixtures} />
-
-          <TotalWeight selectedFixtures={this.props.selectedFixtures} />
-          {/* <p>Fixture Count: {fixtureCount}</p> */}
-          <TotalAmps selectedFixtures={this.props.selectedFixtures} />
-        </div>
-      </div>
-    );
-  }
-}
-
 class FixtureDetails extends React.Component {
+  //Container within Page - shows details when fixture name clicked
   render() {
     let manual = this.props.fixture.manual ? (
       <a
@@ -501,7 +347,7 @@ class FixtureDetails extends React.Component {
         <div></div>
       );
     return (
-      <div class="fixture-details">
+      <div className="fixture-details">
         <div>Manufacturer: {this.props.fixture.manufacturer}</div>
         <div>Weight: {this.props.fixture.weight}kg</div>
         <div>Power: {this.props.fixture.power}W</div>
@@ -513,52 +359,115 @@ class FixtureDetails extends React.Component {
   }
 }
 
-class Review extends React.Component {
+class Page extends React.Component {
+  //Container for all the content not in the header or footer
   constructor(props) {
     super(props);
+    this.state = {
+      projectFixtures: [],
+    };
     this.handleFixtureChange = this.handleFixtureChange.bind(this);
-    //this.handleSelectedFixtureChange = this.handleSelectedFixtureChange.bind(this);
     this.handleRemoveButtonClick = this.handleRemoveButtonClick.bind(this);
+    this.handleFilterTextChange = this.handleFilterTextChange.bind(this);
     this.handleFixtureClick = this.handleFixtureClick.bind(this);
   }
 
-  handleFixtureChange(fixtureId, quantity) {
-    this.props.onFixtureChange(fixtureId, quantity);
-  }
-
-  handleRemoveButtonClick(fixtureId) {
-    this.props.onRemoveButtonClick(fixtureId);
+  handleFilterTextChange(filterText) {
+    this.props.onFilterTextChange(filterText);
   }
 
   handleFixtureClick(fixture) {
     this.props.onFixtureClick(fixture);
   }
 
+  handleFixtureChange(fixtureId, quantity) {
+    quantity = parseInt(quantity);
+
+    let updatedSelectedFixtures = this.state.projectFixtures.slice();
+    let newFixture = getObj(APPDATA.fixtures, "id", fixtureId);
+
+    if (newFixture) {
+      let fixtureAlreadySelected = false;
+      updatedSelectedFixtures.forEach((fixture) => {
+        if (fixture.id === fixtureId) {
+          fixture.quantity = quantity;
+          fixtureAlreadySelected = true;
+          return;
+        }
+      });
+
+      if (!fixtureAlreadySelected) {
+        newFixture.quantity = quantity;
+        newFixture.selected = true;
+        updatedSelectedFixtures.push(newFixture);
+      }
+    }
+
+    this.setState({
+      projectFixtures: updatedSelectedFixtures,
+    });
+  }
+
+  handleRemoveButtonClick(fixtureId) {
+    let remainingFixtures = this.state.projectFixtures.filter((fixture) => {
+      return fixtureId !== fixture.id;
+    });
+    this.setState({
+      projectFixtures: remainingFixtures,
+    });
+  }
+
   render() {
-    return (
-      <div>
-        <div>
-          <Totals
-            selectedFixtures={this.props.selectedFixtures}
-            name="Totals"
-          />
-        </div>
-        <div>
-          <SelectedFixturesTable
+    let fixtureCount = 0;
+    this.state.projectFixtures.forEach((fixture) => {
+      fixtureCount += Number(fixture.quantity);
+    });
+
+    let page;
+    if (this.props.fixtureView) {
+      page = <FixtureDetails fixture={this.props.selectedFixture} />;
+    } else {
+      if (this.props.mode === "build") {
+        page = (
+          <FixtureTable
             mode={this.props.mode}
-            selectedFixtures={this.props.selectedFixtures}
+            fixtures={APPDATA.fixtures}
+            selectedFixtures={this.state.projectFixtures}
+            filterText={this.props.filterText}
             onFixtureChange={this.handleFixtureChange}
             onRemoveButtonClick={this.handleRemoveButtonClick}
-            currentTruss={this.props.currentTruss}
             onFixtureClick={this.handleFixtureClick}
           />
-        </div>
-      </div>
-    );
+        );
+      } else {
+        page = (
+          <div>
+            <Totals
+              selectedFixtures={this.state.projectFixtures}
+              name="Totals"
+            />
+            <div className="selected-heading">
+              <h2>Selected Fixtures ({fixtureCount})</h2>
+            </div>
+
+            <FixtureTable
+              mode={this.props.mode}
+              fixtures={this.state.projectFixtures}
+              filterText={""}
+              onFixtureChange={this.handleFixtureChange}
+              onRemoveButtonClick={this.handleRemoveButtonClick}
+              onFixtureClick={this.handleFixtureClick}
+            />
+          </div>
+        );
+      }
+    }
+    return <div className="page">{page}</div>;
   }
 }
 
 class Header extends React.Component {
+  //container for header - search bar, title, back button
   constructor(props) {
     super(props);
     this.state = {
@@ -598,14 +507,8 @@ class Header extends React.Component {
     let leftIcon;
     let rightIcon;
     let title;
-    //let backLink;
-    //let searchBar;
     let headerClass = "header";
-    // let searchBarExtend = (<SearchBar
-    //         filterText={this.props.filterText}
-    //         onFilterTextChange={this.handleFilterTextChange}
-    //         //onProdCoChange={this.handleProdCoChange}
-    //         />)
+
     switch (this.props.mode) {
       case "build":
         switch (this.state.searchExtended) {
@@ -615,50 +518,36 @@ class Header extends React.Component {
                 <SearchBar
                   filterText={this.props.filterText}
                   onFilterTextChange={this.handleFilterTextChange}
-                  //onProdCoChange={this.handleProdCoChange}
                 />
               </div>
             );
             leftIcon = (
-              <div class="left-icon-div" onClick={this.handleBackClick}>
-                <IoIosArrowBack class="left-icon" />
+              <div className="left-icon-div" onClick={this.handleBackClick}>
+                <IoIosArrowBack className="left-icon" />
               </div>
             );
-            // rightIcon = (<IoMdClose
-            //     class="right-icon"
-            //     onClick={this.handleClearSearch}
-            //     />
-            //     )
             headerClass = "header-search";
             rightIcon = <div></div>;
             break;
           default:
             title = (
-              <h1 class="title" onClick={this.handleSearchClick}>
+              <h1 className="title" onClick={this.handleSearchClick}>
                 PatchPal
               </h1>
             );
             leftIcon = (
-              <div class="left-icon-div" onClick={this.handleSearchClick}>
-                <IoIosSearch class="left-icon" />
+              <div className="left-icon-div" onClick={this.handleSearchClick}>
+                <IoIosSearch className="left-icon" />
               </div>
             );
             rightIcon = <div></div>;
-            //backLink = (<div></div>);
             headerClass = "header";
         }
         break;
       case "review":
-        title = <h1 class="title">Summary</h1>;
+        title = <h1 className="title">Summary</h1>;
         leftIcon = <div></div>;
         headerClass = "header-review";
-        // rightIcon = (
-        //   <select id="voltage">
-        //     <option value="230">230V</option>
-        //     <option value="220">220V</option>
-        //     <option value="120">120V</option>
-        //   </select>
-        // );
         break;
       default:
         leftIcon = <div></div>;
@@ -668,8 +557,8 @@ class Header extends React.Component {
 
     if (this.props.fixtureView) {
       leftIcon = (
-        <div class="left-icon-div" onClick={this.handleBackClick}>
-          <IoIosArrowBack class="left-icon" />
+        <div className="left-icon-div" onClick={this.handleBackClick}>
+          <IoIosArrowBack className="left-icon" />
         </div>
       );
       title = <h1>{this.props.selectedFixture.name}</h1>;
@@ -678,16 +567,21 @@ class Header extends React.Component {
     }
 
     return (
-      <div class={headerClass}>
-        {leftIcon}
-        {title}
-        {rightIcon}
+      <div className="header-container-container">
+        <div className="header-container">
+          <div className={headerClass}>
+            {leftIcon}
+            {title}
+            {rightIcon}
+          </div>
+        </div>
       </div>
     );
   }
 }
 
 class Footer extends React.Component {
+  //container for footer - build tab or review tab
   constructor(props) {
     super(props);
     this.handleBuildMode = this.handleBuildMode.bind(this);
@@ -706,24 +600,24 @@ class Footer extends React.Component {
         : { fontWeight: "lighter" };
     let searchIcon =
       this.props.mode === "build" ? (
-        <IoMdAddCircle class="footer-icon" />
+        <IoMdAddCircle className="footer-icon" />
       ) : (
-        <IoMdAddCircleOutline class="footer-icon" />
+        <IoMdAddCircleOutline className="footer-icon" />
       );
     let listIcon =
       this.props.mode === "review" ? (
-        <IoIosListBox class="footer-icon" />
+        <IoIosListBox className="footer-icon" />
       ) : (
-        <IoIosList class="footer-icon" />
+        <IoIosList className="footer-icon" />
       );
 
     return (
-      <div class="footer-container-container">
-        <div class="footer-container">
+      <div className="footer-container-container">
+        <div className="footer-container">
           <div id="footer">
             <div></div>
             <div
-              class="child-clicks-this"
+              className="child-clicks-this"
               style={buildStyle}
               onClick={this.handleBuildMode}
               data-mode="build"
@@ -732,8 +626,7 @@ class Footer extends React.Component {
             </div>
             <div></div>
             <div
-              class="child-clicks-this"
-              pointer-events="none"
+              className="child-clicks-this"
               style={reviewStyle}
               onClick={this.handleBuildMode}
               data-mode="review"
@@ -749,24 +642,19 @@ class Footer extends React.Component {
 }
 
 class App extends React.Component {
+  //Container for entire app
   constructor(props) {
     super(props);
     this.state = {
-      ////use trussList to allow user defined trusses at some point
-      //trussList: ["Project","Truss 1", "Truss 2", "Truss 3"],
-      //currentTruss: "Project",
       mode: "build",
       projectFixtures: [],
       filterText: "",
       selectedFixture: {},
       fixtureView: false,
     };
-    this.handleFixtureChange = this.handleFixtureChange.bind(this);
-    this.handleRemoveButtonClick = this.handleRemoveButtonClick.bind(this);
-    //this.handleTrussSelect = this.handleTrussSelect.bind(this);
+    this.handleFixtureClick = this.handleFixtureClick.bind(this);
     this.handleBuildMode = this.handleBuildMode.bind(this);
     this.handleFilterTextChange = this.handleFilterTextChange.bind(this);
-    this.handleFixtureClick = this.handleFixtureClick.bind(this);
     this.handleBackClick = this.handleBackClick.bind(this);
   }
   handleBuildMode(e) {
@@ -782,57 +670,9 @@ class App extends React.Component {
     }
   }
 
-  // handleTrussSelect (trussName) {
-  //     this.setState({
-  //         currentTruss: trussName,
-  //     });
-  // }
-
   handleFilterTextChange(filterText) {
     this.setState({
       filterText: filterText,
-    });
-  }
-
-  handleFixtureChange(fixtureId, quantity) {
-    quantity = parseInt(quantity);
-
-    let updatedSelectedFixtures = this.state.projectFixtures.slice();
-
-    let newFixture = getObj(APPDATA.fixtures, "id", fixtureId);
-
-    if (newFixture) {
-      let fixtureAlreadySelected = false;
-      updatedSelectedFixtures.forEach((fixture) => {
-        if (
-          fixture.id === fixtureId &&
-          fixture.truss === this.state.currentTruss
-        ) {
-          fixture.quantity = quantity;
-          fixtureAlreadySelected = true;
-          return;
-        }
-      });
-
-      if (!fixtureAlreadySelected) {
-        newFixture.quantity = quantity;
-        newFixture.selected = true;
-        newFixture.truss = this.state.currentTruss;
-        updatedSelectedFixtures.push(newFixture);
-      }
-    }
-
-    this.setState({
-      projectFixtures: updatedSelectedFixtures,
-    });
-  }
-
-  handleRemoveButtonClick(fixtureId) {
-    let remainingFixtures = this.state.projectFixtures.filter((fixture) => {
-      return fixtureId !== fixture.id;
-    });
-    this.setState({
-      projectFixtures: remainingFixtures,
     });
   }
 
@@ -851,56 +691,23 @@ class App extends React.Component {
   }
 
   render() {
-    let page;
-    if (this.state.fixtureView) {
-      page = <FixtureDetails fixture={this.state.selectedFixture} />;
-    } else {
-      if (this.state.mode === "build") {
-        page = (
-          <FilterableFixtureTable
-            mode={this.state.mode}
-            fixtures={APPDATA.fixtures}
-            selectedFixtures={this.state.projectFixtures}
-            onFixtureChange={this.handleFixtureChange}
-            onRemoveButtonClick={this.handleRemoveButtonClick}
-            filterText={this.state.filterText}
-            onFixtureClick={this.handleFixtureClick}
-            //currentTruss={this.props.currentTruss}
-          />
-        );
-      } else {
-        page = (
-          <Review
-            mode={this.state.mode}
-            trussList={this.state.trussList}
-            selectedFixtures={this.state.projectFixtures}
-            onFixtureChange={this.handleFixtureChange}
-            onRemoveButtonClick={this.handleRemoveButtonClick}
-            onFixtureClick={this.handleFixtureClick}
-          />
-        );
-      }
-    }
-
-    // let reviewStyle = (this.state.mode==="review") ? {fontWeight: 'bold'} : {fontWeight: 'lighter'};
-    // let buildStyle = (this.state.mode==="build") ? {fontWeight: 'bold'} : {fontWeight: 'lighter'};
-
     return (
-      <div class="app">
-        <div class="header-container-container">
-          <div class="header-container">
-            <Header
-              fixtureView={this.state.fixtureView}
-              mode={this.state.mode}
-              selectedFixture={this.state.selectedFixture}
-              onFilterTextChange={this.handleFilterTextChange}
-              onBackClick={this.handleBackClick}
-            />
-          </div>
-        </div>
-
-        <div class="page">{page}</div>
-
+      <div className="app">
+        <Header
+          fixtureView={this.state.fixtureView}
+          mode={this.state.mode}
+          selectedFixture={this.state.selectedFixture}
+          onFilterTextChange={this.handleFilterTextChange}
+          onBackClick={this.handleBackClick}
+        />
+        <Page
+          fixtureView={this.state.fixtureView}
+          mode={this.state.mode}
+          selectedFixture={this.state.selectedFixture}
+          onFilterTextChange={this.handleFilterTextChange}
+          filterText={this.state.filterText}
+          onFixtureClick={this.handleFixtureClick}
+        />
         <Footer mode={this.state.mode} onModeChange={this.handleBuildMode} />
       </div>
     );
