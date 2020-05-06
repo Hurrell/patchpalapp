@@ -5,6 +5,9 @@
   --accent-color: #292929;
   --dark-text-color: #cfcfcf;
 }
+body {
+  background-color: var(--main-bg-color);
+}
 
 #root,
 .app,

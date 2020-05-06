@@ -150,6 +150,18 @@ class FixtureRow extends React.Component {
       );
     }
 
+    let power;
+    if (fixture.apparentPower) {
+      power = "" + fixture.apparentPower + "VA";
+    } else if (fixture.realPower && fixture.powerFactor) {
+      power =
+        Math.ceil(
+          Number(fixture.realPower) / Number(fixture.powerFactor)
+        ).toString() + "VA";
+    } else {
+      power = "" + fixture.realPower + "W";
+    }
+
     return (
       <div className="fixture-row">
         <div className="remove-button-container">{removeButton}</div>
@@ -163,7 +175,7 @@ class FixtureRow extends React.Component {
             </span>
           </div>
           <div className="fixture-in-row-details">
-            {fixture.power}W · {fixture.weight}kg
+            {power} · {fixture.weight}kg
           </div>
         </div>
         <FixtureChanger
@@ -338,20 +350,41 @@ class FixtureDetails extends React.Component {
       ""
     );
 
+    let webpage = this.props.fixture.webpage ? (
+      <a
+        href={this.props.fixture.webpage}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Web Page
+      </a>
+    ) : (
+      ""
+    );
+
     let docs =
-      manual || specSheet ? (
+      manual || specSheet || webpage ? (
         <div>
-          Documents: {manual} {specSheet}
+          Documents: {manual} {specSheet} {webpage}
         </div>
       ) : (
         <div></div>
       );
+
+    let power = "";
+    if (this.props.fixture.realPower) {
+      power += this.props.fixture.realPower + "W ";
+    }
+    if (this.props.fixture.apparentPower) {
+      power += this.props.fixture.apparentPower + "VA ";
+    }
     return (
       <div className="fixture-details">
         <div>Manufacturer: {this.props.fixture.manufacturer}</div>
         <div>Weight: {this.props.fixture.weight}kg</div>
-        <div>Power: {this.props.fixture.power}W</div>
+        <div>Power: {power}</div>
         <div>Type: {this.props.fixture.type}</div>
+        <div>Lamp: {this.props.fixture.lampType}</div>
         {docs}
         {/* <div>Rented by: {this.props.fixture.productionCos}</div> */}
       </div>

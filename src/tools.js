@@ -47,19 +47,28 @@ function getObj(list, keyName, id) {
 
 //Function to return totals from a given list of fixtures
 function totalsFrom(fixtureList, voltage) {
-  let power = 0,
+  let totAppPower = 0,
     weight = 0,
     current = 0;
   if (fixtureList) {
     fixtureList.forEach((fixture) => {
       if (fixture.quantity >= 1) {
+        if (fixture.apparentPower) {
+          totAppPower +=
+            Number(fixture.apparentPower) * Number(fixture.quantity);
+        } else if (fixture.powerFactor && fixture.realPower) {
+          totAppPower +=
+            (Number(fixture.realPower) / Number(fixture.powerFactor)) *
+            Number(fixture.quantity);
+        } else {
+          totAppPower += Number(fixture.realPower) * Number(fixture.quantity);
+        }
         weight += Number(fixture.weight) * Number(fixture.quantity);
-        power += Number(fixture.power) * Number(fixture.quantity);
       }
     });
   }
-  current = power / voltage;
-  return { power: power, weight: weight, current: current };
+  current = totAppPower / voltage;
+  return { power: totAppPower, weight: weight, current: current };
 }
 
 export { printPower, getObj, matchAgainst, totalsFrom };

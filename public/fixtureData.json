@@ -5,18 +5,18 @@
       "manufacturer": "Robe",
       "name": "Pointe",
       "type": "Discharge",
-      "power": 470,
+      "realPower": 470,
       "blackoutPower": 470,
       "weight": 15,
       "specSheet": "https://cdn.robe.cz/fileadmin/user_upload/product_pdf/en_pointe.pdf",
-      "productionCos": ["default","cse","siyan"]
+      "productionCos": ["default", "cse", "siyan"]
     },
     {
       "id": 1002,
       "manufacturer": "Robe",
       "name": "Spiider",
       "type": "LED",
-      "power": 600,
+      "realPower": 600,
       "blackoutPower": 600,
       "weight": 13.3,
       "specSheet": "https://cdn.robe.cz/fileadmin/user_upload/product_pdf/en_spiider.pdf",
@@ -27,7 +27,7 @@
       "manufacturer": "Generic",
       "name": "2 Lite Blinder",
       "type": "Generic",
-      "power": 1300,
+      "realPower": 1300,
       "blackoutPower": 0,
       "weight": 2.96,
       "citation": "https://www.thomann.de/gb/showtec_stage_blinder_2_dmx.htm",
@@ -35,70 +35,248 @@
     },
     {
       "id": 1004,
-      "manufacturer": "Clay Paky",
+      "manufacturer": "ClayPaky",
       "name": "Scenius Unico",
-      "type": "Discharge",
-      "power": 1400,
-      "blackoutPower": 1400,
+      "type": "Spot",
+      "lampType": "Discharge",
+      "realPower": 1400,
+      "RDM": true,
+      "DMX3in": false,
+      "DMX3out": false,
+      "DMX5in": true,
+      "DMX5out": true,
+      "ethernetIn": true,
+      "ethernetOut": false,
+      "wireless": false,
+      "powerIn": "TRUE1",
+      "powerOut": false,
+      "protocols": ["DMX-512", "Art-net"],
       "weight": 45.6,
-      "citation": "https://8c693ab5-259b-48c5-9145-47e096473bba.filesusr.com/ugd/cf9a35_76c5494da4ee4c5ebf49c758280efb7e.pdf",
-      "productionCos": ["cse"]
+      "webpage": "https://www.claypaky.it/en/products/scenius-unico",
+      "manual": "https://8c693ab5-259b-48c5-9145-47e096473bba.filesusr.com/ugd/cf9a35_76c5494da4ee4c5ebf49c758280efb7e.pdf",
+      "modes": [
+        {
+          "name": "Mode 1",
+          "channels": 39
+        },
+        {
+          "name": "Mode 2",
+          "channels": 43
+        }
+      ],
+      "origin": "ch-creator",
+      "created": "2020-05-05"
     },
     {
       "id": 1005,
       "manufacturer": "Generic",
       "name": "4 Lite Blinder",
-      "type": "Generic",
-      "power": 2600,
-      "blackoutPower": 0,
-      "weight": 6,
-      "citation": "https://www.thomann.de/gb/showtec_stage_blinder_2_dmx.htm",
-      "productionCos": ["cse", "siyan"]
+      "type": "Blinder",
+      "lampType": "Conventional",
+      "realPower": 2600,
+      "apparentPower": 2600,
+      "powerFactor": 1,
+      "origin": "ch-creator",
+      "created": "2020-05-05"
     },
     {
       "id": 1006,
       "manufacturer": "GLP",
       "name": "JDC-1",
-      "type": "LED-Strobe",
-      "power": 1200,
-      "blackoutPower": 50,
+      "type": "Strobe",
+      "lampType": "LED-Strobe",
+      "realPower": 1200,
+      "RDM": true,
+      "DMX3in": false,
+      "DMX3out": false,
+      "DMX5in": true,
+      "DMX5out": true,
+      "ethernetIn": false,
+      "ethernetOut": false,
+      "wireless": false,
+      "powerIn": "TRUE1",
+      "powerOut": false,
+      "protocols": ["DMX-512"],
       "weight": 12,
+      "webpage": "https://www.glp.de/en/products/strobes-led/jdc1",
       "manual": "https://www.glp.de/en/products?format=raw&task=download&fid=571",
-      "productionCos": ["cse"]
+      "modes": [
+        {
+          "name": "Mode 1 (Compressed Pro)",
+          "channels": 14
+        },
+        {
+          "name": "Mode 2 (Normal)",
+          "channels": 23
+        },
+        {
+          "name": "Mode 3 (SPix)",
+          "channels": 68
+        },
+        {
+          "name": "Mode 4 (SPix Pro",
+          "channels": 62
+        },
+        {
+          "name": "Mode 5 (1Pix Pro)",
+          "channels": 17
+        },
+        {
+          "name": "Mode 6 (Easy)",
+          "channels": 11
+        }
+      ],
+      "origin": "ch-creator",
+      "created": "2020-05-05"
     },
     {
       "id": 1007,
-      "manufacturer": "Coloursound",
+      "manufacturer": "ColourSound",
       "name": "Aquabeam",
-      "type": "Discharge",
-      "power": 628,
-      "blackoutPower": 628,
+      "type": "Beam",
+      "lampType": "Discharge",
+      "realPower": 628,
+      "RDM": true,
+      "DMX3in": true,
+      "DMX3out": true,
+      "DMX5in": true,
+      "DMX5out": true,
+      "ethernetIn": false,
+      "ethernetOut": false,
+      "wireless": "Optional",
+      "protocols": ["DMX-512", "Art-net"],
       "weight": 23,
-      "citation": "https://www.coloursound.com/aquabeam",
-      "productionCos": ["cse"]
+      "IP": "44",
+      "webpage": "https://www.coloursound.com/aquabeam",
+      "manual": "https://8c693ab5-259b-48c5-9145-47e096473bba.filesusr.com/ugd/cf9a35_4943553be16a4924a32eafddd2ef2439.pdf",
+      "modes": [
+        {
+          "name": "Standard",
+          "channels": 24
+        },
+        {
+          "name": "Simple",
+          "channels": 20
+        }
+      ],
+      "origin": "ch-creator",
+      "created": "2020-05-05"
     },
     {
       "id": 1008,
-      "manufacturer": "Prolights",
-      "name": "Diamond 7",
-      "type": "LED",
-      "power": 125,
-      "blackoutPower": 50,
+      "manufacturer": "PROLights",
+      "name": "Diamond7",
+      "type": "beam-wash",
+      "lampType": "LED",
+      "realPower": 125,
+      "RDM": true,
+      "DMX3in": true,
+      "DMX3out": true,
+      "DMX5in": true,
+      "DMX5out": true,
+      "ethernetIn": false,
+      "ethernetOut": false,
+      "wireless": "Optional",
+      "powerIn": "PowerCon",
+      "powerOut": "PowerCon",
+      "protocols": ["DMX-512"],
       "weight": 6.4,
-      "citation": "https://www.prolights.it/en/product/DIAMOND7#tech-sheet",
-      "productionCos": ["cse"]
+      "IP": "20",
+      "webpage": "https://www.musiclights.it/product/DIAMOND7",
+      "manual": "https://www.musiclights.it/download.php?id=3868",
+      "modes": [
+        {
+          "name": "STAND",
+          "channels": 19
+        },
+        {
+          "name": "EXT-1",
+          "channels": 26
+        },
+        {
+          "name": "EXT-2",
+          "channels": 50
+        },
+        {
+          "name": "BAS-8",
+          "channels": 18
+        },
+        {
+          "name": "BAS-16",
+          "channels": 20
+        }
+      ],
+      "origin": "ch-creator",
+      "created": "2020-05-05"
     },
     {
       "id": 1009,
       "manufacturer": "Robe",
       "name": "MegaPointe",
-      "type": "Discharge",
-      "power": 670,
+      "type": "Hybrid",
+      "lampType": "Discharge",
+      "realPower": 670,
       "powerFactor": 0.97,
-      "blackoutPower": 50,
+      "RDM": true,
+      "DMX3in": true,
+      "DMX3out": true,
+      "DMX5in": true,
+      "DMX5out": true,
+      "ethernetIn": true,
+      "ethernetOut": false,
+      "wireless": "Optional",
+      "powerIn": "TRUE1",
+      "protocols": ["DMX-512", "Art-net", "MA Net", "MA Net2", "sACN"],
       "weight": 22,
-      "citation": "https://www.prolights.it/en/product/DIAMOND7#tech-sheet",
-      "productionCos": ["cse"]
+      "IP": "20",
+      "webpage": "https://www.robe.cz/megapointe/",
+      "manual": "https://www.robe.cz/index.php?type=10898&tx_odproducts_f%5baction%5d=downloadFile&tx_odproducts_f%5bfile%5d=robe/downloads/user_manuals/User_manual_Robin_MegaPointe.pdf",
+      "modes": [
+        {
+          "name": "Mode 1",
+          "channels": 39
+        },
+        {
+          "name": "Mode 2",
+          "channels": 34
+        }
+      ],
+      "origin": "ch-creator",
+      "created": "2020-05-03"
+    },
+    {
+      "id": 1010,
+      "manufacturer": "ClayPaky",
+      "name": "Sharpy",
+      "type": "Beam",
+      "lampType": "Discharge",
+      "apparentPower": 350,
+      "RDM": true,
+      "DMX3in": true,
+      "DMX3out": true,
+      "DMX5in": true,
+      "DMX5out": true,
+      "ethernetIn": true,
+      "ethernetOut": false,
+      "wireless": false,
+      "powerIn": "PowerCon",
+      "protocols": ["DMX-512", "Art-net"],
+      "weight": 19,
+      "IP": "20",
+      "webpage": "https://www.claypaky.it/en/products/sharpy",
+      "manual": "https://www.claypaky.it/media/documents/HR_Sharpy_Manual_05.2016_EN.pdf",
+      "modes": [
+        {
+          "name": "standard",
+          "channels": 16
+        },
+        {
+          "name": "vector",
+          "channels": 20
+        }
+      ],
+      "origin": "ch-creator",
+      "created": "2020-05-03"
     }
   ]
 }
