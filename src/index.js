@@ -747,14 +747,20 @@ class App extends React.Component {
   }
 }
 
-//Request json and only render page when json retreived
-const xmlhttp = new XMLHttpRequest();
-xmlhttp.onreadystatechange = function () {
-  if (this.readyState === 4 && this.status === 200) {
-    APPDATA = JSON.parse(this.responseText);
+function loadApp() {
+  ReactDOM.render(<App />, document.querySelector("#root"));
+}
 
-    ReactDOM.render(<App />, document.querySelector("#root"));
-  }
-};
-xmlhttp.open("GET", "fixtureData.json", true);
-xmlhttp.send();
+//Request json and only render page when json retreived
+fetch("fixtureData.json")
+  .then(function (response) {
+    console.log(response);
+    if (!response.ok) {
+      console.error("Database not found.");
+    }
+    return response.text();
+  })
+  .then(function (text) {
+    APPDATA = JSON.parse(text);
+    loadApp();
+  });
