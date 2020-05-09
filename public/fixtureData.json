@@ -6,6 +6,7 @@
       "name": "Pointe",
       "type": "Hybrid",
       "lampType": "Discharge",
+      "dimmed": false,
       "realPower": 470,
       "powerFactor": 0.96,
       "RDM": true,
@@ -45,6 +46,7 @@
       "name": "Spiider",
       "type": "Wash",
       "lampType": "LED",
+      "dimmed": false,
       "realPower": 600,
       "powerFactor": 0.98,
       "RDM": true,
@@ -117,9 +119,10 @@
     {
       "id": 1003,
       "manufacturer": "Generic",
-      "name": "2 Lite Blinder",
+      "name": "2 Lite Blinder, dimmed",
       "type": "Blinder",
       "lampType": "Conventional",
+      "dimmed": true,
       "realPower": 1300,
       "powerFactor": 1,
       "weight": 3,
@@ -132,6 +135,7 @@
       "name": "Scenius Unico",
       "type": "Spot",
       "lampType": "Discharge",
+      "dimmed": false,
       "realPower": 1400,
       "RDM": true,
       "DMX3in": false,
@@ -163,9 +167,10 @@
     {
       "id": 1005,
       "manufacturer": "Generic",
-      "name": "4 Lite Blinder",
+      "name": "4 Lite Blinder, dimmed",
       "type": "Blinder",
       "lampType": "Conventional",
+      "dimmed": true,
       "realPower": 2600,
       "apparentPower": 2600,
       "powerFactor": 1,
@@ -178,6 +183,7 @@
       "name": "JDC-1",
       "type": "Strobe",
       "lampType": "LED-Strobe",
+      "dimmed": false,
       "realPower": 1200,
       "RDM": true,
       "DMX3in": false,
@@ -228,6 +234,7 @@
       "name": "Aquabeam",
       "type": "Beam",
       "lampType": "Discharge",
+      "dimmed": false,
       "realPower": 628,
       "RDM": true,
       "DMX3in": true,
@@ -261,6 +268,7 @@
       "name": "Diamond7",
       "type": "beam-wash",
       "lampType": "LED",
+      "dimmed": false,
       "realPower": 125,
       "RDM": true,
       "DMX3in": true,
@@ -308,6 +316,7 @@
       "name": "MegaPointe",
       "type": "Hybrid",
       "lampType": "Discharge",
+      "dimmed": false,
       "realPower": 670,
       "powerFactor": 0.97,
       "RDM": true,
@@ -343,6 +352,7 @@
       "name": "Sharpy",
       "type": "Beam",
       "lampType": "Discharge",
+      "dimmed": false,
       "apparentPower": 350,
       "RDM": true,
       "DMX3in": true,
@@ -377,6 +387,7 @@
       "name": "BMFL Spot",
       "type": "Spot",
       "lampType": "Discharge",
+      "dimmed": false,
       "realPower": 2000,
       "powerFactor": 0.99,
       "RDM": true,
@@ -412,6 +423,7 @@
       "name": "Rogue R2 Spot",
       "type": "Spot",
       "lampType": "LED",
+      "dimmed": false,
       "realPower": 310,
       "RDM": false,
       "DMX3in": true,
@@ -439,6 +451,438 @@
       ],
       "origin": "ch-creator",
       "created": "2020-05-06"
+    },
+    {
+      "id": 1013,
+      "manufacturer": "Robe",
+      "name": "'Robin' 600 LEDWash",
+      "type": "Wash",
+      "lampType": "LED",
+      "dimmed": false,
+      "realPower": 415,
+      "apparentPower": 430,
+      "powerFactor": 0.98,
+      "RDM": true,
+      "DMX3in": true,
+      "DMX3out": true,
+      "DMX5in": true,
+      "DMX5out": true,
+      "ethernetIn": true,
+      "ethernetOut": false,
+      "wireless": "Optional",
+      "powerIn": "Flex",
+      "powerOut": false,
+      "protocols": ["DMX-512Art-net", "MA Net", "MA Net2"],
+      "weight": 10.6,
+      "webpage": "https://www.robe.cz/ledwash-600/",
+      "manual": "https://www.robe.cz/index.php?type=10898&tx_odproducts_f%5baction%5d=downloadFile&tx_odproducts_f%5bfile%5d=robe/downloads/user_manuals/User_manual_Robin_600_LEDWash.pdf",
+      "modes": [
+        {
+          "name": "Mode 1",
+          "channels": 37
+        },
+        {
+          "name": "Mode 2",
+          "channels": 21
+        },
+        {
+          "name": "Mode 3",
+          "channels": 15
+        },
+        {
+          "name": "Mode 4 - Full RGBW",
+          "channels": 10
+        },
+        {
+          "name": "Mode 5 - Wash",
+          "channels": 37
+        },
+        {
+          "name": "Mode 6 - Pattern",
+          "channels": 24
+        }
+      ],
+      "origin": "ch-creator",
+      "created": "2020-05-09"
+    },
+    {
+      "id": 1014,
+      "manufacturer": "Chauvet",
+      "name": "Rogue R2 Wash",
+      "type": "Wash",
+      "lampType": "LED",
+      "dimmed": false,
+      "realPower": 339,
+      "RDM": false,
+      "DMX3in": true,
+      "DMX3out": true,
+      "DMX5in": true,
+      "DMX5out": true,
+      "ethernetIn": false,
+      "ethernetOut": false,
+      "wireless": false,
+      "powerIn": "PowerCon",
+      "powerOut": "PowerCon",
+      "protocols": ["DMX-512"],
+      "weight": 9.25,
+      "IP": "20",
+      "webpage": "https://www.chauvetprofessional.com/products/rogue-r2-wash/",
+      "manual": "https://www.chauvetprofessional.com/wp-content/uploads/2015/06/ROGUE_R2_Wash_UM_Rev4_WO2.pdf",
+      "modes": [
+        {
+          "name": "Mode 1 - 15CH",
+          "channels": 15
+        },
+        {
+          "name": "Mode 2 - 17CH",
+          "channels": 17
+        },
+        {
+          "name": "Mode 3 - 22CH",
+          "channels": 22
+        },
+        {
+          "name": "Mode 4 - 33CH",
+          "channels": 33
+        },
+        {
+          "name": "Mode 5 - 33CH MS",
+          "channels": 33
+        },
+        {
+          "name": "Mode 6 - 54CH",
+          "channels": 54
+        },
+        {
+          "name": "Mode 7 - 54CH MS",
+          "channels": 54
+        },
+        {
+          "name": "Mode 8 - 56CH",
+          "channels": 56
+        }
+      ],
+      "origin": "ch-creator",
+      "created": "2020-05-09"
+    },
+    {
+      "id": 1015,
+      "manufacturer": "Chauvet",
+      "name": "Rogue R1 Wash",
+      "type": "Wash",
+      "lampType": "LED",
+      "dimmed": false,
+      "realPower": 161,
+      "RDM": false,
+      "DMX3in": true,
+      "DMX3out": true,
+      "DMX5in": true,
+      "DMX5out": true,
+      "ethernetIn": false,
+      "ethernetOut": false,
+      "wireless": false,
+      "powerIn": "PowerCon",
+      "powerOut": "PowerCon",
+      "protocols": ["DMX-512"],
+      "weight": 5.9,
+      "IP": "20",
+      "webpage": "https://www.chauvetprofessional.com/products/rogue-r1-wash/",
+      "manual": "https://www.chauvetprofessional.com/wp-content/uploads/2015/06/ROGUE_R1_Wash_UM_Rev2_WO1.pdf",
+      "modes": [
+        {
+          "name": "Mode 1 - 14CH",
+          "channels": 14
+        },
+        {
+          "name": "Mode 2 - 15CH",
+          "channels": 15
+        },
+        {
+          "name": "Mode 3 - 19CH",
+          "channels": 19
+        },
+        {
+          "name": "Mode 4 - 21CH",
+          "channels": 21
+        }
+      ],
+      "origin": "ch-creator",
+      "created": "2020-05-09"
+    },
+    {
+      "id": 1016,
+      "manufacturer": "ClayPaky",
+      "name": "Aleda B-Eye K20",
+      "type": "Wash",
+      "lampType": "LED",
+      "dimmed": false,
+      "apparentPower": 750,
+      "RDM": true,
+      "DMX3in": true,
+      "DMX3out": true,
+      "DMX5in": true,
+      "DMX5out": true,
+      "ethernetIn": true,
+      "ethernetOut": false,
+      "wireless": false,
+      "powerIn": "PowerCon",
+      "powerOut": false,
+      "protocols": ["DMX-512", "Art-net"],
+      "weight": 21,
+      "IP": "20",
+      "webpage": "https://www.claypaky.it/en/products/b-eye-k20",
+      "manual": "https://www.claypaky.it/media/documents/HR_A.leda_B-Eye_K10-K20_Manual_08.2016_EN.pdf",
+      "modes": [
+        {
+          "name": "Basic Engine - Standard",
+          "channels": 21
+        },
+        {
+          "name": "Basic Engine - Shapes",
+          "channels": 35
+        },
+        {
+          "name": "Pixel Engine - RGB",
+          "channels": 111
+        },
+        {
+          "name": "Pixel Engine",
+          "channels": 148
+        }
+      ],
+      "origin": "ch-creator",
+      "created": "2020-05-09"
+    },
+    {
+      "id": 1017,
+      "manufacturer": "ClayPaky",
+      "name": "Aleda B-Eye K10",
+      "type": "Wash",
+      "lampType": "LED",
+      "dimmed": false,
+      "apparentPower": 450,
+      "RDM": true,
+      "DMX3in": false,
+      "DMX3out": false,
+      "DMX5in": true,
+      "DMX5out": true,
+      "ethernetIn": true,
+      "ethernetOut": false,
+      "wireless": false,
+      "powerIn": "PowerCon",
+      "powerOut": false,
+      "protocols": ["DMX-512", "Art-net"],
+      "weight": 15,
+      "webpage": "https://www.claypaky.it/en/products/aleda-b-eye-k10",
+      "manual": "https://www.claypaky.it/media/documents/HR_A.leda_B-Eye_K10-K20_Manual_08.2016_EN.pdf",
+      "modes": [
+        {
+          "name": "Basic Engine - Standard",
+          "channels": 21
+        },
+        {
+          "name": "Basic Engine - Shapes",
+          "channels": 35
+        },
+        {
+          "name": "Pixel Engine - RGB",
+          "channels": 57
+        },
+        {
+          "name": "Pixel Engine",
+          "channels": 76
+        }
+      ],
+      "origin": "ch-creator",
+      "created": "2020-05-09"
+    },
+    {
+      "id": 1018,
+      "manufacturer": "Showtec",
+      "name": "Sunstrip Active DMX (Mk1, Tungsten, 75W GU10s)",
+      "type": "Blinder",
+      "lampType": "Conventional",
+      "dimmed": false,
+      "realPower": 800,
+      "RDM": false,
+      "DMX3in": true,
+      "DMX3out": true,
+      "DMX5in": false,
+      "DMX5out": false,
+      "ethernetIn": false,
+      "ethernetOut": false,
+      "wireless": false,
+      "powerIn": "PowerCon",
+      "powerOut": "PowerCon",
+      "protocols": ["DMX-512"],
+      "weight": 5.32,
+      "webpage": "https://www.showtec.co.uk/onlineshop/index.php?route=product/product&product_id=454",
+      "manual": "https://8c693ab5-259b-48c5-9145-47e096473bba.filesusr.com/ugd/cf9a35_453274ab96b74700bb37944e0e55a12a.pdf",
+      "modes": [
+        {
+          "name": "Mode 1",
+          "channels": 1
+        },
+        {
+          "name": "Mode 2",
+          "channels": 2
+        },
+        {
+          "name": "Mode 3",
+          "channels": 5
+        },
+        {
+          "name": "Mode 4",
+          "channels": 10
+        }
+      ],
+      "origin": "ch-creator",
+      "created": "2020-05-09"
+    },
+    {
+      "id": 1019,
+      "manufacturer": "Showtec",
+      "name": "Sunstrip Active DMX Mk2 (Tungsten, 50W GU10s)",
+      "type": "Blinder",
+      "lampType": "Conventional",
+      "dimmed": false,
+      "realPower": 550,
+      "RDM": false,
+      "DMX3in": true,
+      "DMX3out": true,
+      "DMX5in": false,
+      "DMX5out": false,
+      "ethernetIn": false,
+      "ethernetOut": false,
+      "wireless": false,
+      "powerIn": "PowerCon",
+      "powerOut": "PowerCon",
+      "protocols": ["DMX-512"],
+      "weight": 6.2,
+      "webpage": "https://www.showtec.co.uk/onlineshop/index.php?route=product/product&product_id=455",
+      "manual": "https://assets.highlite.com/attachments/MANUAL/30714_MANUAL_GB_V2.pdf",
+      "modes": [
+        {
+          "name": "Mode 1",
+          "channels": 1
+        },
+        {
+          "name": "Mode 2",
+          "channels": 2
+        },
+        {
+          "name": "Mode 3",
+          "channels": 5
+        },
+        {
+          "name": "Mode 4",
+          "channels": 10
+        }
+      ],
+      "origin": "ch-creator",
+      "created": "2020-05-09"
+    },
+    {
+      "id": 1020,
+      "manufacturer": "Chromlech",
+      "name": "Jarag-5 (PAR30)",
+      "type": "Blinder",
+      "lampType": "Conventional",
+      "dimmed": false,
+      "realPower": 1875,
+      "RDM": false,
+      "DMX3in": false,
+      "DMX3out": false,
+      "DMX5in": true,
+      "DMX5out": true,
+      "ethernetIn": false,
+      "ethernetOut": false,
+      "wireless": false,
+      "powerIn": "PowerCon",
+      "powerOut": false,
+      "protocols": ["DMX-512"],
+      "weight": 13.1,
+      "webpage": "http://www.chromlech.fr/pages/en/products/jarag-5-range.php",
+      "manual": "http://www.chromlech.fr/media/support/manuels/userguide_revD_full_eng.pdf",
+      "modes": [
+        {
+          "name": "Mode 1 - Sequence",
+          "channels": 6
+        },
+        {
+          "name": "Mode 2 - Matrix",
+          "channels": 25
+        },
+        {
+          "name": "Mode 3 - Dual",
+          "channels": 31
+        }
+      ],
+      "origin": "ch-creator",
+      "created": "2020-05-09"
+    },
+    {
+      "id": 1021,
+      "manufacturer": "Portman",
+      "name": "P1 Retro Lamp",
+      "type": "Blinder",
+      "lampType": "Conventional",
+      "dimmed": false,
+      "realPower": 2200,
+      "RDM": false,
+      "DMX3in": true,
+      "DMX3out": true,
+      "DMX5in": true,
+      "DMX5out": true,
+      "ethernetIn": false,
+      "ethernetOut": false,
+      "wireless": false,
+      "powerIn": "PowerCon",
+      "powerOut": false,
+      "protocols": ["DMX-512"],
+      "weight": 12.5,
+      "webpage": "https://portmanlights.com/p1-retro-lamp/",
+      "manual": "https://portmanlights.com/wp-content/uploads/2017/11/P1-MANUAL.pdf",
+      "modes": [
+        {
+          "name": "Mode 1",
+          "channels": 7
+        }
+      ],
+      "origin": "ch-creator",
+      "created": "2020-05-09"
+    },
+    {
+      "id": 1022,
+      "manufacturer": "Portman",
+      "name": "P2 Hexaline",
+      "type": "Blinder",
+      "lampType": "Conventional",
+      "dimmed": false,
+      "realPower": 1900,
+      "RDM": false,
+      "DMX3in": true,
+      "DMX3out": true,
+      "DMX5in": true,
+      "DMX5out": true,
+      "ethernetIn": false,
+      "ethernetOut": false,
+      "wireless": false,
+      "powerIn": "TRUE1",
+      "powerOut": false,
+      "protocols": ["DMX-512"],
+      "weight": 9,
+      "webpage": "https://portmanlights.com/p2-hexaline/",
+      "manual": "https://portmanlights.com/wp-content/uploads/2017/11/P2-MANUAL.pdf",
+      "modes": [
+        {
+          "name": "Mode 1",
+          "channels": 6
+        }
+      ],
+      "notes": "Some power connectors may be PowerCon.",
+      "origin": "ch-creator",
+      "created": "2020-05-09"
     }
   ]
 }
