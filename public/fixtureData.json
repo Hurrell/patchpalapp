@@ -883,6 +883,840 @@
       "notes": "Some power connectors may be PowerCon.",
       "origin": "ch-creator",
       "created": "2020-05-09"
+    },
+    {
+      "id": 1024,
+      "image": "https://www.glp.de/media/djcatalog2/images/item/0/impression-x4-bar-20_f.jpg",
+      "manufacturer": "GLP",
+      "name": "Impression X4 Bar 20",
+      "type": "Batten",
+      "lampType": "LED",
+      "dimmed": false,
+      "realPower": 400,
+      "apparentPower": 450,
+      "RDM": true,
+      "DMX3in": false,
+      "DMX3out": false,
+      "DMX5in": true,
+      "DMX5out": true,
+      "ethernetIn": false,
+      "ethernetOut": false,
+      "wireless": false,
+      "powerIn": "PowerCon",
+      "powerOut": "PowerCon",
+      "protocols": ["DMX-512"],
+      "weight": 16,
+      "webpage": "https://www.glp.de/en/products/moving-lights-led/impression-x4-bar-20",
+      "manual": "https://www.glp.de/en/products?format=raw&task=download&fid=114",
+      "modes": [
+        {
+          "name": "Mode 1 - Normal",
+          "channels": 34
+        },
+        {
+          "name": "Mode 2 - Compressed",
+          "channels": 19
+        },
+        {
+          "name": "Mode 3 - High Resolution",
+          "channels": 35
+        },
+        {
+          "name": "Mode 4 - Single Pixel",
+          "channels": 88
+        },
+        {
+          "name": "Mode 5 - Single Pixel High Resolution",
+          "channels": 89
+        },
+        {
+          "name": "Mode 6 - Dual Pixel",
+          "channels": 48
+        },
+        {
+          "name": "Mode 7 - Dual Pixel High Resolution",
+          "channels": 49
+        }
+      ],
+      "origin": "ch-creator",
+      "created": "2020-05-10"
+    },
+    {
+      "id": 1025,
+      "image": "https://www.glp.de/media/djcatalog2/images/item/0/impression-x4-bar-10_f.jpg",
+      "manufacturer": "GLP",
+      "name": "Impression X4 Bar 10",
+      "type": "Batten",
+      "lampType": "LED",
+      "dimmed": false,
+      "apparentPower": 200,
+      "RDM": true,
+      "DMX3in": false,
+      "DMX3out": false,
+      "DMX5in": true,
+      "DMX5out": true,
+      "ethernetIn": false,
+      "ethernetOut": false,
+      "wireless": false,
+      "powerIn": "PowerCon",
+      "powerOut": "PowerCon",
+      "protocols": ["DMX-512"],
+      "weight": 8,
+      "webpage": "https://www.glp.de/en/products/moving-lights-led/impression-x4-bar-10",
+      "manual": "https://www.glp.de/en/products?format=raw&task=download&fid=112",
+      "modes": [
+        {
+          "name": "Mode 1 - Normal",
+          "channels": 33
+        },
+        {
+          "name": "Mode 2 - Compressed",
+          "channels": 19
+        },
+        {
+          "name": "Mode 3 - High Resolution",
+          "channels": 34
+        },
+        {
+          "name": "Mode 4 - Single Pixel",
+          "channels": 48
+        },
+        {
+          "name": "Mode 5 - Single Pixel High Resolution",
+          "channels": 49
+        },
+        {
+          "name": "Mode 6 - Dual Pixel",
+          "channels": 28
+        },
+        {
+          "name": "Mode 7 - Dual Pixel High Resolution",
+          "channels": 29
+        }
+      ],
+      "origin": "ch-creator",
+      "created": "2020-05-10"
+    },
+    {
+      "id": 1026,
+      "image": "https://www.glp.de/media/djcatalog2/images/item/0/impression-x4_f.jpg",
+      "manufacturer": "GLP",
+      "name": "Impression X4",
+      "type": "Wash",
+      "lampType": "LED",
+      "dimmed": false,
+      "apparentPower": 350,
+      "RDM": false,
+      "DMX3in": false,
+      "DMX3out": false,
+      "DMX5in": true,
+      "DMX5out": true,
+      "ethernetIn": false,
+      "ethernetOut": false,
+      "wireless": false,
+      "powerIn": "PowerCon",
+      "powerOut": false,
+      "protocols": ["DMX-512"],
+      "weight": 8,
+      "webpage": "https://www.glp.de/en/products/moving-lights-led/impression-x4",
+      "manual": "https://www.glp.de/en/products?format=raw&task=download&fid=596",
+      "modes": [
+        {
+          "name": "Mode 1 - Normal",
+          "channels": 20
+        },
+        {
+          "name": "Mode 2 - Compress",
+          "channels": 14
+        },
+        {
+          "name": "Mode 3 - High Resolution (Extended)",
+          "channels": 21
+        }
+      ],
+      "origin": "ch-creator",
+      "created": "2020-05-11"
+    },
+    {
+      "id": 1027,
+      "image": "https://www.glp.de/media/djcatalog2/images/item/0/impression-x4-l_f.jpg",
+      "manufacturer": "GLP",
+      "name": "Impression X4 L",
+      "type": "Wash",
+      "lampType": "LED",
+      "dimmed": false,
+      "apparentPower": 900,
+      "RDM": false,
+      "DMX3in": false,
+      "DMX3out": false,
+      "DMX5in": true,
+      "DMX5out": true,
+      "ethernetIn": false,
+      "ethernetOut": false,
+      "wireless": false,
+      "powerIn": "PowerCon",
+      "powerOut": false,
+      "protocols": ["DMX-512"],
+      "weight": 17,
+      "webpage": "https://www.glp.de/en/products/moving-lights-led/impression-x4-l",
+      "manual": "https://www.glp.de/en/products?format=raw&task=download&fid=599",
+      "modes": [
+        {
+          "name": "Mode 1 - Normal",
+          "channels": 29
+        },
+        {
+          "name": "Mode 2 - Compressed",
+          "channels": 21
+        },
+        {
+          "name": "Mode 3 - Extended (High)",
+          "channels": 31
+        },
+        {
+          "name": "Mode 4 - Single Pixel (spix)",
+          "channels": 169
+        }
+      ],
+      "origin": "ch-creator",
+      "created": "2020-05-11"
+    },
+    {
+      "id": 1028,
+      "image": "https://www.glp.de/media/djcatalog2/images/item/0/impression-x4-xl_f.jpg",
+      "manufacturer": "GLP",
+      "name": "Impression X4 XL",
+      "type": "Wash",
+      "lampType": "LED",
+      "dimmed": false,
+      "apparentPower": 1200,
+      "RDM": false,
+      "DMX3in": true,
+      "DMX3out": true,
+      "DMX5in": true,
+      "DMX5out": true,
+      "ethernetIn": false,
+      "ethernetOut": false,
+      "wireless": false,
+      "powerIn": "PowerCon",
+      "powerOut": false,
+      "protocols": ["DMX-512"],
+      "weight": 31,
+      "webpage": "https://www.glp.de/en/products/moving-lights-led/impression-x4-xl",
+      "manual": "https://www.glp.de/en/products?format=raw&task=download&fid=109",
+      "modes": [
+        {
+          "name": "Mode 1 - Normal",
+          "channels": 26
+        },
+        {
+          "name": "Mode 2 - Compress",
+          "channels": 16
+        },
+        {
+          "name": "Mode 3 - High Resolution / Extended",
+          "channels": 27
+        }
+      ],
+      "origin": "ch-creator",
+      "created": "2020-05-11"
+    },
+    {
+      "id": 1029,
+      "image": "https://cdn.robe.cz/fileadmin/_processed_/4/9/csm_esprite-01_dc54e9ad32.png",
+      "manufacturer": "Robe",
+      "name": "Esprite",
+      "type": "Spot",
+      "lampType": "LED",
+      "dimmed": false,
+      "realPower": 950,
+      "powerFactor": 0.98,
+      "RDM": true,
+      "DMX3in": true,
+      "DMX3out": true,
+      "DMX5in": true,
+      "DMX5out": true,
+      "ethernetIn": true,
+      "ethernetOut": false,
+      "wireless": true,
+      "powerIn": "TRUE1",
+      "powerOut": false,
+      "protocols": ["DMX-512", "Art-net", "MA Net", "MA Net2", "sACN"],
+      "weight": 28.2,
+      "IP": "20",
+      "webpage": "https://www.robe.cz/esprite/",
+      "manual": "https://www.robe.cz/index.php?type=10898&tx_odproducts_f%5baction%5d=downloadFile&tx_odproducts_f%5bfile%5d=robe/downloads/user_manuals/User_manual_Robin_Esprite.pdf",
+      "modes": [
+        {
+          "name": "Mode 1 - Standard 16 bit",
+          "channels": 49
+        },
+        {
+          "name": "Mode 2 - Reduced 8 bit",
+          "channels": 42
+        }
+      ],
+      "origin": "ch-creator",
+      "created": "2020-05-11"
+    },
+    {
+      "id": 1030,
+      "image": "https://cdn.robe.cz/fileadmin/robe/media/photo/products/ledbeam-150-01.png",
+      "manufacturer": "Robe",
+      "name": "'Robin' LEDBeam 150",
+      "type": "beam-wash",
+      "lampType": "LED",
+      "dimmed": false,
+      "realPower": 220,
+      "powerFactor": 0.97,
+      "RDM": true,
+      "DMX3in": false,
+      "DMX3out": false,
+      "DMX5in": true,
+      "DMX5out": true,
+      "ethernetIn": false,
+      "ethernetOut": false,
+      "wireless": "Optional",
+      "powerIn": "PowerCon",
+      "powerOut": "PowerCon",
+      "protocols": ["DMX-512"],
+      "weight": 5.7,
+      "webpage": "https://www.robe.cz/ledbeam-150/",
+      "manual": "https://www.robe.cz/index.php?type=10898&tx_odproducts_f%5baction%5d=downloadFile&tx_odproducts_f%5bfile%5d=robe/downloads/user_manuals/User_manual_Robin_LEDBeam_150.pdf",
+      "modes": [
+        {
+          "name": "Mode 1 - Standard 16 bit",
+          "channels": 22
+        },
+        {
+          "name": "Mode 2 - Reduced 8 bit",
+          "channels": 16
+        }
+      ],
+      "origin": "ch-creator",
+      "created": "2020-05-11"
+    },
+    {
+      "id": 1031,
+      "image": "https://cdn.robe.cz/fileadmin/robe/media/photo/products/viva-01.png",
+      "manufacturer": "Robe",
+      "name": "'Robin' Viva",
+      "type": "Hybrid",
+      "lampType": "LED",
+      "dimmed": false,
+      "realPower": 400,
+      "RDM": true,
+      "DMX3in": true,
+      "DMX3out": true,
+      "DMX5in": true,
+      "DMX5out": true,
+      "ethernetIn": true,
+      "ethernetOut": false,
+      "wireless": "Optional",
+      "powerIn": "PowerCon",
+      "powerOut": false,
+      "protocols": ["DMX-512Art-net", "MA Net", "MA Net2", "sACN"],
+      "weight": 17.5,
+      "webpage": "https://www.robe.cz/viva/",
+      "manual": "https://www.robe.cz/index.php?type=10898&tx_odproducts_f%5baction%5d=downloadFile&tx_odproducts_f%5bfile%5d=robe/downloads/user_manuals/User_manual_Robin_Viva.pdf",
+      "modes": [
+        {
+          "name": "Mode 1 - Standard 16 bit",
+          "channels": 30
+        },
+        {
+          "name": "Mode 2 - Reduced 8 bit",
+          "channels": 23
+        }
+      ],
+      "origin": "ch-creator",
+      "created": "2020-05-11"
+    },
+    {
+      "id": 1032,
+      "image": "https://www.claypaky.it/media/productentries/images/C61396.jpg",
+      "manufacturer": "ClayPaky",
+      "name": "Mythos 2",
+      "type": "Spot",
+      "lampType": "Discharge",
+      "dimmed": false,
+      "apparentPower": 700,
+      "RDM": true,
+      "DMX3in": false,
+      "DMX3out": false,
+      "DMX5in": true,
+      "DMX5out": true,
+      "ethernetIn": true,
+      "ethernetOut": false,
+      "wireless": false,
+      "powerIn": "TRUE1",
+      "powerOut": false,
+      "protocols": ["DMX-512", "Art-net"],
+      "weight": 32,
+      "IP": "20",
+      "webpage": "https://www.claypaky.it/en/products/mythos2",
+      "manual": "https://www.claypaky.it/media/documents/HR_Mythos_Manual_02.2017_EN.pdf",
+      "modes": [
+        {
+          "name": "Mode 1 - Standard",
+          "channels": 30
+        },
+        {
+          "name": "Mode 2 - Vector",
+          "channels": 34
+        }
+      ],
+      "origin": "ch-creator",
+      "created": "2020-05-11"
+    },
+    {
+      "id": 1033,
+      "image": "https://www.musiclights.it/images/tmp/600x60065x65STUDIOCOBFC_27796.png?20200218101729",
+      "manufacturer": "ProLights",
+      "name": "Studio Cob FC",
+      "type": "Wash",
+      "lampType": "LED",
+      "dimmed": false,
+      "realPower": 140,
+      "RDM": false,
+      "DMX3in": true,
+      "DMX3out": true,
+      "DMX5in": true,
+      "DMX5out": true,
+      "ethernetIn": false,
+      "ethernetOut": false,
+      "wireless": false,
+      "powerIn": "PowerCon",
+      "powerOut": "PowerCon",
+      "protocols": ["DMX-512"],
+      "weight": 4.5,
+      "IP": "20",
+      "webpage": "https://www.musiclights.it/product/STUDIOCOBFC?lang=EN",
+      "manual": "https://www.musiclights.it/download.php?id=2945",
+      "modes": [
+        {
+          "name": "Mode 1",
+          "channels": 3
+        },
+        {
+          "name": "Mode 2",
+          "channels": 5
+        },
+        {
+          "name": "Mode 3",
+          "channels": 8
+        }
+      ],
+      "origin": "ch-creator",
+      "created": "2020-05-11"
+    },
+    {
+      "id": 1034,
+      "image": "https://www.fisherproductions.co.uk/services/image/cache/data/Movers/Batten2-front%20fisher%20hires-740x530.jpg",
+      "manufacturer": "MT",
+      "name": "Miltec Batten 2 1812",
+      "type": "Batten",
+      "lampType": "LED",
+      "dimmed": false,
+      "realPower": 250,
+      "DMX3in": true,
+      "DMX3out": true,
+      "DMX5in": true,
+      "DMX5out": true,
+      "ethernetIn": false,
+      "ethernetOut": false,
+      "powerIn": "PowerCon",
+      "powerOut": "PowerCon",
+      "protocols": ["DMX-512"],
+      "weight": 3.7,
+      "IP": "20",
+      "manual": "https://media.vsl-uk.com/manuals/light/Miltec_Batten2_User_Manual.pdf",
+      "modes": [
+        {
+          "name": "Mode 1",
+          "channels": 4
+        },
+        {
+          "name": "Mode 2",
+          "channels": 5
+        },
+        {
+          "name": "Mode 3",
+          "channels": 7
+        },
+        {
+          "name": "Mode 4",
+          "channels": 72
+        }
+      ],
+      "origin": "ch-creator",
+      "created": "2020-05-11"
+    },
+    {
+      "id": 1035,
+      "image": "https://www.etcconnect.com/uploadedImages/Main_Site/Images/Products/Lighting_Fixtures/Source_Four/S4LED_Series2_Lustr_Red.jpg",
+      "manufacturer": "ETC",
+      "name": "Source 4 LED Series 2 (Lustr)",
+      "type": "Profile",
+      "lampType": "LED",
+      "dimmed": false,
+      "realPower": 173,
+      "RDM": true,
+      "DMX3in": false,
+      "DMX3out": false,
+      "DMX5in": true,
+      "DMX5out": true,
+      "ethernetIn": false,
+      "ethernetOut": false,
+      "wireless": false,
+      "powerIn": "PowerCon",
+      "powerOut": "PowerCon",
+      "protocols": ["DMX-512"],
+      "weight": 8.6,
+      "IP": "20",
+      "webpage": "https://www.etcconnect.com/Products/Lighting-Fixtures/Source-Four-LED-Series-2/Features.aspx",
+      "manual": "https://www.etcconnect.com/WorkArea/DownloadAsset.aspx?id=10737501163",
+      "modes": [
+        {
+          "name": "Mode 1 - Direct Control",
+          "channels": 10
+        },
+        {
+          "name": "Mode 2 - RGB",
+          "channels": 6
+        },
+        {
+          "name": "Mode 3 - HSI",
+          "channels": 6
+        },
+        {
+          "name": "Mode 4 - HSIC",
+          "channels": 7
+        },
+        {
+          "name": "Mode 5 - Studio",
+          "channels": 6
+        },
+        {
+          "name": "Mode 6 - RGB + 7",
+          "channels": 13
+        },
+        {
+          "name": "Mode 7 - HSI + 7",
+          "channels": 13
+        },
+        {
+          "name": "Mode 8 - HSIC + 7",
+          "channels": 14
+        }
+      ],
+      "origin": "ch-creator",
+      "created": "2020-05-11"
+    },
+    {
+      "id": 1036,
+      "image": "https://sgmlight.com/files/images/perfion/G-Spot_RAL_black_small.png",
+      "manufacturer": "SGM",
+      "name": "G Spot",
+      "type": "Spot",
+      "lampType": "LED",
+      "dimmed": false,
+      "realPower": 1150,
+      "powerFactor": 0.97,
+      "RDM": true,
+      "DMX3in": false,
+      "DMX3out": false,
+      "DMX5in": true,
+      "DMX5out": true,
+      "ethernetIn": false,
+      "ethernetOut": false,
+      "wireless": true,
+      "powerIn": "TRUE1",
+      "powerOut": false,
+      "protocols": ["DMX-512"],
+      "weight": 52,
+      "IP": "65",
+      "webpage": "https://sgmlight.com/products/entertainment/g%C2%B7spot",
+      "manual": "https://sgmlight.com/Admin/Public/DWSDownload.aspx?File=\\Files\\Files\\Perfion\\StrRDDATAUserManualFileGroup\\G-Spot\\FileRDDATAUserManualGSpotWEB\\SGM%20G-Spot%20and%20G-Spot%20POI%20User%20Manual%20(Rev%20H).pdf",
+      "modes": [
+        {
+          "name": "Mode 1 - Standard",
+          "channels": 24
+        },
+        {
+          "name": "Mode 2 - Extended",
+          "channels": 30
+        }
+      ],
+      "origin": "ch-creator",
+      "created": "2020-05-11"
+    },
+    {
+      "id": 1037,
+      "image": "https://sgmlight.com/files/images/perfion/P-1_RAL_black_small.png",
+      "manufacturer": "SGM",
+      "name": "P-1",
+      "type": "Wash",
+      "lampType": "LED",
+      "batteryLife": 12,
+      "dimmed": false,
+      "realPower": 90,
+      "RDM": true,
+      "DMX3in": false,
+      "DMX3out": false,
+      "DMX5in": true,
+      "DMX5out": true,
+      "ethernetIn": false,
+      "ethernetOut": false,
+      "wireless": true,
+      "powerIn": "TRUE1",
+      "powerOut": false,
+      "protocols": ["DMX-512"],
+      "weight": 5.7,
+      "IP": "65",
+      "webpage": "https://sgmlight.com/products/architectural/p%C2%B71",
+      "manual": "https://sgmlight.com/Admin/Public/DWSDownload.aspx?File=\\Files\\Files\\Perfion\\StrRDDATAUserManualFileGroup\\P-1\\FileRDDATAUserManualP1WEB\\SGM%20P-1%20User%20Manual%20(Rev%20A).pdf",
+      "modes": [
+        {
+          "name": "Mode 1 - 1 x RGB",
+          "channels": 3
+        },
+        {
+          "name": "Mode 2 - RAW",
+          "channels": 4
+        },
+        {
+          "name": "Mode 3 - 2 x RGB",
+          "channels": 6
+        },
+        {
+          "name": "Mode 4 - 9 Channel",
+          "channels": 9
+        },
+        {
+          "name": "Mode 5 - 6 Channel",
+          "channels": 6
+        },
+        {
+          "name": "Mode 6 - 6 Channel RAW",
+          "channels": 6
+        },
+        {
+          "name": "Mode 7 - 11 Channel RAW",
+          "channels": 11
+        },
+        {
+          "name": "Mode 8 - 16 Channel 16 bit",
+          "channels": 16
+        }
+      ],
+      "origin": "ch-creator",
+      "created": "2020-05-11"
+    },
+    {
+      "id": 1038,
+      "image": "https://sgmlight.com/files/images/perfion/P-6_RAL_black_small.png",
+      "manufacturer": "SGM",
+      "name": "P-6",
+      "type": "Wash",
+      "lampType": "LED",
+      "dimmed": false,
+      "realPower": 630,
+      "powerFactor": 0.96,
+      "RDM": true,
+      "DMX3in": false,
+      "DMX3out": false,
+      "DMX5in": true,
+      "DMX5out": true,
+      "ethernetIn": false,
+      "ethernetOut": false,
+      "wireless": true,
+      "powerIn": "TRUE1",
+      "powerOut": "TRUE1",
+      "protocols": ["DMX-512"],
+      "weight": 14.5,
+      "IP": "66",
+      "webpage": "https://sgmlight.com/products/entertainment/p%C2%B76",
+      "manual": "https://sgmlight.com/Admin/Public/DWSDownload.aspx?File=\\Files\\Files\\Perfion\\StrRDDATAUserManualFileGroup\\P-6\\FileRDDATAUserManualP6WEB\\SGM%20P-6%20STD%20and%20POI%20User%20Manual%20(Rev%20C).pdf",
+      "modes": [
+        {
+          "name": "4 Channel Mode RAW",
+          "channels": 4
+        },
+        {
+          "name": "6 Channel Mode RAW",
+          "channels": 6
+        },
+        {
+          "name": "6 Channel Mode CTC (default)",
+          "channels": 6
+        },
+        {
+          "name": "8 Channel RAW",
+          "channels": 8
+        },
+        {
+          "name": "9 Channel Mode Strobe",
+          "channels": 9
+        },
+        {
+          "name": "10 Channel Mode CTC",
+          "channels": 10
+        },
+        {
+          "name": "6 X RGB",
+          "channels": 18
+        },
+        {
+          "name": "21 Channel Mode",
+          "channels": 21
+        },
+        {
+          "name": "24 Channel Mode Strobe",
+          "channels": 24
+        },
+        {
+          "name": "26 Channel Mode Strobe",
+          "channels": 26
+        },
+        {
+          "name": "27 Channel Mode RAW",
+          "channels": 27
+        },
+        {
+          "name": "21 Channel Studio Mode",
+          "channels": 21
+        },
+        {
+          "name": "40 Channel Mode",
+          "channels": 40
+        }
+      ],
+      "origin": "ch-creator",
+      "created": "2020-05-11"
+    },
+    {
+      "id": 1039,
+      "image": "https://sgmlight.com/files/images/perfion/Q-10_RAL_black_small.png",
+      "manufacturer": "SGM",
+      "name": "Q-10",
+      "type": "Wash",
+      "lampType": "LED",
+      "dimmed": false,
+      "realPower": 1250,
+      "powerFactor": 0.99,
+      "RDM": true,
+      "DMX3in": false,
+      "DMX3out": false,
+      "DMX5in": true,
+      "DMX5out": true,
+      "ethernetIn": false,
+      "ethernetOut": false,
+      "wireless": true,
+      "powerIn": "TRUE1",
+      "powerOut": "TRUE1",
+      "protocols": ["DMX-512"],
+      "weight": 19.8,
+      "IP": "65",
+      "webpage": "https://sgmlight.com/products/architectural/q%C2%B710",
+      "manual": "https://sgmlight.com/Admin/Public/DWSDownload.aspx?File=\\Files\\Files\\Perfion\\StrRDDATAUserManualFileGroup\\Q-10\\FileRDDATAUserManualQ10WEB\\SGM%20Safety%20Instructions%20for%20STD%20and%20POI%20products%20(Rev.%20C).pdf",
+      "modes": [
+        {
+          "name": "3 Channel Mode CTC",
+          "channels": 3
+        },
+        {
+          "name": "4 Channel Mode RAW",
+          "channels": 4
+        },
+        {
+          "name": "6 Channel Mode RAW",
+          "channels": 6
+        },
+        {
+          "name": "6 Channel Mode CTC (default)",
+          "channels": 6
+        },
+        {
+          "name": "8 Channel RAW",
+          "channels": 8
+        },
+        {
+          "name": "9 Channel Mode Strobe",
+          "channels": 9
+        },
+        {
+          "name": "10 Channel Mode CTC",
+          "channels": 10
+        },
+        {
+          "name": "8 X RGB",
+          "channels": 24
+        },
+        {
+          "name": "27 Channel Mode",
+          "channels": 27
+        },
+        {
+          "name": "30 Channel Mode Strobe",
+          "channels": 30
+        },
+        {
+          "name": "32 Channel Mode Strobe",
+          "channels": 32
+        },
+        {
+          "name": "35 Channel Mode RAW",
+          "channels": 35
+        },
+        {
+          "name": "52 Channel Mode",
+          "channels": 52
+        }
+      ],
+      "origin": "ch-creator",
+      "created": "2020-05-11"
+    },
+    {
+      "id": 1040,
+      "image": "https://www.claypaky.it/media/productentries/images/C71085_C71086.jpg",
+      "manufacturer": "ClayPaky",
+      "name": "Show-Batten 100",
+      "type": "Batten",
+      "lampType": "LED",
+      "dimmed": false,
+      "apparentPower": 170,
+      "RDM": true,
+      "DMX3in": false,
+      "DMX3out": false,
+      "DMX5in": true,
+      "DMX5out": true,
+      "ethernetIn": true,
+      "ethernetOut": true,
+      "wireless": false,
+      "powerIn": "PowerCon",
+      "powerOut": "PowerCon",
+      "protocols": ["DMX-512", "Art-net"],
+      "weight": 10,
+      "IP": "20",
+      "webpage": "https://www.claypaky.it/en/products/showbatten100",
+      "manual": "https://www.claypaky.it/media/documents/HR_ShowBatten100_Manual_05.2016_EN.pdf",
+      "modes": [
+        {
+          "name": "Basic Engine",
+          "channels": 18
+        },
+        {
+          "name": "Pixel Engine RGB",
+          "channels": 48
+        },
+        {
+          "name": "Pixel Engine RGBW",
+          "channels": 58
+        }
+      ],
+      "origin": "ch-creator",
+      "created": "2020-05-12"
     }
   ]
 }
