@@ -24,28 +24,13 @@ function printPower(power) {
     number: Math.ceil(power),
     unit: "W",
   };
-
   if (power > 1000) {
     visualPower = {
       number: (power / 1000).toFixed(1),
       unit: "kW",
     };
   }
-
   return visualPower;
-}
-
-//function to get total power draw from selected fixtures
-function powerDraw(selectedFixtures) {
-  let power = 0;
-  if (selectedFixtures) {
-    selectedFixtures.forEach((fixture) => {
-      if (fixture.quantity >= 1) {
-        power += Number(fixture.power) * Number(fixture.quantity);
-      }
-    });
-  }
-  return power;
 }
 
 //Function to return an object from list using key
@@ -60,4 +45,30 @@ function getObj(list, keyName, id) {
   return foundObj;
 }
 
-export { printPower, powerDraw, getObj, matchAgainst };
+//Function to return totals from a given list of fixtures
+function totalsFrom(fixtureList, voltage) {
+  let totAppPower = 0,
+    weight = 0,
+    current = 0;
+  if (fixtureList) {
+    fixtureList.forEach((fixture) => {
+      if (fixture.quantity >= 1) {
+        if (fixture.apparentPower) {
+          totAppPower +=
+            Number(fixture.apparentPower) * Number(fixture.quantity);
+        } else if (fixture.powerFactor && fixture.realPower) {
+          totAppPower +=
+            (Number(fixture.realPower) / Number(fixture.powerFactor)) *
+            Number(fixture.quantity);
+        } else {
+          totAppPower += Number(fixture.realPower) * Number(fixture.quantity);
+        }
+        weight += Number(fixture.weight) * Number(fixture.quantity);
+      }
+    });
+  }
+  current = totAppPower / voltage;
+  return { power: totAppPower, weight: weight, current: current };
+}
+
+export { printPower, getObj, matchAgainst, totalsFrom };
