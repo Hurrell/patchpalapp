@@ -42,7 +42,7 @@ a:active {
 .app {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 35px 1fr 40px;
+  grid-template-rows: auto 1fr 40px;
   overflow: hidden;
 }
 
@@ -63,7 +63,7 @@ a:active {
 /* Header ----------*/
 .header-container-container {
   background-color: var(--accent-color);
-  height: 40px;
+  height: auto;
   width: 100%;
   justify-self: center;
   text-align: center;
@@ -81,7 +81,7 @@ a:active {
   font-weight: 500;
   /* box-shadow: 0 1px 2px 0; */
   padding-top: 5px;
-  height: 35px;
+  height: auto;
   width: 100%;
   display: grid;
   grid-template-columns: 53px 1fr 53px;
@@ -304,13 +304,103 @@ a:active {
   margin-right: 20px;
 }
 
-.fixture-details div {
+.fixture-details > div {
   margin-bottom: 5px;
 }
 #fixture-detail-backarrow {
   height: 32px;
   width: 32px;
 }
+
+.icon-callout {
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: center; */
+}
+
+.icon-callout > * {
+  justify-self: center;
+  align-self: center;
+}
+
+.details-top-tile,
+.details-bottom-tile {
+  height: 45px;
+  width: 40px;
+  padding: 5px;
+  border: 1px solid white;
+  border-radius: 5px;
+  font-size: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 5px 15px 5px;
+  /* margin-bottom: 15px; */
+  /* background-color: var(--accent-color); */
+}
+
+.true1 > * {
+  fill: rgb(255, 230, 0) !important;
+}
+
+.powercon > * {
+  fill: rgb(0, 98, 255) !important;
+}
+
+.details-top-tile {
+  font-size: 13px;
+}
+
+.details-bottom-tile {
+  font-size: 10px;
+}
+
+.details-top-tile > *,
+.details-bottom-tile > * {
+  text-align: center;
+  margin: auto;
+}
+
+.details-icon {
+  height: 33px;
+  width: 33px;
+  fill: rgb(255, 255, 255);
+}
+
+.smaller-connector {
+  height: 31px;
+  width: 31px;
+}
+
+.detail-table {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  align-self: center;
+  font-size: 0.75em;
+}
+
+.detail-table > div {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-style: solid;
+  border-color: var(--accent-color);
+  border-width: 1px 0;
+}
+
+/* .callout-letters {
+  background-color: var(--main-fg-color);
+  color: var(--main-bg-color);
+  height: 30px;
+  width: 35px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 30px;
+  margin-top: 2px;
+} */
 
 /* Review/Summary page */
 .page h2 {
