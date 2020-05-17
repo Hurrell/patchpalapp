@@ -13,7 +13,9 @@ class Totals extends React.Component {
           <span className="review-total">
             {printPower(totalObj.power).number}
           </span>
-          <span className="review-unit">{printPower(totalObj.power).unit}</span>
+          <span className="review-unit">
+            {printPower(totalObj.power).unit}VA
+          </span>
         </div>
         <div className="review-weight">
           <span className="review-total">{Math.ceil(totalObj.weight)}</span>
@@ -29,4 +31,4 @@ class Totals extends React.Component {
     );
   }
 }
-export default Totals;
+export { Totals, VOLTAGE };

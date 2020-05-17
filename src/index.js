@@ -4,7 +4,7 @@ import "./index.css";
 import { getObj } from "./tools.js";
 import { FixtureTable } from "./components/fixtureTable.js";
 import FixtureDetails from "./components/fixtureDetails.js";
-import Totals from "./components/totals.js";
+import { Totals } from "./components/totals.js";
 import {
   IoIosSearch,
   IoIosList,
