@@ -1,10 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
+
 import "./index.css";
 import { getObj } from "./tools.js";
 import { FixtureTable } from "./components/fixtureTable.js";
 import FixtureDetails from "./components/fixtureDetails.js";
-import { Totals } from "./components/totals.js";
+import { Review } from "./components/review.js";
 import {
   IoIosSearch,
   IoIosList,
@@ -100,7 +101,17 @@ class Page extends React.Component {
     this.handleRemoveButtonClick = this.handleRemoveButtonClick.bind(this);
     this.handleFilterTextChange = this.handleFilterTextChange.bind(this);
     this.handleFixtureClick = this.handleFixtureClick.bind(this);
+    this.scroller = React.createRef();
   }
+  // //some code to handle scrolling...
+  // componentDidMount = () => this.handleScroll();
+  // //componentDidUpdate = () => this.handleScroll();
+  // handleScroll = () => {
+  //   const { index, selected } = this.props;
+  //   if (index === selected) {
+  //     this.scroller.current.scrollIntoView({ behavior: "auto" });
+  //   }
+  // };
 
   handleFilterTextChange(filterText) {
     this.props.onFilterTextChange(filterText);
@@ -148,42 +159,36 @@ class Page extends React.Component {
   }
 
   render() {
-    let fixtureCount = 0;
-    this.state.projectFixtures.forEach((fixture) => {
-      fixtureCount += Number(fixture.quantity);
-    });
-
     let page;
     if (this.props.fixtureView) {
-      page = <FixtureDetails fixture={this.props.selectedFixture} />;
+      page = (
+        <div ref={this.scroller}>
+          <FixtureDetails fixture={this.props.selectedFixture} />;
+        </div>
+      );
     } else {
       if (this.props.mode === "build") {
         page = (
-          <FixtureTable
-            mode={this.props.mode}
-            fixtures={APPDATA.fixtures}
-            selectedFixtures={this.state.projectFixtures}
-            filterText={this.props.filterText}
-            onFixtureChange={this.handleFixtureChange}
-            onRemoveButtonClick={this.handleRemoveButtonClick}
-            onFixtureClick={this.handleFixtureClick}
-          />
+          <div ref={this.scroller}>
+            <FixtureTable
+              mode={this.props.mode}
+              fixtures={APPDATA.fixtures}
+              selectedFixtures={this.state.projectFixtures}
+              filterText={this.props.filterText}
+              onFixtureChange={this.handleFixtureChange}
+              onRemoveButtonClick={this.handleRemoveButtonClick}
+              onFixtureClick={this.handleFixtureClick}
+            />
+          </div>
         );
       } else {
         page = (
-          <div>
-            <Totals
-              selectedFixtures={this.state.projectFixtures}
-              name="Totals"
-            />
-            <div className="selected-heading">
-              <h2>Selected Fixtures ({fixtureCount})</h2>
-            </div>
-
-            <FixtureTable
+          <div ref={this.scroller}>
+            <Review
               mode={this.props.mode}
-              fixtures={this.state.projectFixtures}
-              filterText={""}
+              fixtures={APPDATA.fixtures}
+              selectedFixtures={this.state.projectFixtures}
+              filterText={this.props.filterText}
               onFixtureChange={this.handleFixtureChange}
               onRemoveButtonClick={this.handleRemoveButtonClick}
               onFixtureClick={this.handleFixtureClick}
@@ -192,7 +197,7 @@ class Page extends React.Component {
         );
       }
     }
-    return <div className="page">{page}</div>;
+    return <div>{page}</div>;
   }
 }
 
@@ -214,13 +219,20 @@ class Header extends React.Component {
   }
 
   handleBackClick(e) {
-    if (this.state.searchExtended) {
+    if (this.state.searchExtended && !this.props.fixtureView) {
       this.props.onFilterTextChange("");
       this.setState({
         searchExtended: false,
       });
-    } else {
+    } else if (this.state.searchExtended && this.props.fixtureView) {
       this.props.onBackClick(e);
+      //this.props.handleFilterTextChange(this.props.filterText);
+    } else {
+      this.props.onFilterTextChange("");
+      this.props.onBackClick(e);
+      this.setState({
+        searchExtended: false,
+      });
     }
   }
   handleSearchClick(e) {
@@ -234,6 +246,7 @@ class Header extends React.Component {
   }
 
   render() {
+    console.log(this.props.filterText);
     let leftIcon;
     let rightIcon;
     let title;
@@ -386,7 +399,19 @@ class App extends React.Component {
     this.handleBuildMode = this.handleBuildMode.bind(this);
     this.handleFilterTextChange = this.handleFilterTextChange.bind(this);
     this.handleBackClick = this.handleBackClick.bind(this);
+    this.mainScroller = React.createRef();
   }
+
+  //some code to handle scrolling...
+  //componentDidMount = () => this.handleScroll();
+  //componentDidUpdate = () => this.handleScroll();
+  handleScroll = () => {
+    const { index, selected } = this.props;
+    if (index === selected) {
+      this.mainScroller.current.scrollIntoView({ behavior: "auto" });
+    }
+  };
+
   handleBuildMode(e) {
     let newMode = e.target.dataset.mode;
     this.setState({
@@ -395,15 +420,17 @@ class App extends React.Component {
     if (this.state.mode !== newMode) {
       this.setState({
         mode: e.target.dataset.mode,
-        filterText: "",
+        //filterText: "",
       });
     }
+    this.handleScroll();
   }
 
   handleFilterTextChange(filterText) {
     this.setState({
       filterText: filterText,
     });
+    this.handleScroll();
   }
 
   handleFixtureClick(fixture) {
@@ -411,6 +438,7 @@ class App extends React.Component {
       fixtureView: true,
       selectedFixture: fixture,
     });
+    this.handleScroll();
   }
 
   handleBackClick(e) {
@@ -429,15 +457,20 @@ class App extends React.Component {
           selectedFixture={this.state.selectedFixture}
           onFilterTextChange={this.handleFilterTextChange}
           onBackClick={this.handleBackClick}
-        />
-        <Page
-          fixtureView={this.state.fixtureView}
-          mode={this.state.mode}
-          selectedFixture={this.state.selectedFixture}
-          onFilterTextChange={this.handleFilterTextChange}
           filterText={this.state.filterText}
-          onFixtureClick={this.handleFixtureClick}
         />
+        <div className="page">
+          <div ref={this.mainScroller}></div>
+          <Page
+            fixtureView={this.state.fixtureView}
+            mode={this.state.mode}
+            selectedFixture={this.state.selectedFixture}
+            onFilterTextChange={this.handleFilterTextChange}
+            filterText={this.state.filterText}
+            onFixtureClick={this.handleFixtureClick}
+          />
+        </div>
+
         <Footer mode={this.state.mode} onModeChange={this.handleBuildMode} />
       </div>
     );
