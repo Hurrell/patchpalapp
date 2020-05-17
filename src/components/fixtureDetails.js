@@ -5,7 +5,7 @@ import { ReactComponent as DMX3Male } from "../assets/dmx3_male.svg";
 import { ReactComponent as DMX3Female } from "../assets/dmx3_female.svg";
 import { ReactComponent as Ethercon } from "../assets/ethercon.svg";
 import { powersFrom } from "../tools.js";
-import { VOLTAGE } from "./totals.js";
+import { VOLTAGE } from "./review.js";
 import { IoIosSwap, IoMdUmbrella, IoIosWifi, IoMdPower } from "react-icons/io";
 
 const DEFAULTPFDISCHARGE = 0.96;
