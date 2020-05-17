@@ -1,6 +1,6 @@
 import React from "react";
 import { IoMdClose, IoIosAdd, IoIosRemove } from "react-icons/io";
-import { matchAgainst } from "../tools.js";
+import { matchAgainst, powersFrom } from "../tools.js";
 
 class FixtureChanger extends React.Component {
   //Component of FixtureRow - user inputs fixture quantities here
@@ -108,16 +108,21 @@ class FixtureRow extends React.Component {
     }
 
     let power;
-    if (fixture.apparentPower) {
-      power = "" + fixture.apparentPower + "VA";
-    } else if (fixture.realPower && fixture.powerFactor) {
-      power =
-        Math.ceil(
-          Number(fixture.realPower) / Number(fixture.powerFactor)
-        ).toString() + "VA";
-    } else {
-      power = "" + fixture.realPower + "W";
+
+    if (powersFrom(fixture).apparentPower) {
+      power = "" + Math.ceil(Number(powersFrom(fixture).apparentPower)) + "VA";
     }
+
+    // if (fixture.apparentPower) {
+    //   power = "" + fixture.apparentPower + "VA";
+    // } else if (fixture.realPower && fixture.powerFactor) {
+    //   power =
+    //     Math.ceil(
+    //       Number(fixture.realPower) / Number(fixture.powerFactor)
+    //     ).toString() + "VA";
+    // } else {
+    //   power = "" + fixture.realPower + "W";
+    // }
 
     return (
       <div className="fixture-row">
@@ -132,7 +137,7 @@ class FixtureRow extends React.Component {
             </span>
           </div>
           <div className="fixture-in-row-details">
-            {power} · {fixture.weight}kg
+            {fixture.weight}kg · {power}
           </div>
         </div>
         <FixtureChanger
