@@ -1718,6 +1718,418 @@
       ],
       "origin": "ch-creator",
       "created": "2020-05-12"
+    },
+    {
+      "id": 1041,
+      "image": "https://adn.harmanpro.com/product_attachments/product_attachments/4793_1501981202/macviperprofile_original.jpg",
+      "manufacturer": "Martin",
+      "name": "MAC Viper Profile",
+      "type": "Spot",
+      "lampType": "Discharge",
+      "dimmed": false,
+      "realPower": 1186,
+      "powerFactor": 0.993,
+      "RDM": true,
+      "DMX3in": false,
+      "DMX3out": false,
+      "DMX5in": true,
+      "DMX5out": true,
+      "ethernetIn": false,
+      "ethernetOut": false,
+      "wireless": false,
+      "powerIn": "PowerCon",
+      "powerOut": false,
+      "protocols": ["DMX-512"],
+      "weight": 37.2,
+      "IP": "20",
+      "webpage": "https://www.martin.com/en/products/mac-viper-profile",
+      "manual": "https://www.martin.com/en/site_elements/martin-manuals-user-guide-safety-and-installation-manual",
+      "modes": [
+        {
+          "name": "Basic 16-bit",
+          "channels": 26
+        },
+        {
+          "name": "16-bit Extended",
+          "channels": 34
+        }
+      ],
+      "origin": "ch-creator",
+      "created": "2020-05-18"
+    },
+    {
+      "id": 1042,
+      "image": "https://adn.harmanpro.com/product_attachments/product_attachments/4794_1501981530/macviperperformance_original.jpg",
+      "manufacturer": "Martin",
+      "name": "MAC Viper Performance",
+      "type": "Spot",
+      "lampType": "Discharge",
+      "dimmed": false,
+      "realPower": 1186,
+      "powerFactor": 0.993,
+      "RDM": true,
+      "DMX3in": false,
+      "DMX3out": false,
+      "DMX5in": true,
+      "DMX5out": true,
+      "ethernetIn": false,
+      "ethernetOut": false,
+      "wireless": false,
+      "powerIn": "PowerCon",
+      "powerOut": false,
+      "protocols": ["DMX-512"],
+      "weight": 37.9,
+      "IP": "20",
+      "webpage": "https://www.martin.com/en/products/mac-viper-performance",
+      "manual": "https://www.martin.com/en/site_elements/mac-viper-performance-user-guide",
+      "modes": [
+        {
+          "name": "Basic 16-bit",
+          "channels": 32
+        },
+        {
+          "name": "16-bit Extended",
+          "channels": 40
+        }
+      ],
+      "origin": "ch-creator",
+      "created": "2020-05-18"
+    },
+    {
+      "id": 1043,
+      "image": "https://adn.harmanpro.com/product_attachments/product_attachments/4827_1501986952/macaura_original.jpg",
+      "manufacturer": "Martin",
+      "name": "MAC Aura",
+      "type": "Wash",
+      "lampType": "LED",
+      "dimmed": false,
+      "realPower": 228,
+      "powerFactor": 0.959,
+      "RDM": true,
+      "DMX3in": false,
+      "DMX3out": false,
+      "DMX5in": true,
+      "DMX5out": true,
+      "ethernetIn": false,
+      "ethernetOut": false,
+      "wireless": false,
+      "powerIn": "PowerCon",
+      "powerOut": "PowerCon",
+      "protocols": ["DMX-512"],
+      "weight": 5.6,
+      "IP": "20",
+      "webpage": "https://www.martin.com/en/products/mac-aura",
+      "manual": "https://www.martin.com/en/site_elements/mac-aura-user-manual",
+      "modes": [
+        {
+          "name": "Standard",
+          "channels": 14
+        },
+        {
+          "name": "Extended",
+          "channels": 25
+        }
+      ],
+      "origin": "ch-creator",
+      "created": "2020-05-18"
+    },
+    {
+      "id": 1044,
+      "image": "https://cdn.robe.cz/fileadmin/robe/media/photo/products/100-ledbeam-01.png",
+      "manufacturer": "Robe",
+      "name": "'Robin' LEDBEAM 100",
+      "type": "Wash",
+      "lampType": "LED",
+      "dimmed": false,
+      "realPower": 200,
+      "powerFactor": 0.96,
+      "RDM": true,
+      "DMX3in": false,
+      "DMX3out": false,
+      "DMX5in": true,
+      "DMX5out": true,
+      "ethernetIn": false,
+      "ethernetOut": false,
+      "wireless": "Optional",
+      "powerIn": "PowerCon",
+      "powerOut": "PowerCon",
+      "protocols": ["DMX-512"],
+      "weight": 4.5,
+      "webpage": "https://www.robe.cz/ledbeam-100/",
+      "manual": "https://www.robe.cz/index.php?type=10898&tx_odproducts_f%5baction%5d=downloadFile&tx_odproducts_f%5bfile%5d=robe/downloads/user_manuals/User_manual_Robin_100_LEDBeam.pdf",
+      "modes": [
+        {
+          "name": "Mode 1",
+          "channels": 35
+        },
+        {
+          "name": "Mode 2",
+          "channels": 19
+        },
+        {
+          "name": "Mode 3",
+          "channels": 14
+        },
+        {
+          "name": "Mode 4",
+          "channels": 9
+        },
+        {
+          "name": "Mode 5",
+          "channels": 9
+        },
+        {
+          "name": "Mode 6",
+          "channels": 37
+        }
+      ],
+      "origin": "ch-creator",
+      "created": "2020-05-18"
+    },
+    {
+      "id": 1045,
+      "image": "https://adn.harmanpro.com/product_attachments/product_attachments/4821_1501986589/AuraXB_main_1_original.jpg",
+      "manufacturer": "Martin",
+      "name": "MAC Aura XB",
+      "type": "Wash",
+      "lampType": "LED",
+      "dimmed": false,
+      "realPower": 350,
+      "powerFactor": 0.95,
+      "RDM": true,
+      "DMX3in": false,
+      "DMX3out": false,
+      "DMX5in": true,
+      "DMX5out": true,
+      "ethernetIn": false,
+      "ethernetOut": false,
+      "wireless": false,
+      "powerIn": "TRUE1",
+      "powerOut": "TRUE1",
+      "protocols": ["DMX-512"],
+      "weight": 6.5,
+      "IP": "20",
+      "webpage": "https://www.martin.com/en/products/mac-aura-xb",
+      "manual": "https://www.martin.com/en/site_elements/martin-mac-aura-xb-user-manual",
+      "modes": [
+        {
+          "name": "Standard",
+          "channels": 14
+        },
+        {
+          "name": "Extended",
+          "channels": 25
+        }
+      ],
+      "origin": "ch-creator",
+      "created": "2020-05-18"
+    },
+    {
+      "id": 1046,
+      "image": "https://sgmlight.com/files/images/perfion/G-7Beast_front_logo_text.png",
+      "manufacturer": "SGM",
+      "name": "G-7 Beast",
+      "type": "Hybrid",
+      "lampType": "LED",
+      "dimmed": false,
+      "realPower": 650,
+      "powerFactor": 0.96,
+      "RDM": true,
+      "DMX3in": false,
+      "DMX3out": false,
+      "DMX5in": true,
+      "DMX5out": true,
+      "ethernetIn": false,
+      "ethernetOut": false,
+      "wireless": true,
+      "powerIn": "TRUE1",
+      "powerOut": "TRUE1",
+      "protocols": [
+        "DMX-512",
+        "CRMX",
+        "W-DMX G2",
+        "W-DMX G3",
+        "W-DMX G4",
+        "W-DMX G4S"
+      ],
+      "weight": 30,
+      "IP": "66",
+      "webpage": "https://sgmlight.com/products/entertainment/g%C2%B77-beast",
+      "manual": "https://sgmlight.com/Admin/Public/DWSDownload.aspx?File=\\Files\\Files\\Perfion\\StrRDDATAUserManualFileGroup\\G-7%20Beam\\FileRDDATAUserManualG7BeamWEB\\SGM%20G-7%20BeaSt%20User%20Manual%20(Rev%20C).pdf",
+      "modes": [
+        {
+          "name": "Standard",
+          "channels": 22
+        },
+        {
+          "name": "Extended",
+          "channels": 29
+        },
+        {
+          "name": "Extended+",
+          "channels": 35
+        },
+        {
+          "name": "Simplified",
+          "channels": 18
+        }
+      ],
+      "origin": "ch-creator",
+      "created": "2020-05-18"
+    },
+    {
+      "id": 1047,
+      "image": "https://sgmlight.com/files/images/perfion/G-7_Spot_front_logo_text.png",
+      "manufacturer": "SGM",
+      "name": "G-7 Spot",
+      "type": "Spot",
+      "lampType": "LED",
+      "dimmed": false,
+      "realPower": 480,
+      "powerFactor": 0.96,
+      "RDM": true,
+      "DMX3in": false,
+      "DMX3out": false,
+      "DMX5in": true,
+      "DMX5out": true,
+      "ethernetIn": false,
+      "ethernetOut": false,
+      "wireless": true,
+      "powerIn": "TRUE1",
+      "powerOut": "TRUE1",
+      "protocols": [
+        "DMX-512",
+        "CRMX",
+        "W-DMX G2",
+        "W-DMX G3",
+        "W-DMX G4",
+        "W-DMX G4S"
+      ],
+      "weight": 27,
+      "IP": "66",
+      "webpage": "https://sgmlight.com/products/entertainment/g%C2%B77-spot",
+      "manual": "https://sgmlight.com/Admin/Public/DWSDownload.aspx?File=\\Files\\Files\\Perfion\\StrRDDATAUserManualFileGroup\\G-7%20Spot\\FileRDDATAUserManualG7SpotWEB\\SGM%20G-7%20Spot%20User%20Manual%20(Rev%20B).pdf",
+      "modes": [
+        {
+          "name": "Standard",
+          "channels": 22
+        },
+        {
+          "name": "Extended",
+          "channels": 29
+        }
+      ],
+      "origin": "ch-creator",
+      "created": "2020-05-18"
+    },
+    {
+      "id": 1048,
+      "image": "https://www.vari-lite.com/content/dam/vari-lite/products/vl2600-wash/vl2600-wash-450-620.jpg",
+      "manufacturer": "Vari-Lite",
+      "name": "VL2600 Wash",
+      "type": "Wash",
+      "lampType": "LED",
+      "dimmed": false,
+      "realPower": 550,
+      "RDM": true,
+      "DMX3in": false,
+      "DMX3out": false,
+      "DMX5in": true,
+      "DMX5out": true,
+      "ethernetIn": true,
+      "ethernetOut": false,
+      "wireless": false,
+      "powerIn": "TRUE1",
+      "powerOut": "TRUE1",
+      "protocols": ["DMX-512", "Art-net"],
+      "weight": 30.2,
+      "IP": "20",
+      "webpage": "https://www.vari-lite.com/global/products/vl2600-wash",
+      "manual": "https://www.vari-lite.com/b-dam/vari-lite/products/vl2600-wash/guides-and-manuals/VariLite_VL2600_QuickStartGuide.pdf",
+      "modes": [
+        {
+          "name": "16bit Enhanced",
+          "channels": 32
+        },
+        {
+          "name": "16bit",
+          "channels": 29
+        }
+      ],
+      "origin": "ch-creator",
+      "created": "2020-05-18"
+    },
+    {
+      "id": 1049,
+      "image": "https://www.claypaky.it/media/productentries/images/C61500.jpg",
+      "manufacturer": "ClayPaky",
+      "name": "Scenius Spot",
+      "type": "Spot",
+      "lampType": "Discharge",
+      "dimmed": false,
+      "apparentPower": 1800,
+      "RDM": true,
+      "DMX3in": false,
+      "DMX3out": false,
+      "DMX5in": true,
+      "DMX5out": true,
+      "ethernetIn": true,
+      "ethernetOut": false,
+      "wireless": false,
+      "powerIn": "TRUE1",
+      "powerOut": false,
+      "protocols": ["DMX-512", "Art-net"],
+      "weight": 38,
+      "IP": "20",
+      "webpage": "https://www.claypaky.it/en/products/scenius-spot",
+      "manual": "https://www.claypaky.it/media/documents/SceniusSpot_Manual_12.2016_EN.pdf",
+      "modes": [
+        {
+          "name": "Standard",
+          "channels": 32
+        },
+        {
+          "name": "Vector",
+          "channels": 36
+        }
+      ],
+      "origin": "ch-creator",
+      "created": "2020-05-18"
+    },
+    {
+      "id": 1050,
+      "manufacturer": "ClayPaky",
+      "name": "AlphaSpot 700 HPE",
+      "type": "Spot",
+      "lampType": "Discharge",
+      "dimmed": false,
+      "apparentPower": 1050,
+      "RDM": true,
+      "DMX3in": true,
+      "DMX3out": true,
+      "DMX5in": true,
+      "DMX5out": true,
+      "ethernetIn": true,
+      "ethernetOut": false,
+      "wireless": false,
+      "powerIn": "PowerCon",
+      "powerOut": false,
+      "protocols": ["DMX-512", "Art-net"],
+      "weight": 22.9,
+      "IP": "20",
+      "manual": "https://www.claypaky.it/media/documents/AlphaSpotHPE700_Manual_Rev.2_(02.11)_EN.pdf",
+      "modes": [
+        {
+          "name": "Standard",
+          "channels": 25
+        },
+        {
+          "name": "Vector",
+          "channels": 29
+        }
+      ],
+      "origin": "ch-creator",
+      "created": "2020-05-18"
     }
   ]
 }

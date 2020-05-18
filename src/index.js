@@ -163,7 +163,7 @@ class Page extends React.Component {
     if (this.props.fixtureView) {
       page = (
         <div ref={this.scroller}>
-          <FixtureDetails fixture={this.props.selectedFixture} />;
+          <FixtureDetails fixture={this.props.selectedFixture} />
         </div>
       );
     } else {
