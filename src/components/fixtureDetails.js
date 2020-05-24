@@ -81,7 +81,7 @@ class FixtureKeyDetails extends React.Component {
         <div className="review-amps">
           <span className="review-total ">{current.toFixed(1)}</span>
           <span className="review-unit">
-            A<sup>({VOLTAGE}v)</sup>
+            A<sup>({VOLTAGE}V)</sup>
           </span>
         </div>
       </div>

@@ -20,9 +20,9 @@ class FixtureChanger extends React.Component {
   }
   handlePlus() {
     let quantity = this.props.fixture.quantity;
-    if (Number(quantity)) {
+    if (Number(quantity) && Number(quantity) < 99) {
       quantity = Number(quantity) + 1;
-    } else {
+    } else if (Number(quantity) !== 99) {
       quantity = 1;
     }
     this.props.onFixtureChange(this.props.fixture.id, quantity);
@@ -137,7 +137,7 @@ class FixtureRow extends React.Component {
             </span>
           </div>
           <div className="fixture-in-row-details">
-            {fixture.weight}kg · {power}
+            {Math.ceil(fixture.weight)}kg · {power}
           </div>
         </div>
         <FixtureChanger

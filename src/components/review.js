@@ -76,7 +76,9 @@ class Review extends React.Component {
   render() {
     let fixtureCount = 0;
     this.props.selectedFixtures.forEach((fixture) => {
-      fixtureCount += Number(fixture.quantity);
+      if (Number(fixture.quantity)) {
+        fixtureCount += Number(fixture.quantity);
+      }
     });
     return (
       <div>
