@@ -24,7 +24,7 @@ footer {
   margin: 0 40px 0 15px;
 }
 
-.footer-icon {
+.footer-button-icon {
   height: 32px;
   width: 32px;
   /* Clicking on this icon activates container (.footer-button-*) */

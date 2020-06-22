@@ -27,15 +27,15 @@ class Footer extends React.Component {
         : { fontWeight: "lighter" };
     let searchIcon =
       this.props.mode === "build" ? (
-        <IoMdAddCircle className="footer-icon" />
+        <IoMdAddCircle className="footer-button-icon" />
       ) : (
-        <IoMdAddCircleOutline className="footer-icon" />
+        <IoMdAddCircleOutline className="footer-button-icon" />
       );
     let listIcon =
       this.props.mode === "review" ? (
-        <IoIosListBox className="footer-icon" />
+        <IoIosListBox className="footer-button-icon" />
       ) : (
-        <IoIosList className="footer-icon" />
+        <IoIosList className="footer-button-icon" />
       );
 
     return (
