@@ -51,29 +51,23 @@ class Header extends React.Component {
   render() {
     console.log(this.props.filterText);
     let leftIcon;
-    let rightIcon;
     let title;
-    let headerClass = "header";
 
     switch (this.props.mode) {
       case "build":
         switch (this.state.searchExtended) {
           case true:
             title = (
-              <div>
-                <SearchBar
-                  filterText={this.props.filterText}
-                  onFilterTextChange={this.handleFilterTextChange}
-                />
-              </div>
+              <SearchBar
+                filterText={this.props.filterText}
+                onFilterTextChange={this.handleFilterTextChange}
+              />
             );
             leftIcon = (
               <div className="left-icon-div" onClick={this.handleBackClick}>
                 <IoIosArrowBack className="left-icon" />
               </div>
             );
-            headerClass = "header-search";
-            rightIcon = <div></div>;
             break;
           default:
             title = (
@@ -86,18 +80,14 @@ class Header extends React.Component {
                 <IoIosSearch className="left-icon" />
               </div>
             );
-            rightIcon = <div></div>;
-            headerClass = "header";
         }
         break;
       case "review":
         title = <h1 className="title">Summary</h1>;
         leftIcon = <div></div>;
-        headerClass = "header-review";
         break;
       default:
         leftIcon = <div></div>;
-        rightIcon = <div></div>;
         title = <h1>PatchPal</h1>;
     }
 
@@ -108,19 +98,12 @@ class Header extends React.Component {
         </div>
       );
       title = <h1>{this.props.selectedFixture.name}</h1>;
-      rightIcon = <div></div>;
-      headerClass = "header";
     }
 
     return (
-      <header className="header-container-container">
-        <div className="header-container">
-          <div className={headerClass}>
-            {leftIcon}
-            {title}
-            {rightIcon}
-          </div>
-        </div>
+      <header>
+        {leftIcon}
+        {title}
       </header>
     );
   }

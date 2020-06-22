@@ -21,6 +21,7 @@ class SearchBar extends React.Component {
 
     return (
       <form
+        className="search-form"
         onKeyPress={(e) => {
           e.key === "Enter" && e.preventDefault();
         }}

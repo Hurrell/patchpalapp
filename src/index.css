@@ -169,7 +169,7 @@ a:active {
 .app {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto 1fr 40px;
+  grid-template-rows: 38px 1fr 40px;
   overflow: hidden;
 }
 
