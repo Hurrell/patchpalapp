@@ -39,30 +39,30 @@ class Footer extends React.Component {
       );
 
     return (
-      <footer className="footer-container-container">
-        <div className="footer-container">
-          <nav id="footer">
-            <div></div>
-            <div
-              className="child-clicks-this"
-              style={buildStyle}
-              onClick={this.handleBuildMode}
-              data-mode="build"
-            >
-              {searchIcon}
-            </div>
-            <div></div>
-            <div
-              className="child-clicks-this"
-              style={reviewStyle}
-              onClick={this.handleBuildMode}
-              data-mode="review"
-            >
-              {listIcon}
-            </div>
-            <div></div>
-          </nav>
+      <footer>
+        {/* <div className="footer-container"> */}
+        {/* <nav className="footer"> */}
+        {/* <div></div> */}
+        <div
+          className="footer-button-left"
+          style={buildStyle}
+          onClick={this.handleBuildMode}
+          data-mode="build"
+        >
+          {searchIcon}
         </div>
+        {/* <div></div> */}
+        <div
+          className="footer-button-right"
+          style={reviewStyle}
+          onClick={this.handleBuildMode}
+          data-mode="review"
+        >
+          {listIcon}
+        </div>
+        {/* <div></div> */}
+        {/* </nav> */}
+        {/* </div> */}
       </footer>
     );
   }

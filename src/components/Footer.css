@@ -1,31 +1,32 @@
 /* Footer ----------*/
 footer {
-  background-color: var(--accent-color);
+  /* Layout */
   height: 40px;
-  width: 100%;
-  justify-self: center;
-  text-align: center;
-}
-
-.footer-container {
-  display: inline-block;
-  width: 100%;
-  max-width: 560px;
-}
-
-#footer {
-  padding-top: 5px;
-  display: grid;
-  grid-template-columns: 0.2fr 1fr 0.2fr 1fr 0.2fr;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  /* Style */
   background-color: var(--accent-color);
 }
+
+.footer-button-left,
+.footer-button-right {
+  flex: 1 0 auto;
+  max-width: 210px;
+  text-align: center;
+  padding: 4px 0;
+}
+
+.footer-button-left {
+  margin: 0 15px 0 40px;
+}
+
+.footer-button-right {
+  margin: 0 40px 0 15px;
+}
+
 .footer-icon {
   height: 32px;
   width: 32px;
-}
-
-/* clicking on any child activates this div's onClick */
-.child-clicks-this > * {
+  /* Clicking on this icon activates container (.footer-button-*) */
   pointer-events: none;
 }
