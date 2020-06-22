@@ -1,0 +1,17 @@
+.search {
+  border-style: none;
+  /* margin-block-start: 0.1em; */
+  height: 30px;
+  width: 100%;
+  font-size: 19px;
+  outline-style: none;
+}
+
+.search::placeholder {
+  opacity: 85%;
+}
+
+.search,
+.search::placeholder {
+  background-color: var(--accent-color);
+}
