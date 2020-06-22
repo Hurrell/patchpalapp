@@ -6,14 +6,9 @@ import { getObj } from "./tools.js";
 import { FixtureTable } from "./components/fixtureTable.js";
 import FixtureDetails from "./components/fixtureDetails.js";
 import { Review } from "./components/review.js";
-import {
-  IoIosSearch,
-  IoIosList,
-  IoIosListBox,
-  IoIosArrowBack,
-  IoMdAddCircleOutline,
-  IoMdAddCircle,
-} from "react-icons/io";
+import Footer from "./components/Footer.js";
+
+import { IoIosSearch, IoIosArrowBack } from "react-icons/io";
 
 var APPDATA;
 //const VOLTAGE = 230;
@@ -310,7 +305,7 @@ class Header extends React.Component {
     }
 
     return (
-      <div className="header-container-container">
+      <header className="header-container-container">
         <div className="header-container">
           <div className={headerClass}>
             {leftIcon}
@@ -318,68 +313,7 @@ class Header extends React.Component {
             {rightIcon}
           </div>
         </div>
-      </div>
-    );
-  }
-}
-
-class Footer extends React.Component {
-  //container for footer - build tab or review tab
-  constructor(props) {
-    super(props);
-    this.handleBuildMode = this.handleBuildMode.bind(this);
-  }
-  handleBuildMode(e) {
-    this.props.onModeChange(e);
-  }
-  render() {
-    let reviewStyle =
-      this.props.mode === "review"
-        ? { fontWeight: "bold" }
-        : { fontWeight: "lighter" };
-    let buildStyle =
-      this.props.mode === "build"
-        ? { fontWeight: "bold" }
-        : { fontWeight: "lighter" };
-    let searchIcon =
-      this.props.mode === "build" ? (
-        <IoMdAddCircle className="footer-icon" />
-      ) : (
-        <IoMdAddCircleOutline className="footer-icon" />
-      );
-    let listIcon =
-      this.props.mode === "review" ? (
-        <IoIosListBox className="footer-icon" />
-      ) : (
-        <IoIosList className="footer-icon" />
-      );
-
-    return (
-      <div className="footer-container-container">
-        <div className="footer-container">
-          <div id="footer">
-            <div></div>
-            <div
-              className="child-clicks-this"
-              style={buildStyle}
-              onClick={this.handleBuildMode}
-              data-mode="build"
-            >
-              {searchIcon}
-            </div>
-            <div></div>
-            <div
-              className="child-clicks-this"
-              style={reviewStyle}
-              onClick={this.handleBuildMode}
-              data-mode="review"
-            >
-              {listIcon}
-            </div>
-            <div></div>
-          </div>
-        </div>
-      </div>
+      </header>
     );
   }
 }
@@ -459,7 +393,7 @@ class App extends React.Component {
           onBackClick={this.handleBackClick}
           filterText={this.state.filterText}
         />
-        <div className="page">
+        <section className="page">
           <div ref={this.mainScroller}></div>
           <Page
             fixtureView={this.state.fixtureView}
@@ -469,7 +403,7 @@ class App extends React.Component {
             filterText={this.state.filterText}
             onFixtureClick={this.handleFixtureClick}
           />
-        </div>
+        </section>
 
         <Footer mode={this.state.mode} onModeChange={this.handleBuildMode} />
       </div>

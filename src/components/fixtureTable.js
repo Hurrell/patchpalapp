@@ -128,17 +128,18 @@ class FixtureRow extends React.Component {
       <div className="fixture-row">
         <div className="remove-button-container">{removeButton}</div>
         <div>
-          <div>
+          <h3>
             <span
               className="fixture-row-title"
               onClick={this.handleFixtureClick}
             >
               {fixture.manufacturer} {fixture.name}
             </span>
-          </div>
-          <div className="fixture-in-row-details">
+          </h3>
+
+          <p className="fixture-in-row-details">
             {Math.ceil(fixture.weight)}kg · {power}
-          </div>
+          </p>
         </div>
         <FixtureChanger
           onFixtureChange={this.handleFixtureChange}
