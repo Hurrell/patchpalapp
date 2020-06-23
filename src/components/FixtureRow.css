@@ -24,6 +24,10 @@
   border-width: 1px 0;
 }
 
+.fixture-row-title {
+  margin-bottom: 3px;
+}
+
 /* When on desktop, links underline on hover. */
 @media (hover: hover) and (pointer: fine) {
   .fixture-row:hover {

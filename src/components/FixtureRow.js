@@ -62,13 +62,8 @@ class FixtureRow extends React.Component {
       <li className="fixture-row">
         <div className="remove-button-container">{removeButton}</div>
         <div>
-          <h3>
-            <span
-              className="fixture-row-title"
-              onClick={this.handleFixtureClick}
-            >
-              {fixture.manufacturer} {fixture.name}
-            </span>
+          <h3 className="fixture-row-title" onClick={this.handleFixtureClick}>
+            {fixture.manufacturer} {fixture.name}
           </h3>
 
           <p className="fixture-in-row-details">

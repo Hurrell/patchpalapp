@@ -95,7 +95,7 @@ class Page extends React.Component {
         );
       }
     }
-    return <div>{page}</div>;
+    return page;
   }
 }
 
