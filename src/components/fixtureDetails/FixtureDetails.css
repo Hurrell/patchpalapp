@@ -1,0 +1,32 @@
+/* Fixture Page */
+.fixture-details {
+  /* font-size: 1.3em; */
+  margin-top: 25px;
+  margin-left: 36px;
+  margin-right: 20px;
+}
+
+.fixture-details > div {
+  margin-bottom: 5px;
+}
+
+#fixture-detail-backarrow {
+  height: 32px;
+  width: 32px;
+}
+
+.detail-table {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  align-self: center;
+}
+
+.detail-table > div {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-style: solid;
+  border-color: var(--accent-color);
+  border-width: 1px 0;
+}

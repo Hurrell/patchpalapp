@@ -3,7 +3,7 @@ import "./Page.css";
 
 import { getObj } from "./../tools.js";
 import { FixtureTable } from "./fixtureTable.js";
-import FixtureDetails from "./fixtureDetails.js";
+import FixtureDetails from "./fixtureDetails/FixtureDetails.js";
 import { Review } from "./review.js";
 
 class Page extends React.Component {
