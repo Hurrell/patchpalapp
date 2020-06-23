@@ -28,7 +28,7 @@ class FixtureRow extends React.Component {
 
   render() {
     const fixture = this.props.fixture;
-    let removeButton = "";
+    let removeButton = <div className="remove-button"></div>;
     if (fixture.selected) {
       removeButton = (
         <button
@@ -47,20 +47,9 @@ class FixtureRow extends React.Component {
       power = "" + Math.ceil(Number(powersFrom(fixture).apparentPower)) + "VA";
     }
 
-    // if (fixture.apparentPower) {
-    //   power = "" + fixture.apparentPower + "VA";
-    // } else if (fixture.realPower && fixture.powerFactor) {
-    //   power =
-    //     Math.ceil(
-    //       Number(fixture.realPower) / Number(fixture.powerFactor)
-    //     ).toString() + "VA";
-    // } else {
-    //   power = "" + fixture.realPower + "W";
-    // }
-
     return (
       <li className="fixture-row">
-        <div className="remove-button-container">{removeButton}</div>
+        {removeButton}
         <div>
           <h3 className="fixture-row-title" onClick={this.handleFixtureClick}>
             {fixture.manufacturer} {fixture.name}
