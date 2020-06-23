@@ -1,0 +1,23 @@
+.search-form {
+  /* Layout */
+  flex: 1 0 auto;
+  max-width: 415px;
+  margin: 0 20px 0 10px;
+}
+
+.search {
+  border-style: none;
+  padding-top: 4px;
+  width: 100%;
+  font-size: 19px;
+  outline-style: none;
+}
+
+.search::placeholder {
+  opacity: 85%;
+}
+
+.search,
+.search::placeholder {
+  background-color: var(--accent-color);
+}

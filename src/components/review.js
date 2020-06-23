@@ -40,7 +40,7 @@ class Totals extends React.Component {
         <div className="review-amps">
           <span className="review-total ">{Math.ceil(totalObj.current)}</span>
           <span className="review-unit">
-            A<sup>({VOLTAGE}v)</sup>
+            A<sup>({VOLTAGE}V)</sup>
           </span>
         </div>
       </div>

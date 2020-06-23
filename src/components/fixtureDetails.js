@@ -333,7 +333,7 @@ class FixtureDetails extends React.Component {
     Object.assign(singleFixture, this.props.fixture);
     singleFixture.quantity = 1;
     return (
-      <div className="fixture-details">
+      <article className="fixture-details">
         <IconCalloutTop fixture={this.props.fixture} />
         <FixtureKeyDetails fixture={this.props.fixture} />
         <IconCalloutBottom fixture={this.props.fixture} />
@@ -357,7 +357,7 @@ class FixtureDetails extends React.Component {
         </div>
         {/* <div>Modes: {this.props.fixture.modes}</div> */}
         {/* <div>Rented by: {this.props.fixture.productionCos}</div> */}
-      </div>
+      </article>
     );
   }
 }
