@@ -59,7 +59,7 @@ class FixtureRow extends React.Component {
     // }
 
     return (
-      <div className="fixture-row">
+      <li className="fixture-row">
         <div className="remove-button-container">{removeButton}</div>
         <div>
           <h3>
@@ -79,7 +79,7 @@ class FixtureRow extends React.Component {
           onFixtureChange={this.handleFixtureChange}
           fixture={this.props.fixture}
         />
-      </div>
+      </li>
     );
   }
 }

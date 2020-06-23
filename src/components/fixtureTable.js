@@ -63,7 +63,7 @@ class FixtureTable extends React.Component {
         return <div></div>;
       }
     } else {
-      return <div className="fixture-table">{rows}</div>;
+      return <ul className="fixture-table">{rows}</ul>;
     }
   }
 }
