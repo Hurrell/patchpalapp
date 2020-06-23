@@ -227,6 +227,7 @@ class App extends React.Component {
           filterText={this.state.filterText}
         />
         <section className="page">
+          {/* Blank div for scroll into view reference */}
           <div ref={this.mainScroller}></div>
           <Page
             fixtureView={this.state.fixtureView}
