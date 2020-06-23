@@ -17,17 +17,7 @@ class Page extends React.Component {
     this.handleRemoveButtonClick = this.handleRemoveButtonClick.bind(this);
     this.handleFilterTextChange = this.handleFilterTextChange.bind(this);
     this.handleFixtureClick = this.handleFixtureClick.bind(this);
-    this.scroller = React.createRef();
   }
-  // //some code to handle scrolling...
-  // componentDidMount = () => this.handleScroll();
-  // //componentDidUpdate = () => this.handleScroll();
-  // handleScroll = () => {
-  //   const { index, selected } = this.props;
-  //   if (index === selected) {
-  //     this.scroller.current.scrollIntoView({ behavior: "auto" });
-  //   }
-  // };
 
   handleFilterTextChange(filterText) {
     this.props.onFilterTextChange(filterText);
@@ -77,39 +67,31 @@ class Page extends React.Component {
   render() {
     let page;
     if (this.props.fixtureView) {
-      page = (
-        <div ref={this.scroller}>
-          <FixtureDetails fixture={this.props.selectedFixture} />
-        </div>
-      );
+      page = <FixtureDetails fixture={this.props.selectedFixture} />;
     } else {
       if (this.props.mode === "build") {
         page = (
-          <div ref={this.scroller}>
-            <FixtureTable
-              mode={this.props.mode}
-              fixtures={this.props.APPDATA.fixtures}
-              selectedFixtures={this.state.projectFixtures}
-              filterText={this.props.filterText}
-              onFixtureChange={this.handleFixtureChange}
-              onRemoveButtonClick={this.handleRemoveButtonClick}
-              onFixtureClick={this.handleFixtureClick}
-            />
-          </div>
+          <FixtureTable
+            mode={this.props.mode}
+            fixtures={this.props.APPDATA.fixtures}
+            selectedFixtures={this.state.projectFixtures}
+            filterText={this.props.filterText}
+            onFixtureChange={this.handleFixtureChange}
+            onRemoveButtonClick={this.handleRemoveButtonClick}
+            onFixtureClick={this.handleFixtureClick}
+          />
         );
       } else {
         page = (
-          <div ref={this.scroller}>
-            <Review
-              mode={this.props.mode}
-              fixtures={this.props.APPDATA.fixtures}
-              selectedFixtures={this.state.projectFixtures}
-              filterText={this.props.filterText}
-              onFixtureChange={this.handleFixtureChange}
-              onRemoveButtonClick={this.handleRemoveButtonClick}
-              onFixtureClick={this.handleFixtureClick}
-            />
-          </div>
+          <Review
+            mode={this.props.mode}
+            fixtures={this.props.APPDATA.fixtures}
+            selectedFixtures={this.state.projectFixtures}
+            filterText={this.props.filterText}
+            onFixtureChange={this.handleFixtureChange}
+            onRemoveButtonClick={this.handleRemoveButtonClick}
+            onFixtureClick={this.handleFixtureClick}
+          />
         );
       }
     }
