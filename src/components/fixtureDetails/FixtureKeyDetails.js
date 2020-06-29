@@ -2,7 +2,7 @@ import React from "react";
 import "./FixtureKeyDetails.css";
 
 import { powersFrom } from "../../tools.js";
-import { VOLTAGE } from "../review.js";
+import { VOLTAGE } from "../Review.js";
 
 class FixtureKeyDetails extends React.Component {
   //container within Review, shows totals

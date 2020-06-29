@@ -2,6 +2,8 @@ import React from "react";
 import { printPower, totalsFrom } from "../tools.js";
 import { FixtureTable } from "./fixtureTable/FixtureTable.js";
 
+import "./Review.css";
+
 const VOLTAGE = 230;
 
 class Totals extends React.Component {

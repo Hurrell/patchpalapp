@@ -34,13 +34,6 @@ class SearchBar extends React.Component {
           value={filterText}
           onChange={this.handleFilterTextChange}
         />
-        {/* <p>
-                      <select onChange={this.handleProdCoChange}>
-                          <option value = "default">Filter by Production Co.</option>
-                          <option value = "CSE">CSE</option>
-                          <option value = "Siyan">Siyan</option>
-                      </select>
-                  </p> */}
       </form>
     );
   }
