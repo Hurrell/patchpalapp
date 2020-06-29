@@ -1,9 +1,11 @@
 import React from "react";
 import "./FixtureChanger.css";
+
 import { IoIosAdd, IoIosRemove } from "react-icons/io";
 
 class FixtureChanger extends React.Component {
-  //Component of FixtureRow - user inputs fixture quantities here
+  //Component of FixtureRow
+  //UI for fixture quantities.
   constructor(props) {
     super(props);
     this.handleFixtureChange = this.handleFixtureChange.bind(this);
@@ -65,7 +67,7 @@ class FixtureChanger extends React.Component {
         {minusSymbol}
         {numberInput}
         <div onClick={this.handlePlus}>
-          <IoIosAdd className="plus-minus-icon" />
+          <IoIosAdd className="fixture-change-icon" />
         </div>
       </div>
     );

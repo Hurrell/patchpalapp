@@ -2,12 +2,12 @@ import React from "react";
 import "./FixtureRow.css";
 
 import FixtureChanger from "./FixtureChanger";
-
-import { IoMdClose } from "react-icons/io";
 import { powersFrom } from "../../tools.js";
 
+import { IoMdClose } from "react-icons/io";
+
 class FixtureRow extends React.Component {
-  //Component of FixtureTable - contains fixture title and action buttons
+  //Component of FixtureTable - contains fixture title, key details, and action buttons
   constructor(props) {
     super(props);
     this.handleFixtureChange = this.handleFixtureChange.bind(this);
@@ -17,44 +17,41 @@ class FixtureRow extends React.Component {
   handleFixtureChange(fixture, value) {
     this.props.onFixtureChange(fixture, value);
   }
-
   handleRemoveButtonClick() {
     this.props.onRemoveButtonClick(this.props.fixture.id);
   }
-
   handleFixtureClick(e) {
     this.props.onFixtureClick(this.props.fixture);
   }
 
   render() {
     const fixture = this.props.fixture;
-    let removeButton = <div className="remove-button"></div>;
+
+    // Show the X button if fixtures are selected
+    let isHidden = true;
     if (fixture.selected) {
-      removeButton = (
-        <button
-          className="remove-button"
-          type="button"
-          onClick={this.handleRemoveButtonClick}
-        >
-          <IoMdClose className="remove-button-x" />
-        </button>
-      );
+      isHidden = false;
     }
 
+    // Create readable power string.
     let power;
-
     if (powersFrom(fixture).apparentPower) {
       power = "" + Math.ceil(Number(powersFrom(fixture).apparentPower)) + "VA";
     }
 
     return (
       <li className="fixture-row">
-        {removeButton}
+        <button
+          className={`remove-button ${isHidden ? "hidden" : ""}`}
+          type="button"
+          onClick={this.handleRemoveButtonClick}
+        >
+          <IoMdClose className="remove-button-x" />
+        </button>
         <div>
           <h3 className="fixture-row-title" onClick={this.handleFixtureClick}>
             {fixture.manufacturer} {fixture.name}
           </h3>
-
           <p className="fixture-in-row-details">
             {Math.ceil(fixture.weight)}kg · {power}
           </p>
