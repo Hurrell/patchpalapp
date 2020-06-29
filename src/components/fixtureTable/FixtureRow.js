@@ -4,7 +4,7 @@ import "./FixtureRow.css";
 import FixtureChanger from "./FixtureChanger";
 
 import { IoMdClose } from "react-icons/io";
-import { powersFrom } from "../tools.js";
+import { powersFrom } from "../../tools.js";
 
 class FixtureRow extends React.Component {
   //Component of FixtureTable - contains fixture title and action buttons

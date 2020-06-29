@@ -1,6 +1,6 @@
 import React from "react";
 import { printPower, totalsFrom } from "../tools.js";
-import { FixtureTable } from "./fixtureTable.js";
+import { FixtureTable } from "./fixtureTable/FixtureTable.js";
 
 const VOLTAGE = 230;
 
