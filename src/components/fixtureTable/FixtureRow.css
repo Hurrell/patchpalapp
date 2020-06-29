@@ -40,7 +40,7 @@
 
 /* Make more buttony... */
 .fixture-row-title,
-.plus-minus-icon,
+.fixture-change-icon,
 .remove-button-x {
   cursor: pointer;
 }

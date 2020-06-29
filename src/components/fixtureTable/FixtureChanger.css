@@ -39,3 +39,7 @@
 .quantity-input input:focus::placeholder {
   color: transparent;
 }
+
+.hidden {
+  visibility: hidden;
+}
