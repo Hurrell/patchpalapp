@@ -1,0 +1,41 @@
+.details-icon {
+  height: 33px;
+  width: 33px;
+  fill: rgb(255, 255, 255);
+}
+
+.details-bottom-tile {
+  /* Layout */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 4px 15px 4px;
+  height: 45px;
+  width: 40px;
+  padding: 5px;
+  /* Style */
+  font-size: 10px;
+  border: 1px solid white;
+  border-radius: 5px;
+}
+
+.details-bottom-tile > * {
+  text-align: center;
+  margin: auto;
+}
+
+.smaller-connector {
+  height: 31px;
+  width: 31px;
+}
+
+.icon-callout {
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: center; */
+}
+
+.icon-callout > * {
+  justify-self: center;
+  align-self: center;
+}

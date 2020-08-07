@@ -1,5 +1,5 @@
 import React from "react";
-import { matchAgainst } from "../tools.js";
+import { matchAgainst } from "../../tools.js";
 import FixtureRow from "./FixtureRow";
 
 class FixtureTable extends React.Component {

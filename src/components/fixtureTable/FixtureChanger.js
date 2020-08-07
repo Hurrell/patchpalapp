@@ -1,9 +1,11 @@
 import React from "react";
 import "./FixtureChanger.css";
+
 import { IoIosAdd, IoIosRemove } from "react-icons/io";
 
 class FixtureChanger extends React.Component {
-  //Component of FixtureRow - user inputs fixture quantities here
+  //Component of FixtureRow
+  //UI for fixture quantities.
   constructor(props) {
     super(props);
     this.handleFixtureChange = this.handleFixtureChange.bind(this);
@@ -30,19 +32,20 @@ class FixtureChanger extends React.Component {
 
   render() {
     const fixture = this.props.fixture;
-    let quantityShown = "";
-    let minusSymbol = <div></div>;
-    let numberInput = <div></div>;
+
+    // Show quantity and minus icon if necessary.
+    let isHidden = true;
     if (fixture.quantity || fixture.quantity === 0) {
-      quantityShown = fixture.quantity;
-      minusSymbol = (
-        <div onClick={this.handleMinus}>
-          <IoIosRemove className="plus-minus-icon" />
+      isHidden = false;
+    }
+
+    return (
+      <div className="fixture-change">
+        <div onClick={this.handleMinus} className={isHidden ? "hidden" : ""}>
+          <IoIosRemove className="fixture-change-icon" />
         </div>
-      );
-      numberInput = (
         <form
-          className="quantity-input"
+          className={`quantity-input ${isHidden ? "hidden" : ""}`}
           onKeyPress={(e) => {
             e.key === "Enter" && e.preventDefault();
           }}
@@ -51,21 +54,15 @@ class FixtureChanger extends React.Component {
             type="text"
             pattern="\d*"
             maxLength="2"
-            value={quantityShown}
+            value={fixture.quantity}
             onChange={this.handleFixtureChange}
             onKeyDown={(evt) =>
               ["e", "E", "+", "-"].includes(evt.key) && evt.preventDefault()
             }
           />
         </form>
-      );
-    }
-    return (
-      <div className="fixture-change">
-        {minusSymbol}
-        {numberInput}
         <div onClick={this.handlePlus}>
-          <IoIosAdd className="plus-minus-icon" />
+          <IoIosAdd className="fixture-change-icon" />
         </div>
       </div>
     );

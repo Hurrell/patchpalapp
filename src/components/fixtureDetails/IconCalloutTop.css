@@ -1,0 +1,43 @@
+.details-icon {
+  height: 33px;
+  width: 33px;
+  fill: rgb(255, 255, 255);
+}
+
+.details-top-tile {
+  font-size: 13px;
+  height: 45px;
+  width: 40px;
+  padding: 5px;
+  border: 1px solid white;
+  border-radius: 5px;
+  /* font-size: 10px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 4px 15px 4px;
+}
+
+.details-top-tile > * {
+  text-align: center;
+  margin: auto;
+}
+
+.true1 > * {
+  fill: rgb(255, 230, 0) !important;
+}
+
+.powercon > * {
+  fill: rgb(0, 98, 255) !important;
+}
+
+.icon-callout {
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: center; */
+}
+
+.icon-callout > * {
+  justify-self: center;
+  align-self: center;
+}

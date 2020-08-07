@@ -2,9 +2,9 @@ import React from "react";
 import "./Page.css";
 
 import { getObj } from "./../tools.js";
-import { FixtureTable } from "./fixtureTable.js";
-import FixtureDetails from "./fixtureDetails.js";
-import { Review } from "./review.js";
+import { FixtureTable } from "./fixtureTable/FixtureTable.js";
+import FixtureDetails from "./fixtureDetails/FixtureDetails.js";
+import { Review } from "./Review.js";
 
 class Page extends React.Component {
   //Container for all the content not in the header or footer
