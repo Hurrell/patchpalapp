@@ -39,15 +39,19 @@ class FixtureRow extends React.Component {
       power = "" + Math.ceil(Number(powersFrom(fixture).apparentPower)) + "VA";
     }
 
+    const addDefaultSrc = (ev) => {
+      ev.target.src = "./images/blinder_small.png";
+    };
+
     return (
       <li className="fixture-row">
-        <button
-          className={`remove-button ${isHidden ? "hidden" : ""}`}
-          type="button"
-          onClick={this.handleRemoveButtonClick}
-        >
-          <IoMdClose className="remove-button-x" />
-        </button>
+        <div className="side-img-container">
+          <img
+            className="side-img"
+            src={"./images/" + fixture.id + "_small.png"}
+            onError={addDefaultSrc}
+          ></img>
+        </div>
         <div>
           <h3 className="fixture-row-title" onClick={this.handleFixtureClick}>
             {fixture.manufacturer} {fixture.name}

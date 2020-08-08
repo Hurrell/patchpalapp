@@ -10,9 +10,9 @@
 .fixture-row {
   /* Layout */
   display: grid;
-  grid-template-columns: 28px 1fr 88px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  grid-template-columns: 60px 1fr 88px;
+  padding-top: 12px;
+  padding-bottom: 12px;
   align-self: center;
   /* Style */
   font-family: "Open Sans", sans-serif;
@@ -23,8 +23,23 @@
   border-width: 1px 0;
 }
 
+.side-img-container {
+  height: 50px;
+  width: 50px;
+  overflow: hidden;
+  position: relative;
+}
+
+.side-img {
+  width: 50px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 .fixture-row-title {
-  margin-bottom: 3px;
+  margin-bottom: 6px;
+  font-size: 1.2em;
 }
 
 /* When on desktop, links underline on hover. */
@@ -46,7 +61,7 @@
 }
 
 .fixture-in-row-details {
-  font-size: 0.8em;
+  font-size: 1em;
   font-family: "Open Sans", sans-serif;
   color: var(--dark-text-color);
 }
