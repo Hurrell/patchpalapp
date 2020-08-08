@@ -1,6 +1,6 @@
 # PatchPal
 
-## A tool for Lighting Techs :bulb:
+A tool for Lighting Techs :bulb:
 
 ### Get info
 
