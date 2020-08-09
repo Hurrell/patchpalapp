@@ -40,7 +40,7 @@ class FixtureRow extends React.Component {
     }
 
     const addDefaultSrc = (ev) => {
-      ev.target.src = "./images/blinder_small.png";
+      ev.target.src = "./images/" + fixture.type + "_small.png";
     };
 
     return (
