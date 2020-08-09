@@ -40,15 +40,16 @@ class FixtureRow extends React.Component {
     }
 
     const addDefaultSrc = (ev) => {
-      ev.target.src = "./images/" + fixture.type + "_small.png";
+      ev.target.src = "images/" + fixture.type + "_small.png";
     };
 
     return (
       <li className="fixture-row">
         <div className="side-img-container">
           <img
+            alt=""
             className="side-img"
-            src={"./images/" + fixture.id + "_small.png"}
+            src={"images/" + fixture.id + "_small.png"}
             onError={addDefaultSrc}
           ></img>
         </div>
