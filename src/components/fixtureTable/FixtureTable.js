@@ -1,6 +1,7 @@
 import React from "react";
 import { matchAgainst } from "../../tools.js";
 import FixtureRow from "./FixtureRow";
+import "./FixtureTable.css";
 
 class FixtureTable extends React.Component {
   constructor(props) {
