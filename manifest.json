@@ -1,0 +1,15 @@
+{
+  "short_name": "PatchPal",
+  "name": "PatchPal",
+  "icons": [
+    {
+      "src": "logo_200.png",
+      "type": "image/png",
+      "sizes": "201x200"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

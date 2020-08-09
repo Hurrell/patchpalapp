@@ -1,0 +1,2135 @@
+{
+  "fixtures": [
+    {
+      "id": 1001,
+      "manufacturer": "Robe",
+      "name": "Pointe",
+      "type": "Hybrid",
+      "lampType": "Discharge",
+      "dimmed": false,
+      "realPower": 470,
+      "powerFactor": 0.96,
+      "RDM": true,
+      "DMX3in": true,
+      "DMX3out": true,
+      "DMX5in": true,
+      "DMX5out": true,
+      "ethernetIn": true,
+      "ethernetOut": false,
+      "wireless": "Optional",
+      "powerIn": "PowerCon",
+      "powerOut": false,
+      "protocols": ["DMX-512", "Art-net", "MA Net", "MA Net2", "sACN"],
+      "weight": 15,
+      "webpage": "https://www.robe.cz/pointe/",
+      "manual": "https://www.robe.cz/index.php?type=10898&tx_odproducts_f%5baction%5d=downloadFile&tx_odproducts_f%5bfile%5d=robe/downloads/user_manuals/User_manual_Robin_Pointe.pdf",
+      "modes": [
+        {
+          "name": "Mode 1",
+          "channels": 24
+        },
+        {
+          "name": "Mode 2",
+          "channels": 16
+        },
+        {
+          "name": "Mode 3",
+          "channels": 30
+        }
+      ],
+      "origin": "ch-creator",
+      "created": "2020-05-06"
+    },
+    {
+      "id": 1002,
+      "manufacturer": "Robe",
+      "name": "Spiider",
+      "type": "Wash",
+      "lampType": "LED",
+      "dimmed": false,
+      "realPower": 600,
+      "powerFactor": 0.98,
+      "RDM": true,
+      "DMX3in": true,
+      "DMX3out": true,
+      "DMX5in": true,
+      "DMX5out": true,
+      "ethernetIn": true,
+      "ethernetOut": true,
+      "wireless": "Optional",
+      "powerIn": "TRUE1",
+      "powerOut": false,
+      "protocols": [
+        "DMX-512",
+        "Art-net",
+        "MA Net",
+        "MA Net2",
+        "sACN",
+        "Kling-Net"
+      ],
+      "weight": 13.25,
+      "IP": "2x",
+      "webpage": "https://www.robe.cz/spiider/",
+      "manual": "https://www.robe.cz/index.php?type=10898&tx_odproducts_f%5baction%5d=downloadFile&tx_odproducts_f%5bfile%5d=robe/downloads/user_manuals/User_manual_Robin_Spiider.pdf",
+      "modes": [
+        {
+          "name": "Mode 1 - 3-zones",
+          "channels": 49
+        },
+        {
+          "name": "Mode 2 - Basic",
+          "channels": 27
+        },
+        {
+          "name": "Mode 3 - Advanced",
+          "channels": 33
+        },
+        {
+          "name": "Mode 4 - Full RGBW",
+          "channels": 90
+        },
+        {
+          "name": "Mode 5 - Wash",
+          "channels": 27
+        },
+        {
+          "name": "Mode 6 - Pattern",
+          "channels": 47
+        },
+        {
+          "name": "Mode 7 - Pixel RGB",
+          "channels": 91
+        },
+        {
+          "name": "Mode 8 - Pixel RGBW",
+          "channels": 110
+        },
+        {
+          "name": "Mode 9 - Pattern full RGB",
+          "channels": 104
+        },
+        {
+          "name": "Mode 10 - Pattern full RGBW",
+          "channels": 123
+        }
+      ],
+      "origin": "ch-creator",
+      "created": "2020-05-06"
+    },
+    {
+      "id": 1003,
+      "manufacturer": "Generic",
+      "name": "2 Lite Blinder, dimmed",
+      "type": "Blinder",
+      "lampType": "Conventional",
+      "dimmed": true,
+      "realPower": 1300,
+      "powerFactor": 1,
+      "weight": 3,
+      "origin": "ch-creator",
+      "created": "2020-05-06"
+    },
+    {
+      "id": 1004,
+      "manufacturer": "ClayPaky",
+      "name": "Scenius Unico",
+      "type": "Spot",
+      "lampType": "Discharge",
+      "dimmed": false,
+      "realPower": 1400,
+      "RDM": true,
+      "DMX3in": false,
+      "DMX3out": false,
+      "DMX5in": true,
+      "DMX5out": true,
+      "ethernetIn": true,
+      "ethernetOut": false,
+      "wireless": false,
+      "powerIn": "TRUE1",
+      "powerOut": false,
+      "protocols": ["DMX-512", "Art-net"],
+      "weight": 45.6,
+      "webpage": "https://www.claypaky.it/en/products/scenius-unico",
+      "manual": "https://8c693ab5-259b-48c5-9145-47e096473bba.filesusr.com/ugd/cf9a35_76c5494da4ee4c5ebf49c758280efb7e.pdf",
+      "modes": [
+        {
+          "name": "Mode 1",
+          "channels": 39
+        },
+        {
+          "name": "Mode 2",
+          "channels": 43
+        }
+      ],
+      "origin": "ch-creator",
+      "created": "2020-05-05"
+    },
+    {
+      "id": 1005,
+      "manufacturer": "Generic",
+      "name": "4 Lite Blinder, dimmed",
+      "type": "Blinder",
+      "lampType": "Conventional",
+      "dimmed": true,
+      "realPower": 2600,
+      "apparentPower": 2600,
+      "powerFactor": 1,
+      "weight": 8,
+      "origin": "ch-creator",
+      "created": "2020-05-05"
+    },
+    {
+      "id": 1006,
+      "manufacturer": "GLP",
+      "name": "JDC-1",
+      "type": "Strobe",
+      "lampType": "LED-Strobe",
+      "dimmed": false,
+      "realPower": 1200,
+      "RDM": true,
+      "DMX3in": false,
+      "DMX3out": false,
+      "DMX5in": true,
+      "DMX5out": true,
+      "ethernetIn": false,
+      "ethernetOut": false,
+      "wireless": false,
+      "powerIn": "TRUE1",
+      "powerOut": false,
+      "protocols": ["DMX-512"],
+      "weight": 12,
+      "webpage": "https://www.glp.de/en/products/strobes-led/jdc1",
+      "manual": "https://www.glp.de/en/products?format=raw&task=download&fid=571",
+      "modes": [
+        {
+          "name": "Mode 1 (Compressed Pro)",
+          "channels": 14
+        },
+        {
+          "name": "Mode 2 (Normal)",
+          "channels": 23
+        },
+        {
+          "name": "Mode 3 (SPix)",
+          "channels": 68
+        },
+        {
+          "name": "Mode 4 (SPix Pro",
+          "channels": 62
+        },
+        {
+          "name": "Mode 5 (1Pix Pro)",
+          "channels": 17
+        },
+        {
+          "name": "Mode 6 (Easy)",
+          "channels": 11
+        }
+      ],
+      "origin": "ch-creator",
+      "created": "2020-05-05"
+    },
+    {
+      "id": 1007,
+      "manufacturer": "ColourSound",
+      "name": "Aquabeam",
+      "type": "Beam",
+      "lampType": "Discharge",
+      "dimmed": false,
+      "realPower": 628,
+      "RDM": true,
+      "DMX3in": true,
+      "DMX3out": true,
+      "DMX5in": true,
+      "DMX5out": true,
+      "ethernetIn": false,
+      "ethernetOut": false,
+      "wireless": "Optional",
+      "protocols": ["DMX-512", "Art-net"],
+      "weight": 23,
+      "IP": "44",
+      "webpage": "https://www.coloursound.com/aquabeam",
+      "manual": "https://8c693ab5-259b-48c5-9145-47e096473bba.filesusr.com/ugd/cf9a35_4943553be16a4924a32eafddd2ef2439.pdf",
+      "modes": [
+        {
+          "name": "Standard",
+          "channels": 24
+        },
+        {
+          "name": "Simple",
+          "channels": 20
+        }
+      ],
+      "origin": "ch-creator",
+      "created": "2020-05-05"
+    },
+    {
+      "id": 1008,
+      "manufacturer": "PROLights",
+      "name": "Diamond7",
+      "type": "beam-wash",
+      "lampType": "LED",
+      "dimmed": false,
+      "realPower": 125,
+      "RDM": true,
+      "DMX3in": true,
+      "DMX3out": true,
+      "DMX5in": true,
+      "DMX5out": true,
+      "ethernetIn": false,
+      "ethernetOut": false,
+      "wireless": "Optional",
+      "powerIn": "PowerCon",
+      "powerOut": "PowerCon",
+      "protocols": ["DMX-512"],
+      "weight": 6.4,
+      "IP": "20",
+      "webpage": "https://www.musiclights.it/product/DIAMOND7",
+      "manual": "https://www.musiclights.it/download.php?id=3868",
+      "modes": [
+        {
+          "name": "STAND",
+          "channels": 19
+        },
+        {
+          "name": "EXT-1",
+          "channels": 26
+        },
+        {
+          "name": "EXT-2",
+          "channels": 50
+        },
+        {
+          "name": "BAS-8",
+          "channels": 18
+        },
+        {
+          "name": "BAS-16",
+          "channels": 20
+        }
+      ],
+      "origin": "ch-creator",
+      "created": "2020-05-05"
+    },
+    {
+      "id": 1009,
+      "manufacturer": "Robe",
+      "name": "MegaPointe",
+      "type": "Hybrid",
+      "lampType": "Discharge",
+      "dimmed": false,
+      "realPower": 670,
+      "powerFactor": 0.97,
+      "RDM": true,
+      "DMX3in": true,
+      "DMX3out": true,
+      "DMX5in": true,
+      "DMX5out": true,
+      "ethernetIn": true,
+      "ethernetOut": false,
+      "wireless": "Optional",
+      "powerIn": "TRUE1",
+      "protocols": ["DMX-512", "Art-net", "MA Net", "MA Net2", "sACN"],
+      "weight": 22,
+      "IP": "20",
+      "webpage": "https://www.robe.cz/megapointe/",
+      "manual": "https://www.robe.cz/index.php?type=10898&tx_odproducts_f%5baction%5d=downloadFile&tx_odproducts_f%5bfile%5d=robe/downloads/user_manuals/User_manual_Robin_MegaPointe.pdf",
+      "modes": [
+        {
+          "name": "Mode 1",
+          "channels": 39
+        },
+        {
+          "name": "Mode 2",
+          "channels": 34
+        }
+      ],
+      "origin": "ch-creator",
+      "created": "2020-05-03"
+    },
+    {
+      "id": 1010,
+      "manufacturer": "ClayPaky",
+      "name": "Sharpy",
+      "type": "Beam",
+      "lampType": "Discharge",
+      "dimmed": false,
+      "apparentPower": 350,
+      "RDM": true,
+      "DMX3in": true,
+      "DMX3out": true,
+      "DMX5in": true,
+      "DMX5out": true,
+      "ethernetIn": true,
+      "ethernetOut": false,
+      "wireless": false,
+      "powerIn": "PowerCon",
+      "protocols": ["DMX-512", "Art-net"],
+      "weight": 19,
+      "IP": "20",
+      "webpage": "https://www.claypaky.it/en/products/sharpy",
+      "manual": "https://www.claypaky.it/media/documents/HR_Sharpy_Manual_05.2016_EN.pdf",
+      "modes": [
+        {
+          "name": "standard",
+          "channels": 16
+        },
+        {
+          "name": "vector",
+          "channels": 20
+        }
+      ],
+      "origin": "ch-creator",
+      "created": "2020-05-03"
+    },
+    {
+      "id": 1011,
+      "manufacturer": "Robe",
+      "name": "BMFL Spot",
+      "type": "Spot",
+      "lampType": "Discharge",
+      "dimmed": false,
+      "realPower": 2000,
+      "powerFactor": 0.99,
+      "RDM": true,
+      "DMX3in": true,
+      "DMX3out": true,
+      "DMX5in": true,
+      "DMX5out": true,
+      "ethernetIn": true,
+      "ethernetOut": false,
+      "wireless": "Optional",
+      "powerIn": "PowerCon",
+      "powerOut": false,
+      "protocols": ["DMX-512", "Art-net", "MA Net", "MA Net2", "sACN"],
+      "weight": 36,
+      "webpage": "https://www.robe.cz/bmfl-spot/",
+      "manual": "https://www.robe.cz/index.php?type=10898&tx_odproducts_f%5baction%5d=downloadFile&tx_odproducts_f%5bfile%5d=robe/downloads/user_manuals/User_manual_Robin_BMFL_Spot.pdf",
+      "modes": [
+        {
+          "name": "Mode 1 - Standard 16 bit",
+          "channels": 41
+        },
+        {
+          "name": "Mode 2 - Reduced 8 bit",
+          "channels": 33
+        }
+      ],
+      "origin": "ch-creator",
+      "created": "2020-05-06"
+    },
+    {
+      "id": 1012,
+      "manufacturer": "Chauvet",
+      "name": "Rogue R2 Spot",
+      "type": "Spot",
+      "lampType": "LED",
+      "dimmed": false,
+      "realPower": 310,
+      "RDM": false,
+      "DMX3in": true,
+      "DMX3out": true,
+      "DMX5in": true,
+      "DMX5out": true,
+      "ethernetIn": false,
+      "ethernetOut": false,
+      "wireless": false,
+      "powerIn": "PowerCon",
+      "powerOut": "PowerCon",
+      "protocols": ["DMX-512"],
+      "weight": 21.2,
+      "webpage": "https://www.chauvetprofessional.eu/products/rogue-r2-spot/",
+      "manual": "https://www.chauvetprofessional.eu/wp-content/uploads//2015/06/ROGUE_R2_Spot_UM_Rev9_WO.pdf",
+      "modes": [
+        {
+          "name": "Mode 1",
+          "channels": 18
+        },
+        {
+          "name": "Mode 2",
+          "channels": 21
+        }
+      ],
+      "origin": "ch-creator",
+      "created": "2020-05-06"
+    },
+    {
+      "id": 1013,
+      "manufacturer": "Robe",
+      "name": "'Robin' 600 LEDWash",
+      "type": "Wash",
+      "lampType": "LED",
+      "dimmed": false,
+      "realPower": 415,
+      "apparentPower": 430,
+      "powerFactor": 0.98,
+      "RDM": true,
+      "DMX3in": true,
+      "DMX3out": true,
+      "DMX5in": true,
+      "DMX5out": true,
+      "ethernetIn": true,
+      "ethernetOut": false,
+      "wireless": "Optional",
+      "powerIn": "Flex",
+      "powerOut": false,
+      "protocols": ["DMX-512Art-net", "MA Net", "MA Net2"],
+      "weight": 10.6,
+      "webpage": "https://www.robe.cz/ledwash-600/",
+      "manual": "https://www.robe.cz/index.php?type=10898&tx_odproducts_f%5baction%5d=downloadFile&tx_odproducts_f%5bfile%5d=robe/downloads/user_manuals/User_manual_Robin_600_LEDWash.pdf",
+      "modes": [
+        {
+          "name": "Mode 1",
+          "channels": 37
+        },
+        {
+          "name": "Mode 2",
+          "channels": 21
+        },
+        {
+          "name": "Mode 3",
+          "channels": 15
+        },
+        {
+          "name": "Mode 4 - Full RGBW",
+          "channels": 10
+        },
+        {
+          "name": "Mode 5 - Wash",
+          "channels": 37
+        },
+        {
+          "name": "Mode 6 - Pattern",
+          "channels": 24
+        }
+      ],
+      "origin": "ch-creator",
+      "created": "2020-05-09"
+    },
+    {
+      "id": 1014,
+      "manufacturer": "Chauvet",
+      "name": "Rogue R2 Wash",
+      "type": "Wash",
+      "lampType": "LED",
+      "dimmed": false,
+      "realPower": 339,
+      "RDM": false,
+      "DMX3in": true,
+      "DMX3out": true,
+      "DMX5in": true,
+      "DMX5out": true,
+      "ethernetIn": false,
+      "ethernetOut": false,
+      "wireless": false,
+      "powerIn": "PowerCon",
+      "powerOut": "PowerCon",
+      "protocols": ["DMX-512"],
+      "weight": 9.25,
+      "IP": "20",
+      "webpage": "https://www.chauvetprofessional.com/products/rogue-r2-wash/",
+      "manual": "https://www.chauvetprofessional.com/wp-content/uploads/2015/06/ROGUE_R2_Wash_UM_Rev4_WO2.pdf",
+      "modes": [
+        {
+          "name": "Mode 1 - 15CH",
+          "channels": 15
+        },
+        {
+          "name": "Mode 2 - 17CH",
+          "channels": 17
+        },
+        {
+          "name": "Mode 3 - 22CH",
+          "channels": 22
+        },
+        {
+          "name": "Mode 4 - 33CH",
+          "channels": 33
+        },
+        {
+          "name": "Mode 5 - 33CH MS",
+          "channels": 33
+        },
+        {
+          "name": "Mode 6 - 54CH",
+          "channels": 54
+        },
+        {
+          "name": "Mode 7 - 54CH MS",
+          "channels": 54
+        },
+        {
+          "name": "Mode 8 - 56CH",
+          "channels": 56
+        }
+      ],
+      "origin": "ch-creator",
+      "created": "2020-05-09"
+    },
+    {
+      "id": 1015,
+      "manufacturer": "Chauvet",
+      "name": "Rogue R1 Wash",
+      "type": "Wash",
+      "lampType": "LED",
+      "dimmed": false,
+      "realPower": 161,
+      "RDM": false,
+      "DMX3in": true,
+      "DMX3out": true,
+      "DMX5in": true,
+      "DMX5out": true,
+      "ethernetIn": false,
+      "ethernetOut": false,
+      "wireless": false,
+      "powerIn": "PowerCon",
+      "powerOut": "PowerCon",
+      "protocols": ["DMX-512"],
+      "weight": 5.9,
+      "IP": "20",
+      "webpage": "https://www.chauvetprofessional.com/products/rogue-r1-wash/",
+      "manual": "https://www.chauvetprofessional.com/wp-content/uploads/2015/06/ROGUE_R1_Wash_UM_Rev2_WO1.pdf",
+      "modes": [
+        {
+          "name": "Mode 1 - 14CH",
+          "channels": 14
+        },
+        {
+          "name": "Mode 2 - 15CH",
+          "channels": 15
+        },
+        {
+          "name": "Mode 3 - 19CH",
+          "channels": 19
+        },
+        {
+          "name": "Mode 4 - 21CH",
+          "channels": 21
+        }
+      ],
+      "origin": "ch-creator",
+      "created": "2020-05-09"
+    },
+    {
+      "id": 1016,
+      "manufacturer": "ClayPaky",
+      "name": "Aleda B-Eye K20",
+      "type": "Wash",
+      "lampType": "LED",
+      "dimmed": false,
+      "apparentPower": 750,
+      "RDM": true,
+      "DMX3in": true,
+      "DMX3out": true,
+      "DMX5in": true,
+      "DMX5out": true,
+      "ethernetIn": true,
+      "ethernetOut": false,
+      "wireless": false,
+      "powerIn": "PowerCon",
+      "powerOut": false,
+      "protocols": ["DMX-512", "Art-net"],
+      "weight": 21,
+      "IP": "20",
+      "webpage": "https://www.claypaky.it/en/products/b-eye-k20",
+      "manual": "https://www.claypaky.it/media/documents/HR_A.leda_B-Eye_K10-K20_Manual_08.2016_EN.pdf",
+      "modes": [
+        {
+          "name": "Basic Engine - Standard",
+          "channels": 21
+        },
+        {
+          "name": "Basic Engine - Shapes",
+          "channels": 35
+        },
+        {
+          "name": "Pixel Engine - RGB",
+          "channels": 111
+        },
+        {
+          "name": "Pixel Engine",
+          "channels": 148
+        }
+      ],
+      "origin": "ch-creator",
+      "created": "2020-05-09"
+    },
+    {
+      "id": 1017,
+      "manufacturer": "ClayPaky",
+      "name": "Aleda B-Eye K10",
+      "type": "Wash",
+      "lampType": "LED",
+      "dimmed": false,
+      "apparentPower": 450,
+      "RDM": true,
+      "DMX3in": false,
+      "DMX3out": false,
+      "DMX5in": true,
+      "DMX5out": true,
+      "ethernetIn": true,
+      "ethernetOut": false,
+      "wireless": false,
+      "powerIn": "PowerCon",
+      "powerOut": false,
+      "protocols": ["DMX-512", "Art-net"],
+      "weight": 15,
+      "webpage": "https://www.claypaky.it/en/products/aleda-b-eye-k10",
+      "manual": "https://www.claypaky.it/media/documents/HR_A.leda_B-Eye_K10-K20_Manual_08.2016_EN.pdf",
+      "modes": [
+        {
+          "name": "Basic Engine - Standard",
+          "channels": 21
+        },
+        {
+          "name": "Basic Engine - Shapes",
+          "channels": 35
+        },
+        {
+          "name": "Pixel Engine - RGB",
+          "channels": 57
+        },
+        {
+          "name": "Pixel Engine",
+          "channels": 76
+        }
+      ],
+      "origin": "ch-creator",
+      "created": "2020-05-09"
+    },
+    {
+      "id": 1018,
+      "manufacturer": "Showtec",
+      "name": "Sunstrip Active DMX (Mk1, Tungsten, 75W GU10s)",
+      "type": "Blinder",
+      "lampType": "Conventional",
+      "dimmed": false,
+      "realPower": 800,
+      "RDM": false,
+      "DMX3in": true,
+      "DMX3out": true,
+      "DMX5in": false,
+      "DMX5out": false,
+      "ethernetIn": false,
+      "ethernetOut": false,
+      "wireless": false,
+      "powerIn": "PowerCon",
+      "powerOut": "PowerCon",
+      "protocols": ["DMX-512"],
+      "weight": 5.32,
+      "webpage": "https://www.showtec.co.uk/onlineshop/index.php?route=product/product&product_id=454",
+      "manual": "https://8c693ab5-259b-48c5-9145-47e096473bba.filesusr.com/ugd/cf9a35_453274ab96b74700bb37944e0e55a12a.pdf",
+      "modes": [
+        {
+          "name": "Mode 1",
+          "channels": 1
+        },
+        {
+          "name": "Mode 2",
+          "channels": 2
+        },
+        {
+          "name": "Mode 3",
+          "channels": 5
+        },
+        {
+          "name": "Mode 4",
+          "channels": 10
+        }
+      ],
+      "origin": "ch-creator",
+      "created": "2020-05-09"
+    },
+    {
+      "id": 1019,
+      "manufacturer": "Showtec",
+      "name": "Sunstrip Active DMX Mk2 (Tungsten, 50W GU10s)",
+      "type": "Blinder",
+      "lampType": "Conventional",
+      "dimmed": false,
+      "realPower": 550,
+      "RDM": false,
+      "DMX3in": true,
+      "DMX3out": true,
+      "DMX5in": false,
+      "DMX5out": false,
+      "ethernetIn": false,
+      "ethernetOut": false,
+      "wireless": false,
+      "powerIn": "PowerCon",
+      "powerOut": "PowerCon",
+      "protocols": ["DMX-512"],
+      "weight": 6.2,
+      "webpage": "https://www.showtec.co.uk/onlineshop/index.php?route=product/product&product_id=455",
+      "manual": "https://assets.highlite.com/attachments/MANUAL/30714_MANUAL_GB_V2.pdf",
+      "modes": [
+        {
+          "name": "Mode 1",
+          "channels": 1
+        },
+        {
+          "name": "Mode 2",
+          "channels": 2
+        },
+        {
+          "name": "Mode 3",
+          "channels": 5
+        },
+        {
+          "name": "Mode 4",
+          "channels": 10
+        }
+      ],
+      "origin": "ch-creator",
+      "created": "2020-05-09"
+    },
+    {
+      "id": 1020,
+      "manufacturer": "Chromlech",
+      "name": "Jarag-5 (PAR30)",
+      "type": "Blinder",
+      "lampType": "Conventional",
+      "dimmed": false,
+      "realPower": 1875,
+      "RDM": false,
+      "DMX3in": false,
+      "DMX3out": false,
+      "DMX5in": true,
+      "DMX5out": true,
+      "ethernetIn": false,
+      "ethernetOut": false,
+      "wireless": false,
+      "powerIn": "PowerCon",
+      "powerOut": false,
+      "protocols": ["DMX-512"],
+      "weight": 13.1,
+      "webpage": "http://www.chromlech.fr/pages/en/products/jarag-5-range.php",
+      "manual": "http://www.chromlech.fr/media/support/manuels/userguide_revD_full_eng.pdf",
+      "modes": [
+        {
+          "name": "Mode 1 - Sequence",
+          "channels": 6
+        },
+        {
+          "name": "Mode 2 - Matrix",
+          "channels": 25
+        },
+        {
+          "name": "Mode 3 - Dual",
+          "channels": 31
+        }
+      ],
+      "origin": "ch-creator",
+      "created": "2020-05-09"
+    },
+    {
+      "id": 1021,
+      "manufacturer": "Portman",
+      "name": "P1 Retro Lamp",
+      "type": "Blinder",
+      "lampType": "Conventional",
+      "dimmed": false,
+      "realPower": 2200,
+      "RDM": false,
+      "DMX3in": true,
+      "DMX3out": true,
+      "DMX5in": true,
+      "DMX5out": true,
+      "ethernetIn": false,
+      "ethernetOut": false,
+      "wireless": false,
+      "powerIn": "PowerCon",
+      "powerOut": false,
+      "protocols": ["DMX-512"],
+      "weight": 12.5,
+      "webpage": "https://portmanlights.com/p1-retro-lamp/",
+      "manual": "https://portmanlights.com/wp-content/uploads/2017/11/P1-MANUAL.pdf",
+      "modes": [
+        {
+          "name": "Mode 1",
+          "channels": 7
+        }
+      ],
+      "origin": "ch-creator",
+      "created": "2020-05-09"
+    },
+    {
+      "id": 1022,
+      "manufacturer": "Portman",
+      "name": "P2 Hexaline",
+      "type": "Blinder",
+      "lampType": "Conventional",
+      "dimmed": false,
+      "realPower": 1900,
+      "RDM": false,
+      "DMX3in": true,
+      "DMX3out": true,
+      "DMX5in": true,
+      "DMX5out": true,
+      "ethernetIn": false,
+      "ethernetOut": false,
+      "wireless": false,
+      "powerIn": "TRUE1",
+      "powerOut": false,
+      "protocols": ["DMX-512"],
+      "weight": 9,
+      "webpage": "https://portmanlights.com/p2-hexaline/",
+      "manual": "https://portmanlights.com/wp-content/uploads/2017/11/P2-MANUAL.pdf",
+      "modes": [
+        {
+          "name": "Mode 1",
+          "channels": 6
+        }
+      ],
+      "notes": "Some power connectors may be PowerCon.",
+      "origin": "ch-creator",
+      "created": "2020-05-09"
+    },
+    {
+      "id": 1024,
+      "image": "https://www.glp.de/media/djcatalog2/images/item/0/impression-x4-bar-20_f.jpg",
+      "manufacturer": "GLP",
+      "name": "Impression X4 Bar 20",
+      "type": "Batten",
+      "lampType": "LED",
+      "dimmed": false,
+      "realPower": 400,
+      "apparentPower": 450,
+      "RDM": true,
+      "DMX3in": false,
+      "DMX3out": false,
+      "DMX5in": true,
+      "DMX5out": true,
+      "ethernetIn": false,
+      "ethernetOut": false,
+      "wireless": false,
+      "powerIn": "PowerCon",
+      "powerOut": "PowerCon",
+      "protocols": ["DMX-512"],
+      "weight": 16,
+      "webpage": "https://www.glp.de/en/products/moving-lights-led/impression-x4-bar-20",
+      "manual": "https://www.glp.de/en/products?format=raw&task=download&fid=114",
+      "modes": [
+        {
+          "name": "Mode 1 - Normal",
+          "channels": 34
+        },
+        {
+          "name": "Mode 2 - Compressed",
+          "channels": 19
+        },
+        {
+          "name": "Mode 3 - High Resolution",
+          "channels": 35
+        },
+        {
+          "name": "Mode 4 - Single Pixel",
+          "channels": 88
+        },
+        {
+          "name": "Mode 5 - Single Pixel High Resolution",
+          "channels": 89
+        },
+        {
+          "name": "Mode 6 - Dual Pixel",
+          "channels": 48
+        },
+        {
+          "name": "Mode 7 - Dual Pixel High Resolution",
+          "channels": 49
+        }
+      ],
+      "origin": "ch-creator",
+      "created": "2020-05-10"
+    },
+    {
+      "id": 1025,
+      "image": "https://www.glp.de/media/djcatalog2/images/item/0/impression-x4-bar-10_f.jpg",
+      "manufacturer": "GLP",
+      "name": "Impression X4 Bar 10",
+      "type": "Batten",
+      "lampType": "LED",
+      "dimmed": false,
+      "apparentPower": 200,
+      "RDM": true,
+      "DMX3in": false,
+      "DMX3out": false,
+      "DMX5in": true,
+      "DMX5out": true,
+      "ethernetIn": false,
+      "ethernetOut": false,
+      "wireless": false,
+      "powerIn": "PowerCon",
+      "powerOut": "PowerCon",
+      "protocols": ["DMX-512"],
+      "weight": 8,
+      "webpage": "https://www.glp.de/en/products/moving-lights-led/impression-x4-bar-10",
+      "manual": "https://www.glp.de/en/products?format=raw&task=download&fid=112",
+      "modes": [
+        {
+          "name": "Mode 1 - Normal",
+          "channels": 33
+        },
+        {
+          "name": "Mode 2 - Compressed",
+          "channels": 19
+        },
+        {
+          "name": "Mode 3 - High Resolution",
+          "channels": 34
+        },
+        {
+          "name": "Mode 4 - Single Pixel",
+          "channels": 48
+        },
+        {
+          "name": "Mode 5 - Single Pixel High Resolution",
+          "channels": 49
+        },
+        {
+          "name": "Mode 6 - Dual Pixel",
+          "channels": 28
+        },
+        {
+          "name": "Mode 7 - Dual Pixel High Resolution",
+          "channels": 29
+        }
+      ],
+      "origin": "ch-creator",
+      "created": "2020-05-10"
+    },
+    {
+      "id": 1026,
+      "image": "https://www.glp.de/media/djcatalog2/images/item/0/impression-x4_f.jpg",
+      "manufacturer": "GLP",
+      "name": "Impression X4",
+      "type": "Wash",
+      "lampType": "LED",
+      "dimmed": false,
+      "apparentPower": 350,
+      "RDM": false,
+      "DMX3in": false,
+      "DMX3out": false,
+      "DMX5in": true,
+      "DMX5out": true,
+      "ethernetIn": false,
+      "ethernetOut": false,
+      "wireless": false,
+      "powerIn": "PowerCon",
+      "powerOut": false,
+      "protocols": ["DMX-512"],
+      "weight": 8,
+      "webpage": "https://www.glp.de/en/products/moving-lights-led/impression-x4",
+      "manual": "https://www.glp.de/en/products?format=raw&task=download&fid=596",
+      "modes": [
+        {
+          "name": "Mode 1 - Normal",
+          "channels": 20
+        },
+        {
+          "name": "Mode 2 - Compress",
+          "channels": 14
+        },
+        {
+          "name": "Mode 3 - High Resolution (Extended)",
+          "channels": 21
+        }
+      ],
+      "origin": "ch-creator",
+      "created": "2020-05-11"
+    },
+    {
+      "id": 1027,
+      "image": "https://www.glp.de/media/djcatalog2/images/item/0/impression-x4-l_f.jpg",
+      "manufacturer": "GLP",
+      "name": "Impression X4 L",
+      "type": "Wash",
+      "lampType": "LED",
+      "dimmed": false,
+      "apparentPower": 900,
+      "RDM": false,
+      "DMX3in": false,
+      "DMX3out": false,
+      "DMX5in": true,
+      "DMX5out": true,
+      "ethernetIn": false,
+      "ethernetOut": false,
+      "wireless": false,
+      "powerIn": "PowerCon",
+      "powerOut": false,
+      "protocols": ["DMX-512"],
+      "weight": 17,
+      "webpage": "https://www.glp.de/en/products/moving-lights-led/impression-x4-l",
+      "manual": "https://www.glp.de/en/products?format=raw&task=download&fid=599",
+      "modes": [
+        {
+          "name": "Mode 1 - Normal",
+          "channels": 29
+        },
+        {
+          "name": "Mode 2 - Compressed",
+          "channels": 21
+        },
+        {
+          "name": "Mode 3 - Extended (High)",
+          "channels": 31
+        },
+        {
+          "name": "Mode 4 - Single Pixel (spix)",
+          "channels": 169
+        }
+      ],
+      "origin": "ch-creator",
+      "created": "2020-05-11"
+    },
+    {
+      "id": 1028,
+      "image": "https://www.glp.de/media/djcatalog2/images/item/0/impression-x4-xl_f.jpg",
+      "manufacturer": "GLP",
+      "name": "Impression X4 XL",
+      "type": "Wash",
+      "lampType": "LED",
+      "dimmed": false,
+      "apparentPower": 1200,
+      "RDM": false,
+      "DMX3in": true,
+      "DMX3out": true,
+      "DMX5in": true,
+      "DMX5out": true,
+      "ethernetIn": false,
+      "ethernetOut": false,
+      "wireless": false,
+      "powerIn": "PowerCon",
+      "powerOut": false,
+      "protocols": ["DMX-512"],
+      "weight": 31,
+      "webpage": "https://www.glp.de/en/products/moving-lights-led/impression-x4-xl",
+      "manual": "https://www.glp.de/en/products?format=raw&task=download&fid=109",
+      "modes": [
+        {
+          "name": "Mode 1 - Normal",
+          "channels": 26
+        },
+        {
+          "name": "Mode 2 - Compress",
+          "channels": 16
+        },
+        {
+          "name": "Mode 3 - High Resolution / Extended",
+          "channels": 27
+        }
+      ],
+      "origin": "ch-creator",
+      "created": "2020-05-11"
+    },
+    {
+      "id": 1029,
+      "image": "https://cdn.robe.cz/fileadmin/_processed_/4/9/csm_esprite-01_dc54e9ad32.png",
+      "manufacturer": "Robe",
+      "name": "Esprite",
+      "type": "Spot",
+      "lampType": "LED",
+      "dimmed": false,
+      "realPower": 950,
+      "powerFactor": 0.98,
+      "RDM": true,
+      "DMX3in": true,
+      "DMX3out": true,
+      "DMX5in": true,
+      "DMX5out": true,
+      "ethernetIn": true,
+      "ethernetOut": false,
+      "wireless": true,
+      "powerIn": "TRUE1",
+      "powerOut": false,
+      "protocols": ["DMX-512", "Art-net", "MA Net", "MA Net2", "sACN"],
+      "weight": 28.2,
+      "IP": "20",
+      "webpage": "https://www.robe.cz/esprite/",
+      "manual": "https://www.robe.cz/index.php?type=10898&tx_odproducts_f%5baction%5d=downloadFile&tx_odproducts_f%5bfile%5d=robe/downloads/user_manuals/User_manual_Robin_Esprite.pdf",
+      "modes": [
+        {
+          "name": "Mode 1 - Standard 16 bit",
+          "channels": 49
+        },
+        {
+          "name": "Mode 2 - Reduced 8 bit",
+          "channels": 42
+        }
+      ],
+      "origin": "ch-creator",
+      "created": "2020-05-11"
+    },
+    {
+      "id": 1030,
+      "image": "https://cdn.robe.cz/fileadmin/robe/media/photo/products/ledbeam-150-01.png",
+      "manufacturer": "Robe",
+      "name": "'Robin' LEDBeam 150",
+      "type": "beam-wash",
+      "lampType": "LED",
+      "dimmed": false,
+      "realPower": 220,
+      "powerFactor": 0.97,
+      "RDM": true,
+      "DMX3in": false,
+      "DMX3out": false,
+      "DMX5in": true,
+      "DMX5out": true,
+      "ethernetIn": false,
+      "ethernetOut": false,
+      "wireless": "Optional",
+      "powerIn": "PowerCon",
+      "powerOut": "PowerCon",
+      "protocols": ["DMX-512"],
+      "weight": 5.7,
+      "webpage": "https://www.robe.cz/ledbeam-150/",
+      "manual": "https://www.robe.cz/index.php?type=10898&tx_odproducts_f%5baction%5d=downloadFile&tx_odproducts_f%5bfile%5d=robe/downloads/user_manuals/User_manual_Robin_LEDBeam_150.pdf",
+      "modes": [
+        {
+          "name": "Mode 1 - Standard 16 bit",
+          "channels": 22
+        },
+        {
+          "name": "Mode 2 - Reduced 8 bit",
+          "channels": 16
+        }
+      ],
+      "origin": "ch-creator",
+      "created": "2020-05-11"
+    },
+    {
+      "id": 1031,
+      "image": "https://cdn.robe.cz/fileadmin/robe/media/photo/products/viva-01.png",
+      "manufacturer": "Robe",
+      "name": "'Robin' Viva",
+      "type": "Hybrid",
+      "lampType": "LED",
+      "dimmed": false,
+      "realPower": 400,
+      "RDM": true,
+      "DMX3in": true,
+      "DMX3out": true,
+      "DMX5in": true,
+      "DMX5out": true,
+      "ethernetIn": true,
+      "ethernetOut": false,
+      "wireless": "Optional",
+      "powerIn": "PowerCon",
+      "powerOut": false,
+      "protocols": ["DMX-512Art-net", "MA Net", "MA Net2", "sACN"],
+      "weight": 17.5,
+      "webpage": "https://www.robe.cz/viva/",
+      "manual": "https://www.robe.cz/index.php?type=10898&tx_odproducts_f%5baction%5d=downloadFile&tx_odproducts_f%5bfile%5d=robe/downloads/user_manuals/User_manual_Robin_Viva.pdf",
+      "modes": [
+        {
+          "name": "Mode 1 - Standard 16 bit",
+          "channels": 30
+        },
+        {
+          "name": "Mode 2 - Reduced 8 bit",
+          "channels": 23
+        }
+      ],
+      "origin": "ch-creator",
+      "created": "2020-05-11"
+    },
+    {
+      "id": 1032,
+      "image": "https://www.claypaky.it/media/productentries/images/C61396.jpg",
+      "manufacturer": "ClayPaky",
+      "name": "Mythos 2",
+      "type": "Spot",
+      "lampType": "Discharge",
+      "dimmed": false,
+      "apparentPower": 700,
+      "RDM": true,
+      "DMX3in": false,
+      "DMX3out": false,
+      "DMX5in": true,
+      "DMX5out": true,
+      "ethernetIn": true,
+      "ethernetOut": false,
+      "wireless": false,
+      "powerIn": "TRUE1",
+      "powerOut": false,
+      "protocols": ["DMX-512", "Art-net"],
+      "weight": 32,
+      "IP": "20",
+      "webpage": "https://www.claypaky.it/en/products/mythos2",
+      "manual": "https://www.claypaky.it/media/documents/HR_Mythos_Manual_02.2017_EN.pdf",
+      "modes": [
+        {
+          "name": "Mode 1 - Standard",
+          "channels": 30
+        },
+        {
+          "name": "Mode 2 - Vector",
+          "channels": 34
+        }
+      ],
+      "origin": "ch-creator",
+      "created": "2020-05-11"
+    },
+    {
+      "id": 1033,
+      "image": "https://www.musiclights.it/images/tmp/600x60065x65STUDIOCOBFC_27796.png?20200218101729",
+      "manufacturer": "ProLights",
+      "name": "Studio Cob FC",
+      "type": "Wash",
+      "lampType": "LED",
+      "dimmed": false,
+      "realPower": 140,
+      "RDM": false,
+      "DMX3in": true,
+      "DMX3out": true,
+      "DMX5in": true,
+      "DMX5out": true,
+      "ethernetIn": false,
+      "ethernetOut": false,
+      "wireless": false,
+      "powerIn": "PowerCon",
+      "powerOut": "PowerCon",
+      "protocols": ["DMX-512"],
+      "weight": 4.5,
+      "IP": "20",
+      "webpage": "https://www.musiclights.it/product/STUDIOCOBFC?lang=EN",
+      "manual": "https://www.musiclights.it/download.php?id=2945",
+      "modes": [
+        {
+          "name": "Mode 1",
+          "channels": 3
+        },
+        {
+          "name": "Mode 2",
+          "channels": 5
+        },
+        {
+          "name": "Mode 3",
+          "channels": 8
+        }
+      ],
+      "origin": "ch-creator",
+      "created": "2020-05-11"
+    },
+    {
+      "id": 1034,
+      "image": "https://www.fisherproductions.co.uk/services/image/cache/data/Movers/Batten2-front%20fisher%20hires-740x530.jpg",
+      "manufacturer": "MT",
+      "name": "Miltec Batten 2 1812",
+      "type": "Batten",
+      "lampType": "LED",
+      "dimmed": false,
+      "realPower": 250,
+      "DMX3in": true,
+      "DMX3out": true,
+      "DMX5in": true,
+      "DMX5out": true,
+      "ethernetIn": false,
+      "ethernetOut": false,
+      "powerIn": "PowerCon",
+      "powerOut": "PowerCon",
+      "protocols": ["DMX-512"],
+      "weight": 3.7,
+      "IP": "20",
+      "manual": "https://media.vsl-uk.com/manuals/light/Miltec_Batten2_User_Manual.pdf",
+      "modes": [
+        {
+          "name": "Mode 1",
+          "channels": 4
+        },
+        {
+          "name": "Mode 2",
+          "channels": 5
+        },
+        {
+          "name": "Mode 3",
+          "channels": 7
+        },
+        {
+          "name": "Mode 4",
+          "channels": 72
+        }
+      ],
+      "origin": "ch-creator",
+      "created": "2020-05-11"
+    },
+    {
+      "id": 1035,
+      "image": "https://www.etcconnect.com/uploadedImages/Main_Site/Images/Products/Lighting_Fixtures/Source_Four/S4LED_Series2_Lustr_Red.jpg",
+      "manufacturer": "ETC",
+      "name": "Source 4 LED Series 2 (Lustr)",
+      "type": "Profile",
+      "lampType": "LED",
+      "dimmed": false,
+      "realPower": 173,
+      "RDM": true,
+      "DMX3in": false,
+      "DMX3out": false,
+      "DMX5in": true,
+      "DMX5out": true,
+      "ethernetIn": false,
+      "ethernetOut": false,
+      "wireless": false,
+      "powerIn": "PowerCon",
+      "powerOut": "PowerCon",
+      "protocols": ["DMX-512"],
+      "weight": 8.6,
+      "IP": "20",
+      "webpage": "https://www.etcconnect.com/Products/Lighting-Fixtures/Source-Four-LED-Series-2/Features.aspx",
+      "manual": "https://www.etcconnect.com/WorkArea/DownloadAsset.aspx?id=10737501163",
+      "modes": [
+        {
+          "name": "Mode 1 - Direct Control",
+          "channels": 10
+        },
+        {
+          "name": "Mode 2 - RGB",
+          "channels": 6
+        },
+        {
+          "name": "Mode 3 - HSI",
+          "channels": 6
+        },
+        {
+          "name": "Mode 4 - HSIC",
+          "channels": 7
+        },
+        {
+          "name": "Mode 5 - Studio",
+          "channels": 6
+        },
+        {
+          "name": "Mode 6 - RGB + 7",
+          "channels": 13
+        },
+        {
+          "name": "Mode 7 - HSI + 7",
+          "channels": 13
+        },
+        {
+          "name": "Mode 8 - HSIC + 7",
+          "channels": 14
+        }
+      ],
+      "origin": "ch-creator",
+      "created": "2020-05-11"
+    },
+    {
+      "id": 1036,
+      "image": "https://sgmlight.com/files/images/perfion/G-Spot_RAL_black_small.png",
+      "manufacturer": "SGM",
+      "name": "G Spot",
+      "type": "Spot",
+      "lampType": "LED",
+      "dimmed": false,
+      "realPower": 1150,
+      "powerFactor": 0.97,
+      "RDM": true,
+      "DMX3in": false,
+      "DMX3out": false,
+      "DMX5in": true,
+      "DMX5out": true,
+      "ethernetIn": false,
+      "ethernetOut": false,
+      "wireless": true,
+      "powerIn": "TRUE1",
+      "powerOut": false,
+      "protocols": ["DMX-512"],
+      "weight": 52,
+      "IP": "65",
+      "webpage": "https://sgmlight.com/products/entertainment/g%C2%B7spot",
+      "manual": "https://sgmlight.com/Admin/Public/DWSDownload.aspx?File=\\Files\\Files\\Perfion\\StrRDDATAUserManualFileGroup\\G-Spot\\FileRDDATAUserManualGSpotWEB\\SGM%20G-Spot%20and%20G-Spot%20POI%20User%20Manual%20(Rev%20H).pdf",
+      "modes": [
+        {
+          "name": "Mode 1 - Standard",
+          "channels": 24
+        },
+        {
+          "name": "Mode 2 - Extended",
+          "channels": 30
+        }
+      ],
+      "origin": "ch-creator",
+      "created": "2020-05-11"
+    },
+    {
+      "id": 1037,
+      "image": "https://sgmlight.com/files/images/perfion/P-1_RAL_black_small.png",
+      "manufacturer": "SGM",
+      "name": "P-1",
+      "type": "Wash",
+      "lampType": "LED",
+      "batteryLife": 12,
+      "dimmed": false,
+      "realPower": 90,
+      "RDM": true,
+      "DMX3in": false,
+      "DMX3out": false,
+      "DMX5in": true,
+      "DMX5out": true,
+      "ethernetIn": false,
+      "ethernetOut": false,
+      "wireless": true,
+      "powerIn": "TRUE1",
+      "powerOut": false,
+      "protocols": ["DMX-512"],
+      "weight": 5.7,
+      "IP": "65",
+      "webpage": "https://sgmlight.com/products/architectural/p%C2%B71",
+      "manual": "https://sgmlight.com/Admin/Public/DWSDownload.aspx?File=\\Files\\Files\\Perfion\\StrRDDATAUserManualFileGroup\\P-1\\FileRDDATAUserManualP1WEB\\SGM%20P-1%20User%20Manual%20(Rev%20A).pdf",
+      "modes": [
+        {
+          "name": "Mode 1 - 1 x RGB",
+          "channels": 3
+        },
+        {
+          "name": "Mode 2 - RAW",
+          "channels": 4
+        },
+        {
+          "name": "Mode 3 - 2 x RGB",
+          "channels": 6
+        },
+        {
+          "name": "Mode 4 - 9 Channel",
+          "channels": 9
+        },
+        {
+          "name": "Mode 5 - 6 Channel",
+          "channels": 6
+        },
+        {
+          "name": "Mode 6 - 6 Channel RAW",
+          "channels": 6
+        },
+        {
+          "name": "Mode 7 - 11 Channel RAW",
+          "channels": 11
+        },
+        {
+          "name": "Mode 8 - 16 Channel 16 bit",
+          "channels": 16
+        }
+      ],
+      "origin": "ch-creator",
+      "created": "2020-05-11"
+    },
+    {
+      "id": 1038,
+      "image": "https://sgmlight.com/files/images/perfion/P-6_RAL_black_small.png",
+      "manufacturer": "SGM",
+      "name": "P-6",
+      "type": "Wash",
+      "lampType": "LED",
+      "dimmed": false,
+      "realPower": 630,
+      "powerFactor": 0.96,
+      "RDM": true,
+      "DMX3in": false,
+      "DMX3out": false,
+      "DMX5in": true,
+      "DMX5out": true,
+      "ethernetIn": false,
+      "ethernetOut": false,
+      "wireless": true,
+      "powerIn": "TRUE1",
+      "powerOut": "TRUE1",
+      "protocols": ["DMX-512"],
+      "weight": 14.5,
+      "IP": "66",
+      "webpage": "https://sgmlight.com/products/entertainment/p%C2%B76",
+      "manual": "https://sgmlight.com/Admin/Public/DWSDownload.aspx?File=\\Files\\Files\\Perfion\\StrRDDATAUserManualFileGroup\\P-6\\FileRDDATAUserManualP6WEB\\SGM%20P-6%20STD%20and%20POI%20User%20Manual%20(Rev%20C).pdf",
+      "modes": [
+        {
+          "name": "4 Channel Mode RAW",
+          "channels": 4
+        },
+        {
+          "name": "6 Channel Mode RAW",
+          "channels": 6
+        },
+        {
+          "name": "6 Channel Mode CTC (default)",
+          "channels": 6
+        },
+        {
+          "name": "8 Channel RAW",
+          "channels": 8
+        },
+        {
+          "name": "9 Channel Mode Strobe",
+          "channels": 9
+        },
+        {
+          "name": "10 Channel Mode CTC",
+          "channels": 10
+        },
+        {
+          "name": "6 X RGB",
+          "channels": 18
+        },
+        {
+          "name": "21 Channel Mode",
+          "channels": 21
+        },
+        {
+          "name": "24 Channel Mode Strobe",
+          "channels": 24
+        },
+        {
+          "name": "26 Channel Mode Strobe",
+          "channels": 26
+        },
+        {
+          "name": "27 Channel Mode RAW",
+          "channels": 27
+        },
+        {
+          "name": "21 Channel Studio Mode",
+          "channels": 21
+        },
+        {
+          "name": "40 Channel Mode",
+          "channels": 40
+        }
+      ],
+      "origin": "ch-creator",
+      "created": "2020-05-11"
+    },
+    {
+      "id": 1039,
+      "image": "https://sgmlight.com/files/images/perfion/Q-10_RAL_black_small.png",
+      "manufacturer": "SGM",
+      "name": "Q-10",
+      "type": "Wash",
+      "lampType": "LED",
+      "dimmed": false,
+      "realPower": 1250,
+      "powerFactor": 0.99,
+      "RDM": true,
+      "DMX3in": false,
+      "DMX3out": false,
+      "DMX5in": true,
+      "DMX5out": true,
+      "ethernetIn": false,
+      "ethernetOut": false,
+      "wireless": true,
+      "powerIn": "TRUE1",
+      "powerOut": "TRUE1",
+      "protocols": ["DMX-512"],
+      "weight": 19.8,
+      "IP": "65",
+      "webpage": "https://sgmlight.com/products/architectural/q%C2%B710",
+      "manual": "https://sgmlight.com/Admin/Public/DWSDownload.aspx?File=\\Files\\Files\\Perfion\\StrRDDATAUserManualFileGroup\\Q-10\\FileRDDATAUserManualQ10WEB\\SGM%20Safety%20Instructions%20for%20STD%20and%20POI%20products%20(Rev.%20C).pdf",
+      "modes": [
+        {
+          "name": "3 Channel Mode CTC",
+          "channels": 3
+        },
+        {
+          "name": "4 Channel Mode RAW",
+          "channels": 4
+        },
+        {
+          "name": "6 Channel Mode RAW",
+          "channels": 6
+        },
+        {
+          "name": "6 Channel Mode CTC (default)",
+          "channels": 6
+        },
+        {
+          "name": "8 Channel RAW",
+          "channels": 8
+        },
+        {
+          "name": "9 Channel Mode Strobe",
+          "channels": 9
+        },
+        {
+          "name": "10 Channel Mode CTC",
+          "channels": 10
+        },
+        {
+          "name": "8 X RGB",
+          "channels": 24
+        },
+        {
+          "name": "27 Channel Mode",
+          "channels": 27
+        },
+        {
+          "name": "30 Channel Mode Strobe",
+          "channels": 30
+        },
+        {
+          "name": "32 Channel Mode Strobe",
+          "channels": 32
+        },
+        {
+          "name": "35 Channel Mode RAW",
+          "channels": 35
+        },
+        {
+          "name": "52 Channel Mode",
+          "channels": 52
+        }
+      ],
+      "origin": "ch-creator",
+      "created": "2020-05-11"
+    },
+    {
+      "id": 1040,
+      "image": "https://www.claypaky.it/media/productentries/images/C71085_C71086.jpg",
+      "manufacturer": "ClayPaky",
+      "name": "Show-Batten 100",
+      "type": "Batten",
+      "lampType": "LED",
+      "dimmed": false,
+      "apparentPower": 170,
+      "RDM": true,
+      "DMX3in": false,
+      "DMX3out": false,
+      "DMX5in": true,
+      "DMX5out": true,
+      "ethernetIn": true,
+      "ethernetOut": true,
+      "wireless": false,
+      "powerIn": "PowerCon",
+      "powerOut": "PowerCon",
+      "protocols": ["DMX-512", "Art-net"],
+      "weight": 10,
+      "IP": "20",
+      "webpage": "https://www.claypaky.it/en/products/showbatten100",
+      "manual": "https://www.claypaky.it/media/documents/HR_ShowBatten100_Manual_05.2016_EN.pdf",
+      "modes": [
+        {
+          "name": "Basic Engine",
+          "channels": 18
+        },
+        {
+          "name": "Pixel Engine RGB",
+          "channels": 48
+        },
+        {
+          "name": "Pixel Engine RGBW",
+          "channels": 58
+        }
+      ],
+      "origin": "ch-creator",
+      "created": "2020-05-12"
+    },
+    {
+      "id": 1041,
+      "image": "https://adn.harmanpro.com/product_attachments/product_attachments/4793_1501981202/macviperprofile_original.jpg",
+      "manufacturer": "Martin",
+      "name": "MAC Viper Profile",
+      "type": "Spot",
+      "lampType": "Discharge",
+      "dimmed": false,
+      "realPower": 1186,
+      "powerFactor": 0.993,
+      "RDM": true,
+      "DMX3in": false,
+      "DMX3out": false,
+      "DMX5in": true,
+      "DMX5out": true,
+      "ethernetIn": false,
+      "ethernetOut": false,
+      "wireless": false,
+      "powerIn": "PowerCon",
+      "powerOut": false,
+      "protocols": ["DMX-512"],
+      "weight": 37.2,
+      "IP": "20",
+      "webpage": "https://www.martin.com/en/products/mac-viper-profile",
+      "manual": "https://www.martin.com/en/site_elements/martin-manuals-user-guide-safety-and-installation-manual",
+      "modes": [
+        {
+          "name": "Basic 16-bit",
+          "channels": 26
+        },
+        {
+          "name": "16-bit Extended",
+          "channels": 34
+        }
+      ],
+      "origin": "ch-creator",
+      "created": "2020-05-18"
+    },
+    {
+      "id": 1042,
+      "image": "https://adn.harmanpro.com/product_attachments/product_attachments/4794_1501981530/macviperperformance_original.jpg",
+      "manufacturer": "Martin",
+      "name": "MAC Viper Performance",
+      "type": "Spot",
+      "lampType": "Discharge",
+      "dimmed": false,
+      "realPower": 1186,
+      "powerFactor": 0.993,
+      "RDM": true,
+      "DMX3in": false,
+      "DMX3out": false,
+      "DMX5in": true,
+      "DMX5out": true,
+      "ethernetIn": false,
+      "ethernetOut": false,
+      "wireless": false,
+      "powerIn": "PowerCon",
+      "powerOut": false,
+      "protocols": ["DMX-512"],
+      "weight": 37.9,
+      "IP": "20",
+      "webpage": "https://www.martin.com/en/products/mac-viper-performance",
+      "manual": "https://www.martin.com/en/site_elements/mac-viper-performance-user-guide",
+      "modes": [
+        {
+          "name": "Basic 16-bit",
+          "channels": 32
+        },
+        {
+          "name": "16-bit Extended",
+          "channels": 40
+        }
+      ],
+      "origin": "ch-creator",
+      "created": "2020-05-18"
+    },
+    {
+      "id": 1043,
+      "image": "https://adn.harmanpro.com/product_attachments/product_attachments/4827_1501986952/macaura_original.jpg",
+      "manufacturer": "Martin",
+      "name": "MAC Aura",
+      "type": "Wash",
+      "lampType": "LED",
+      "dimmed": false,
+      "realPower": 228,
+      "powerFactor": 0.959,
+      "RDM": true,
+      "DMX3in": false,
+      "DMX3out": false,
+      "DMX5in": true,
+      "DMX5out": true,
+      "ethernetIn": false,
+      "ethernetOut": false,
+      "wireless": false,
+      "powerIn": "PowerCon",
+      "powerOut": "PowerCon",
+      "protocols": ["DMX-512"],
+      "weight": 5.6,
+      "IP": "20",
+      "webpage": "https://www.martin.com/en/products/mac-aura",
+      "manual": "https://www.martin.com/en/site_elements/mac-aura-user-manual",
+      "modes": [
+        {
+          "name": "Standard",
+          "channels": 14
+        },
+        {
+          "name": "Extended",
+          "channels": 25
+        }
+      ],
+      "origin": "ch-creator",
+      "created": "2020-05-18"
+    },
+    {
+      "id": 1044,
+      "image": "https://cdn.robe.cz/fileadmin/robe/media/photo/products/100-ledbeam-01.png",
+      "manufacturer": "Robe",
+      "name": "'Robin' LEDBEAM 100",
+      "type": "Wash",
+      "lampType": "LED",
+      "dimmed": false,
+      "realPower": 200,
+      "powerFactor": 0.96,
+      "RDM": true,
+      "DMX3in": false,
+      "DMX3out": false,
+      "DMX5in": true,
+      "DMX5out": true,
+      "ethernetIn": false,
+      "ethernetOut": false,
+      "wireless": "Optional",
+      "powerIn": "PowerCon",
+      "powerOut": "PowerCon",
+      "protocols": ["DMX-512"],
+      "weight": 4.5,
+      "webpage": "https://www.robe.cz/ledbeam-100/",
+      "manual": "https://www.robe.cz/index.php?type=10898&tx_odproducts_f%5baction%5d=downloadFile&tx_odproducts_f%5bfile%5d=robe/downloads/user_manuals/User_manual_Robin_100_LEDBeam.pdf",
+      "modes": [
+        {
+          "name": "Mode 1",
+          "channels": 35
+        },
+        {
+          "name": "Mode 2",
+          "channels": 19
+        },
+        {
+          "name": "Mode 3",
+          "channels": 14
+        },
+        {
+          "name": "Mode 4",
+          "channels": 9
+        },
+        {
+          "name": "Mode 5",
+          "channels": 9
+        },
+        {
+          "name": "Mode 6",
+          "channels": 37
+        }
+      ],
+      "origin": "ch-creator",
+      "created": "2020-05-18"
+    },
+    {
+      "id": 1045,
+      "image": "https://adn.harmanpro.com/product_attachments/product_attachments/4821_1501986589/AuraXB_main_1_original.jpg",
+      "manufacturer": "Martin",
+      "name": "MAC Aura XB",
+      "type": "Wash",
+      "lampType": "LED",
+      "dimmed": false,
+      "realPower": 350,
+      "powerFactor": 0.95,
+      "RDM": true,
+      "DMX3in": false,
+      "DMX3out": false,
+      "DMX5in": true,
+      "DMX5out": true,
+      "ethernetIn": false,
+      "ethernetOut": false,
+      "wireless": false,
+      "powerIn": "TRUE1",
+      "powerOut": "TRUE1",
+      "protocols": ["DMX-512"],
+      "weight": 6.5,
+      "IP": "20",
+      "webpage": "https://www.martin.com/en/products/mac-aura-xb",
+      "manual": "https://www.martin.com/en/site_elements/martin-mac-aura-xb-user-manual",
+      "modes": [
+        {
+          "name": "Standard",
+          "channels": 14
+        },
+        {
+          "name": "Extended",
+          "channels": 25
+        }
+      ],
+      "origin": "ch-creator",
+      "created": "2020-05-18"
+    },
+    {
+      "id": 1046,
+      "image": "https://sgmlight.com/files/images/perfion/G-7Beast_front_logo_text.png",
+      "manufacturer": "SGM",
+      "name": "G-7 Beast",
+      "type": "Hybrid",
+      "lampType": "LED",
+      "dimmed": false,
+      "realPower": 650,
+      "powerFactor": 0.96,
+      "RDM": true,
+      "DMX3in": false,
+      "DMX3out": false,
+      "DMX5in": true,
+      "DMX5out": true,
+      "ethernetIn": false,
+      "ethernetOut": false,
+      "wireless": true,
+      "powerIn": "TRUE1",
+      "powerOut": "TRUE1",
+      "protocols": [
+        "DMX-512",
+        "CRMX",
+        "W-DMX G2",
+        "W-DMX G3",
+        "W-DMX G4",
+        "W-DMX G4S"
+      ],
+      "weight": 30,
+      "IP": "66",
+      "webpage": "https://sgmlight.com/products/entertainment/g%C2%B77-beast",
+      "manual": "https://sgmlight.com/Admin/Public/DWSDownload.aspx?File=\\Files\\Files\\Perfion\\StrRDDATAUserManualFileGroup\\G-7%20Beam\\FileRDDATAUserManualG7BeamWEB\\SGM%20G-7%20BeaSt%20User%20Manual%20(Rev%20C).pdf",
+      "modes": [
+        {
+          "name": "Standard",
+          "channels": 22
+        },
+        {
+          "name": "Extended",
+          "channels": 29
+        },
+        {
+          "name": "Extended+",
+          "channels": 35
+        },
+        {
+          "name": "Simplified",
+          "channels": 18
+        }
+      ],
+      "origin": "ch-creator",
+      "created": "2020-05-18"
+    },
+    {
+      "id": 1047,
+      "image": "https://sgmlight.com/files/images/perfion/G-7_Spot_front_logo_text.png",
+      "manufacturer": "SGM",
+      "name": "G-7 Spot",
+      "type": "Spot",
+      "lampType": "LED",
+      "dimmed": false,
+      "realPower": 480,
+      "powerFactor": 0.96,
+      "RDM": true,
+      "DMX3in": false,
+      "DMX3out": false,
+      "DMX5in": true,
+      "DMX5out": true,
+      "ethernetIn": false,
+      "ethernetOut": false,
+      "wireless": true,
+      "powerIn": "TRUE1",
+      "powerOut": "TRUE1",
+      "protocols": [
+        "DMX-512",
+        "CRMX",
+        "W-DMX G2",
+        "W-DMX G3",
+        "W-DMX G4",
+        "W-DMX G4S"
+      ],
+      "weight": 27,
+      "IP": "66",
+      "webpage": "https://sgmlight.com/products/entertainment/g%C2%B77-spot",
+      "manual": "https://sgmlight.com/Admin/Public/DWSDownload.aspx?File=\\Files\\Files\\Perfion\\StrRDDATAUserManualFileGroup\\G-7%20Spot\\FileRDDATAUserManualG7SpotWEB\\SGM%20G-7%20Spot%20User%20Manual%20(Rev%20B).pdf",
+      "modes": [
+        {
+          "name": "Standard",
+          "channels": 22
+        },
+        {
+          "name": "Extended",
+          "channels": 29
+        }
+      ],
+      "origin": "ch-creator",
+      "created": "2020-05-18"
+    },
+    {
+      "id": 1048,
+      "image": "https://www.vari-lite.com/content/dam/vari-lite/products/vl2600-wash/vl2600-wash-450-620.jpg",
+      "manufacturer": "Vari-Lite",
+      "name": "VL2600 Wash",
+      "type": "Wash",
+      "lampType": "LED",
+      "dimmed": false,
+      "realPower": 550,
+      "RDM": true,
+      "DMX3in": false,
+      "DMX3out": false,
+      "DMX5in": true,
+      "DMX5out": true,
+      "ethernetIn": true,
+      "ethernetOut": false,
+      "wireless": false,
+      "powerIn": "TRUE1",
+      "powerOut": "TRUE1",
+      "protocols": ["DMX-512", "Art-net"],
+      "weight": 30.2,
+      "IP": "20",
+      "webpage": "https://www.vari-lite.com/global/products/vl2600-wash",
+      "manual": "https://www.vari-lite.com/b-dam/vari-lite/products/vl2600-wash/guides-and-manuals/VariLite_VL2600_QuickStartGuide.pdf",
+      "modes": [
+        {
+          "name": "16bit Enhanced",
+          "channels": 32
+        },
+        {
+          "name": "16bit",
+          "channels": 29
+        }
+      ],
+      "origin": "ch-creator",
+      "created": "2020-05-18"
+    },
+    {
+      "id": 1049,
+      "image": "https://www.claypaky.it/media/productentries/images/C61500.jpg",
+      "manufacturer": "ClayPaky",
+      "name": "Scenius Spot",
+      "type": "Spot",
+      "lampType": "Discharge",
+      "dimmed": false,
+      "apparentPower": 1800,
+      "RDM": true,
+      "DMX3in": false,
+      "DMX3out": false,
+      "DMX5in": true,
+      "DMX5out": true,
+      "ethernetIn": true,
+      "ethernetOut": false,
+      "wireless": false,
+      "powerIn": "TRUE1",
+      "powerOut": false,
+      "protocols": ["DMX-512", "Art-net"],
+      "weight": 38,
+      "IP": "20",
+      "webpage": "https://www.claypaky.it/en/products/scenius-spot",
+      "manual": "https://www.claypaky.it/media/documents/SceniusSpot_Manual_12.2016_EN.pdf",
+      "modes": [
+        {
+          "name": "Standard",
+          "channels": 32
+        },
+        {
+          "name": "Vector",
+          "channels": 36
+        }
+      ],
+      "origin": "ch-creator",
+      "created": "2020-05-18"
+    },
+    {
+      "id": 1050,
+      "manufacturer": "ClayPaky",
+      "name": "AlphaSpot 700 HPE",
+      "type": "Spot",
+      "lampType": "Discharge",
+      "dimmed": false,
+      "apparentPower": 1050,
+      "RDM": true,
+      "DMX3in": true,
+      "DMX3out": true,
+      "DMX5in": true,
+      "DMX5out": true,
+      "ethernetIn": true,
+      "ethernetOut": false,
+      "wireless": false,
+      "powerIn": "PowerCon",
+      "powerOut": false,
+      "protocols": ["DMX-512", "Art-net"],
+      "weight": 22.9,
+      "IP": "20",
+      "manual": "https://www.claypaky.it/media/documents/AlphaSpotHPE700_Manual_Rev.2_(02.11)_EN.pdf",
+      "modes": [
+        {
+          "name": "Standard",
+          "channels": 25
+        },
+        {
+          "name": "Vector",
+          "channels": 29
+        }
+      ],
+      "origin": "ch-creator",
+      "created": "2020-05-18"
+    }
+  ]
+}

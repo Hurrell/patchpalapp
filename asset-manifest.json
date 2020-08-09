@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/static/css/main.4224bc38.chunk.css",
+    "main.js": "/static/js/main.f7b2b2a7.chunk.js",
+    "main.js.map": "/static/js/main.f7b2b2a7.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.db189513.js",
+    "runtime-main.js.map": "/static/js/runtime-main.db189513.js.map",
+    "static/js/2.ab2338b9.chunk.js": "/static/js/2.ab2338b9.chunk.js",
+    "static/js/2.ab2338b9.chunk.js.map": "/static/js/2.ab2338b9.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.db5fc37905aa4fe0363ea260cef6417e.js": "/precache-manifest.db5fc37905aa4fe0363ea260cef6417e.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.4224bc38.chunk.css.map": "/static/css/main.4224bc38.chunk.css.map",
+    "static/js/2.ab2338b9.chunk.js.LICENSE.txt": "/static/js/2.ab2338b9.chunk.js.LICENSE.txt",
+    "static/media/dmx3_female.bd9aa86c.svg": "/static/media/dmx3_female.bd9aa86c.svg",
+    "static/media/dmx3_male.10c7fcd9.svg": "/static/media/dmx3_male.10c7fcd9.svg",
+    "static/media/dmx5_female.f27a9961.svg": "/static/media/dmx5_female.f27a9961.svg",
+    "static/media/dmx5_male.209f6d47.svg": "/static/media/dmx5_male.209f6d47.svg",
+    "static/media/ethercon.286871b3.svg": "/static/media/ethercon.286871b3.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.db189513.js",
+    "static/js/2.ab2338b9.chunk.js",
+    "static/css/main.4224bc38.chunk.css",
+    "static/js/main.f7b2b2a7.chunk.js"
+  ]
+}
