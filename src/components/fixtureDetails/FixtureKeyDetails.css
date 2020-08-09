@@ -1,0 +1,9 @@
+.totals {
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgba(0, 0, 0, 0.3) !important;
+  background-blend-mode: color;
+
+  height: 30vh;
+}

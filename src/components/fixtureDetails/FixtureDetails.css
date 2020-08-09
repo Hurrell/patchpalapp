@@ -4,6 +4,13 @@
   margin-top: 25px;
   margin-left: 36px;
   margin-right: 20px;
+
+  /* Background image */
+  /* background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgba(0, 0, 0, 0.3) !important;
+  background-blend-mode: color; */
 }
 
 .fixture-details > div {

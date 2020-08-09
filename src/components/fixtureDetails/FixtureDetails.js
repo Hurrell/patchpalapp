@@ -128,8 +128,14 @@ class FixtureDetails extends React.Component {
     let singleFixture = {};
     Object.assign(singleFixture, this.props.fixture);
     singleFixture.quantity = 1;
+
     return (
-      <article className="fixture-details">
+      <article
+        className="fixture-details"
+        // style={{
+        //   backgroundImage: `url(images/${this.props.fixture.id}_large.png)`,
+        // }}
+      >
         <IconCalloutTop fixture={this.props.fixture} />
         <FixtureKeyDetails fixture={this.props.fixture} />
         <IconCalloutBottom fixture={this.props.fixture} />
