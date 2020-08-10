@@ -17,12 +17,7 @@ class FixtureKeyDetails extends React.Component {
     }
 
     return (
-      <div
-        className="totals"
-        style={{
-          backgroundImage: `url(images/${this.props.fixture.id}_large.png)`,
-        }}
-      >
+      <div className="totals">
         <div className="review-power">
           <span className="review-total">{Math.ceil(apparentPower)}</span>
           <span className="review-unit">VA</span>

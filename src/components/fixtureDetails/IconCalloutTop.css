@@ -16,6 +16,7 @@
   flex-direction: column;
   justify-content: space-between;
   margin: 0 4px 15px 4px;
+  background-color: black;
 }
 
 .details-top-tile > * {

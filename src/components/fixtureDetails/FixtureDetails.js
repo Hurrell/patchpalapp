@@ -136,9 +136,17 @@ class FixtureDetails extends React.Component {
         //   backgroundImage: `url(images/${this.props.fixture.id}_large.png)`,
         // }}
       >
-        <IconCalloutTop fixture={this.props.fixture} />
-        <FixtureKeyDetails fixture={this.props.fixture} />
-        <IconCalloutBottom fixture={this.props.fixture} />
+        <div
+          className="fixture-background"
+          style={{
+            backgroundImage: `url(images/${this.props.fixture.id}_large.png)`,
+          }}
+        >
+          <IconCalloutTop fixture={this.props.fixture} />
+          <FixtureKeyDetails fixture={this.props.fixture} />
+          <IconCalloutBottom fixture={this.props.fixture} />
+        </div>
+
         <div className="detail-table">
           <div>Manufacturer:</div>
           <div>{this.props.fixture.manufacturer}</div>

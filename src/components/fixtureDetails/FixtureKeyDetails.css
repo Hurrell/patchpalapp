@@ -1,9 +1,69 @@
 .totals {
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: rgba(0, 0, 0, 0.3) !important;
-  background-blend-mode: color;
-
   height: 30vh;
+
+  text-align: center;
+  margin: 5px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "kg amps"
+    "power power";
+}
+
+/* .review-total,
+.review-unit {
+  padding: 50% 0;
+} */
+.review-total {
+  font-size: 3.5em;
+}
+
+.review-unit {
+  font-size: 1.5em;
+}
+.review-unit sup {
+  font-size: 0.5em;
+}
+
+/* .review-weight,
+.review-power {
+  min-height: 3em;
+} */
+
+.review-power {
+  padding: 10px;
+  grid-area: power;
+  /* justify-self: center; */
+  align-self: center;
+  background: radial-gradient(
+    ellipse,
+    rgba(0, 0, 0, 0.3) 0%,
+    rgba(0, 0, 0, 0.3) 20%,
+    rgba(255, 0, 0, 0) 70%
+  );
+}
+
+.review-weight {
+  padding: 30px 5px;
+  grid-area: kg;
+  align-self: center;
+  background: radial-gradient(
+    ellipse,
+    rgba(0, 0, 0, 0.3) 0%,
+    rgba(0, 0, 0, 0.15) 50%,
+    rgba(0, 0, 0, 0) 70%
+  );
+}
+
+.review-amps {
+  padding: 30px 5px;
+  grid-area: amps;
+  align-self: center;
+  background: radial-gradient(
+    ellipse,
+    rgba(0, 0, 0, 0.3) 0%,
+    rgba(0, 0, 0, 0.15) 50%,
+    rgba(0, 0, 0, 0) 70%
+  );
 }
