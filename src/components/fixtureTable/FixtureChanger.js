@@ -1,7 +1,7 @@
 import React from "react";
 import "./FixtureChanger.css";
 
-import { IoIosAdd, IoIosRemove } from "react-icons/io";
+import { IoIosAdd, IoIosRemove, IoIosClose } from "react-icons/io";
 
 class FixtureChanger extends React.Component {
   //Component of FixtureRow
@@ -11,14 +11,23 @@ class FixtureChanger extends React.Component {
     this.handleFixtureChange = this.handleFixtureChange.bind(this);
     this.handleMinus = this.handleMinus.bind(this);
     this.handlePlus = this.handlePlus.bind(this);
+    // this.onRemoveButtonClick = this.onRemoveButtonClick.bind(this);
   }
   handleFixtureChange(e) {
     this.props.onFixtureChange(this.props.fixture.id, e.target.value);
   }
   handleMinus() {
-    let quantity =
-      this.props.fixture.quantity > 0 ? (this.props.fixture.quantity -= 1) : 0;
-    this.props.onFixtureChange(this.props.fixture.id, quantity);
+    // Remove from selected list if no more fixtures to remove
+    if (this.props.fixture.quantity === 0) {
+      this.props.onRemoveButtonClick();
+    } else {
+      // Drop fixture count by 1.
+      let quantity =
+        this.props.fixture.quantity > 0
+          ? (this.props.fixture.quantity -= 1)
+          : 0;
+      this.props.onFixtureChange(this.props.fixture.id, quantity);
+    }
   }
   handlePlus() {
     let quantity = this.props.fixture.quantity;
@@ -42,7 +51,11 @@ class FixtureChanger extends React.Component {
     return (
       <div className="fixture-change">
         <div onClick={this.handleMinus} className={isHidden ? "hidden" : ""}>
-          <IoIosRemove className="fixture-change-icon" />
+          {fixture.quantity === 0 ? (
+            <IoIosClose className="fixture-change-icon" />
+          ) : (
+            <IoIosRemove className="fixture-change-icon" />
+          )}
         </div>
         <form
           className={`quantity-input ${isHidden ? "hidden" : ""}`}

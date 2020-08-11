@@ -64,6 +64,7 @@ class FixtureRow extends React.Component {
         <FixtureChanger
           onFixtureChange={this.handleFixtureChange}
           fixture={this.props.fixture}
+          onRemoveButtonClick={this.handleRemoveButtonClick}
         />
       </li>
     );

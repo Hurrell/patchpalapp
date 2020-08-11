@@ -29,15 +29,24 @@ class Page extends React.Component {
 
   handleFixtureChange(fixtureId, quantity) {
     quantity = parseInt(quantity);
-
+    // Copy Selected Fixtures
     let updatedSelectedFixtures = this.state.projectFixtures.slice();
+    // Get fixture object using id.
     let newFixture = getObj(this.props.APPDATA.fixtures, "id", fixtureId);
 
     if (newFixture) {
       let fixtureAlreadySelected = false;
       updatedSelectedFixtures.forEach((fixture) => {
         if (fixture.id === fixtureId) {
-          fixture.quantity = quantity;
+          if (isNaN(quantity)) {
+            updatedSelectedFixtures = updatedSelectedFixtures.filter(
+              (fixture) => {
+                return fixtureId !== fixture.id;
+              }
+            );
+          } else {
+            fixture.quantity = quantity;
+          }
           fixtureAlreadySelected = true;
           return;
         }
