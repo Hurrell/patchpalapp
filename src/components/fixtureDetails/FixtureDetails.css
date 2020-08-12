@@ -14,11 +14,11 @@
 }
 
 .fixture-background {
-  background-size: contain;
+  background-size: 60% auto;
   background-repeat: no-repeat;
   background-position: center;
-  /* background-color: rgba(0, 0, 0, 0.3) !important;
-  background-blend-mode: color; */
+  background-color: rgba(0, 0, 0, 0.1) !important;
+  background-blend-mode: color;
 
   /* height: 30vh; */
 }

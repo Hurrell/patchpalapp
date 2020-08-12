@@ -49,7 +49,7 @@ class FixtureRow extends React.Component {
           <img
             alt=""
             className="side-img"
-            src={"images/" + fixture.id + "_small.png"}
+            src={"images/" + fixture.id + "_small.jpg"}
             onError={addDefaultSrc}
           ></img>
         </div>

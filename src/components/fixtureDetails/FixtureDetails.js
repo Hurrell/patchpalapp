@@ -139,7 +139,7 @@ class FixtureDetails extends React.Component {
         <div
           className="fixture-background"
           style={{
-            backgroundImage: `url(images/${this.props.fixture.id}_large.png)`,
+            backgroundImage: `url(images/${this.props.fixture.id}_large.jpg)`,
           }}
         >
           <IconCalloutTop fixture={this.props.fixture} />
