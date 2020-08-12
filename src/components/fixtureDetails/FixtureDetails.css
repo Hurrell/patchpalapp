@@ -14,7 +14,7 @@
 }
 
 .fixture-background {
-  background-size: 60% auto;
+  background-size: auto 80%;
   background-repeat: no-repeat;
   background-position: center;
   background-color: rgba(0, 0, 0, 0.1) !important;
