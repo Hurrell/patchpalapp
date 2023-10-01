@@ -4,8 +4,6 @@ import "./FixtureRow.css";
 import FixtureChanger from "./FixtureChanger";
 import { powersFrom } from "../../tools.js";
 
-import { IoMdClose } from "react-icons/io";
-
 class FixtureRow extends React.Component {
   //Component of FixtureTable - contains fixture title, key details, and action buttons
   constructor(props) {
@@ -26,12 +24,6 @@ class FixtureRow extends React.Component {
 
   render() {
     const fixture = this.props.fixture;
-
-    // Show the X button if fixtures are selected
-    let isHidden = true;
-    if (fixture.selected) {
-      isHidden = false;
-    }
 
     // Create readable power string.
     let power;
