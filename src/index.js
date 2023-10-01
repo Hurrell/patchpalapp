@@ -7,6 +7,13 @@ import Footer from "./components/Footer.js";
 import Header from "./components/Header.js";
 import Page from "./components/Page.js";
 
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+import { PrivacyPolicy } from "./routes/privacy-policy";
+import { Support } from "./routes/support";
+
 var APPDATA;
 //const VOLTAGE = 230;
 
@@ -37,6 +44,7 @@ A) App
         fixture selected --props
 
 */
+
 
 class App extends React.Component {
   //Container for entire app
@@ -133,8 +141,26 @@ class App extends React.Component {
   }
 }
 
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+  },
+  {
+    path: "/privacy-policy",
+    element: <PrivacyPolicy/>
+  },
+  {
+    path: "/support",
+    element: <Support/>
+  }
+]);
+
 function loadApp() {
-  ReactDOM.render(<App />, document.querySelector("#root"));
+  ReactDOM.createRoot(document.querySelector("#root"))
+  .render(<React.StrictMode> 
+    <RouterProvider router={router} />
+  </React.StrictMode>);
 }
 
 //Request json and only render page when json retreived
